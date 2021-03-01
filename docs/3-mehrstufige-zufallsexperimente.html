@@ -29,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="2-2-eingangsquiz.html"/>
+<link rel="prev" href="2-3-wahrscheinlichkeit-da-war-doch-was.html"/>
 <link rel="next" href="4-baumdiagramme.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -51,6 +51,108 @@
 
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script>
+
+/* update total correct if #total_correct exists */
+update_total_correct = function() {
+  if (t = document.getElementById("total_correct")) {
+    t.innerHTML =
+      document.getElementsByClassName("correct").length + " of " +
+      document.getElementsByClassName("solveme").length + " correct";
+  }
+}
+
+/* solution button toggling function */
+b_func = function() {
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "");
+  }
+  
+  if (my_answer !== "" & real_answers.includes(my_answer)) {
+    cl.add("correct");
+  } else {
+    cl.remove("correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);  
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("correct");
+    } else {
+      cl.remove("correct");
+    }  
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("correct");
+    }  
+  }
+  
+  update_total_correct();
+}
+
+window.onload = function() {
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+  
+  /* set up solveme inputs */
+  var solveme = document.getElementsByClassName("solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off"); 
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+    
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+    
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+  }
+  
+  update_total_correct();
+}
+
+</script>
 
 
 
@@ -69,7 +171,7 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><center><a href="https://gdischinger.github.io/Wahrscheinlichkeit-8/"><img src="images/würfel.jpg" alt="logo" width="60%" height="60%"style="margin: 15px 0 0 0"></a></center></li>
+<li><center><a href="https://gdischinger.github.io/Wahrscheinlichkeit-8"><img src="images/würfel.jpg" alt="logo" width="60%" height="60%"style="margin: 15px 0 0 0"></a></center></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Was erwartet dich?</a>
@@ -80,8 +182,28 @@
 <li class="chapter" data-level="1" data-path="1-einführung-warum-du-dich-mit-wahrscheinlichkeiten-unbedingt-beschäftigen-solltest.html"><a href="1-einführung-warum-du-dich-mit-wahrscheinlichkeiten-unbedingt-beschäftigen-solltest.html"><i class="fa fa-check"></i><b>1</b> Einführung - Warum du dich mit Wahrscheinlichkeiten unbedingt beschäftigen solltest…</a></li>
 <li class="chapter" data-level="2" data-path="2-vorwissen.html"><a href="2-vorwissen.html"><i class="fa fa-check"></i><b>2</b> Vorwissen</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="2-1-checkliste.html"><a href="2-1-checkliste.html"><i class="fa fa-check"></i><b>2.1</b> Checkliste</a></li>
-<li class="chapter" data-level="2.2" data-path="2-2-eingangsquiz.html"><a href="2-2-eingangsquiz.html"><i class="fa fa-check"></i><b>2.2</b> Eingangsquiz</a></li>
+<li class="chapter" data-level="2.1" data-path="2-1-bruchrechnung-kurz-und-knapp.html"><a href="2-1-bruchrechnung-kurz-und-knapp.html"><i class="fa fa-check"></i><b>2.1</b> Bruchrechnung kurz und knapp</a>
+<ul>
+<li class="chapter" data-level="" data-path="2-1-bruchrechnung-kurz-und-knapp.html"><a href="2-1-bruchrechnung-kurz-und-knapp.html#brüche-kürzen-und-erweitern"><i class="fa fa-check"></i>Brüche kürzen und erweitern</a></li>
+<li class="chapter" data-level="" data-path="2-1-bruchrechnung-kurz-und-knapp.html"><a href="2-1-bruchrechnung-kurz-und-knapp.html#brüche-in-dezimalzahlen-oder-prozentangaben-umwandeln"><i class="fa fa-check"></i>Brüche in Dezimalzahlen oder Prozentangaben umwandeln</a></li>
+<li class="chapter" data-level="" data-path="2-1-bruchrechnung-kurz-und-knapp.html"><a href="2-1-bruchrechnung-kurz-und-knapp.html#mit-brüchen-rechnen"><i class="fa fa-check"></i>Mit Brüchen rechnen</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="2-2-deskriptive-statistik-zum-nachlesen.html"><a href="2-2-deskriptive-statistik-zum-nachlesen.html"><i class="fa fa-check"></i><b>2.2</b> Deskriptive Statistik zum Nachlesen</a>
+<ul>
+<li class="chapter" data-level="" data-path="2-2-deskriptive-statistik-zum-nachlesen.html"><a href="2-2-deskriptive-statistik-zum-nachlesen.html#absolute-und-relative-häufigkeiten-ermitteln"><i class="fa fa-check"></i>Absolute und relative Häufigkeiten ermitteln</a></li>
+<li class="chapter" data-level="" data-path="2-2-deskriptive-statistik-zum-nachlesen.html"><a href="2-2-deskriptive-statistik-zum-nachlesen.html#häufigkeiten-in-tabellen-säulen--und-kreisdiagrammen-darstellen"><i class="fa fa-check"></i>Häufigkeiten in Tabellen, Säulen- und Kreisdiagrammen darstellen</a></li>
+<li class="chapter" data-level="" data-path="2-2-deskriptive-statistik-zum-nachlesen.html"><a href="2-2-deskriptive-statistik-zum-nachlesen.html#das-arithmetische-mittel-die-spannweite-und-den-median-angeben"><i class="fa fa-check"></i>Das arithmetische Mittel, die Spannweite und den Median angeben</a></li>
+<li class="chapter" data-level="" data-path="2-2-deskriptive-statistik-zum-nachlesen.html"><a href="2-2-deskriptive-statistik-zum-nachlesen.html#box-plots-interpretieren-und-erstellen"><i class="fa fa-check"></i>Box-Plots interpretieren und erstellen</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-3-wahrscheinlichkeit-da-war-doch-was.html"><a href="2-3-wahrscheinlichkeit-da-war-doch-was.html"><i class="fa fa-check"></i><b>2.3</b> Wahrscheinlichkeit - da war doch was</a>
+<ul>
+<li class="chapter" data-level="" data-path="2-3-wahrscheinlichkeit-da-war-doch-was.html"><a href="2-3-wahrscheinlichkeit-da-war-doch-was.html#zufallsexperimente-erkennen"><i class="fa fa-check"></i>Zufallsexperimente erkennen</a></li>
+<li class="chapter" data-level="" data-path="2-3-wahrscheinlichkeit-da-war-doch-was.html"><a href="2-3-wahrscheinlichkeit-da-war-doch-was.html#die-ergebnismenge-eines-einfachen-zufallsexperiments"><i class="fa fa-check"></i>Die Ergebnismenge eines einfachen Zufallsexperiments</a></li>
+<li class="chapter" data-level="" data-path="2-3-wahrscheinlichkeit-da-war-doch-was.html"><a href="2-3-wahrscheinlichkeit-da-war-doch-was.html#die-wahrscheinlichkeit-eines-ereignisses"><i class="fa fa-check"></i>Die Wahrscheinlichkeit eines Ereignisses</a></li>
+<li class="chapter" data-level="" data-path="2-3-wahrscheinlichkeit-da-war-doch-was.html"><a href="2-3-wahrscheinlichkeit-da-war-doch-was.html#eigenschaften-der-wahrscheinlichkeit"><i class="fa fa-check"></i>Eigenschaften der Wahrscheinlichkeit</a></li>
+<li class="chapter" data-level="" data-path="2-3-wahrscheinlichkeit-da-war-doch-was.html"><a href="2-3-wahrscheinlichkeit-da-war-doch-was.html#das-empirische-gesetz-der-großen-zahlen"><i class="fa fa-check"></i>Das empirische Gesetz der großen Zahlen</a></li>
+<li class="chapter" data-level="" data-path="2-3-wahrscheinlichkeit-da-war-doch-was.html"><a href="2-3-wahrscheinlichkeit-da-war-doch-was.html#laplace-experimente-und-ihre-wahrscheinlichkeiten"><i class="fa fa-check"></i>Laplace-Experimente und ihre Wahrscheinlichkeiten</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="3-mehrstufige-zufallsexperimente.html"><a href="3-mehrstufige-zufallsexperimente.html"><i class="fa fa-check"></i><b>3</b> Mehrstufige Zufallsexperimente</a></li>
 <li class="chapter" data-level="4" data-path="4-baumdiagramme.html"><a href="4-baumdiagramme.html"><i class="fa fa-check"></i><b>4</b> Baumdiagramme</a>
@@ -122,7 +244,7 @@
           </div>
         </div>
       </div>
-<a href="2-2-eingangsquiz.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="2-3-wahrscheinlichkeit-da-war-doch-was.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="4-baumdiagramme.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -165,6 +287,7 @@ gitbook.start({
 "download": null,
 "toc": {
 "collapse": "subsection",
+"scroll_highlighting": true,
 "scroll_highlight": true
 },
 "info": true
@@ -172,6 +295,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="de" xml:lang="de">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Bruchrechnung kurz und knapp | Wahrscheinlichkeiten</title>
+  <meta name="description" content="Bruchrechnung kurz und knapp | Wahrscheinlichkeiten" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Bruchrechnung kurz und knapp | Wahrscheinlichkeiten" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="./images/würfel.jpg" />
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Bruchrechnung kurz und knapp | Wahrscheinlichkeiten" />
+  
+  
+  <meta name="twitter:image" content="./images/würfel.jpg" />
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="2-vorwissen.html"/>
+<link rel="next" href="deskriptive-statistik-zum-nachlesen.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script>
+
+/* update total correct if #total_correct exists */
+update_total_correct = function() {
+  if (t = document.getElementById("total_correct")) {
+    t.innerHTML =
+      document.getElementsByClassName("correct").length + " of " +
+      document.getElementsByClassName("solveme").length + " correct";
+  }
+}
+
+/* solution button toggling function */
+b_func = function() {
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "");
+  }
+  
+  if (my_answer !== "" & real_answers.includes(my_answer)) {
+    cl.add("correct");
+  } else {
+    cl.remove("correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);  
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("correct");
+    } else {
+      cl.remove("correct");
+    }  
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("correct");
+    }  
+  }
+  
+  update_total_correct();
+}
+
+window.onload = function() {
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+  
+  /* set up solveme inputs */
+  var solveme = document.getElementsByClassName("solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off"); 
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+    
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+    
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+  }
+  
+  update_total_correct();
+}
+
+</script>
+
+
+
+<link rel="stylesheet" href="webex.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><center><a href="https://gdischinger.github.io/Wahrscheinlichkeit-8"><img src="images/würfel.jpg" alt="logo" width="60%" height="60%"style="margin: 15px 0 0 0"></a></center></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Was erwartet dich?</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#aktuelles"><i class="fa fa-check"></i>Aktuelles</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#allgemeine-informationen-zum-ablauf"><i class="fa fa-check"></i>Allgemeine Informationen zum Ablauf</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="1-einführung-warum-du-dich-mit-wahrscheinlichkeiten-unbedingt-beschäftigen-solltest.html"><a href="1-einführung-warum-du-dich-mit-wahrscheinlichkeiten-unbedingt-beschäftigen-solltest.html"><i class="fa fa-check"></i><b>1</b> Einführung - Warum du dich mit Wahrscheinlichkeiten unbedingt beschäftigen solltest…</a></li>
+<li class="chapter" data-level="2" data-path="2-vorwissen.html"><a href="2-vorwissen.html"><i class="fa fa-check"></i><b>2</b> Vorwissen</a>
+<ul>
+<li class="chapter" data-level="" data-path="bruchrechnung-kurz-und-knapp.html"><a href="bruchrechnung-kurz-und-knapp.html"><i class="fa fa-check"></i>Bruchrechnung kurz und knapp</a>
+<ul>
+<li class="chapter" data-level="" data-path="bruchrechnung-kurz-und-knapp.html"><a href="bruchrechnung-kurz-und-knapp.html#brüche-kürzen-und-erweitern"><i class="fa fa-check"></i>Brüche kürzen und erweitern</a></li>
+<li class="chapter" data-level="" data-path="bruchrechnung-kurz-und-knapp.html"><a href="bruchrechnung-kurz-und-knapp.html#brüche-in-dezimalzahlen-oder-prozentangaben-umwandeln"><i class="fa fa-check"></i>Brüche in Dezimalzahlen oder Prozentangaben umwandeln</a></li>
+<li class="chapter" data-level="" data-path="bruchrechnung-kurz-und-knapp.html"><a href="bruchrechnung-kurz-und-knapp.html#mit-brüchen-rechnen"><i class="fa fa-check"></i>Mit Brüchen rechnen</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="deskriptive-statistik-zum-nachlesen.html"><a href="deskriptive-statistik-zum-nachlesen.html"><i class="fa fa-check"></i>Deskriptive Statistik zum Nachlesen</a>
+<ul>
+<li class="chapter" data-level="" data-path="deskriptive-statistik-zum-nachlesen.html"><a href="deskriptive-statistik-zum-nachlesen.html#absolute-und-relative-häufigkeiten-ermitteln"><i class="fa fa-check"></i>Absolute und relative Häufigkeiten ermitteln</a></li>
+<li class="chapter" data-level="" data-path="deskriptive-statistik-zum-nachlesen.html"><a href="deskriptive-statistik-zum-nachlesen.html#häufigkeiten-in-tabellen-säulen--und-kreisdiagrammen-darstellen"><i class="fa fa-check"></i>Häufigkeiten in Tabellen, Säulen- und Kreisdiagrammen darstellen</a></li>
+<li class="chapter" data-level="" data-path="deskriptive-statistik-zum-nachlesen.html"><a href="deskriptive-statistik-zum-nachlesen.html#das-arithmetische-mittel-die-spannweite-und-den-median-angeben"><i class="fa fa-check"></i>Das arithmetische Mittel, die Spannweite und den Median angeben</a></li>
+<li class="chapter" data-level="" data-path="deskriptive-statistik-zum-nachlesen.html"><a href="deskriptive-statistik-zum-nachlesen.html#box-plots-interpretieren-und-erstellen"><i class="fa fa-check"></i>Box-Plots interpretieren und erstellen</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="wahrscheinlichkeit-da-war-doch-was.html"><a href="wahrscheinlichkeit-da-war-doch-was.html"><i class="fa fa-check"></i>Wahrscheinlichkeit - da war doch was</a>
+<ul>
+<li class="chapter" data-level="" data-path="wahrscheinlichkeit-da-war-doch-was.html"><a href="wahrscheinlichkeit-da-war-doch-was.html#zufallsexperimente-erkennen"><i class="fa fa-check"></i>Zufallsexperimente erkennen</a></li>
+<li class="chapter" data-level="" data-path="wahrscheinlichkeit-da-war-doch-was.html"><a href="wahrscheinlichkeit-da-war-doch-was.html#die-ergebnismenge-eines-einfachen-zufallsexperiments"><i class="fa fa-check"></i>Die Ergebnismenge eines einfachen Zufallsexperiments</a></li>
+<li class="chapter" data-level="" data-path="wahrscheinlichkeit-da-war-doch-was.html"><a href="wahrscheinlichkeit-da-war-doch-was.html#die-wahrscheinlichkeit-eines-ereignisses"><i class="fa fa-check"></i>Die Wahrscheinlichkeit eines Ereignisses</a></li>
+<li class="chapter" data-level="" data-path="wahrscheinlichkeit-da-war-doch-was.html"><a href="wahrscheinlichkeit-da-war-doch-was.html#eigenschaften-der-wahrscheinlichkeit"><i class="fa fa-check"></i>Eigenschaften der Wahrscheinlichkeit</a></li>
+<li class="chapter" data-level="" data-path="wahrscheinlichkeit-da-war-doch-was.html"><a href="wahrscheinlichkeit-da-war-doch-was.html#das-empirische-gesetz-der-großen-zahlen"><i class="fa fa-check"></i>Das empirische Gesetz der großen Zahlen</a></li>
+<li class="chapter" data-level="" data-path="wahrscheinlichkeit-da-war-doch-was.html"><a href="wahrscheinlichkeit-da-war-doch-was.html#laplace-experimente-und-ihre-wahrscheinlichkeiten"><i class="fa fa-check"></i>Laplace-Experimente und ihre Wahrscheinlichkeiten</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-mehrstufige-zufallsexperimente.html"><a href="3-mehrstufige-zufallsexperimente.html"><i class="fa fa-check"></i><b>3</b> Mehrstufige Zufallsexperimente</a></li>
+<li class="chapter" data-level="4" data-path="4-baumdiagramme.html"><a href="4-baumdiagramme.html"><i class="fa fa-check"></i><b>4</b> Baumdiagramme</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="4-1-ein-baumdiagramm-was-ist-das.html"><a href="4-1-ein-baumdiagramm-was-ist-das.html"><i class="fa fa-check"></i><b>4.1</b> Ein Baumdiagramm - Was ist das?</a></li>
+<li class="chapter" data-level="4.2" data-path="4-2-wahrscheinlichkeiten-und-baumdiagramme.html"><a href="4-2-wahrscheinlichkeiten-und-baumdiagramme.html"><i class="fa fa-check"></i><b>4.2</b> Wahrscheinlichkeiten und Baumdiagramme</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="4-2-wahrscheinlichkeiten-und-baumdiagramme.html"><a href="4-2-wahrscheinlichkeiten-und-baumdiagramme.html#produktregel"><i class="fa fa-check"></i><b>4.2.1</b> Produktregel</a></li>
+<li class="chapter" data-level="4.2.2" data-path="4-2-wahrscheinlichkeiten-und-baumdiagramme.html"><a href="4-2-wahrscheinlichkeiten-und-baumdiagramme.html#summenregel"><i class="fa fa-check"></i><b>4.2.2</b> Summenregel</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="4-3-baumdiagramme-geschickt-nutzen.html"><a href="4-3-baumdiagramme-geschickt-nutzen.html"><i class="fa fa-check"></i><b>4.3</b> Baumdiagramme geschickt nutzen</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-übungsaufgaben.html"><a href="5-übungsaufgaben.html"><i class="fa fa-check"></i><b>5</b> Übungsaufgaben</a></li>
+<li class="chapter" data-level="6" data-path="6-abschlussquiz.html"><a href="6-abschlussquiz.html"><i class="fa fa-check"></i><b>6</b> Abschlussquiz</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Wahrscheinlichkeiten</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="bruchrechnung-kurz-und-knapp" class="section level2 unnumbered">
+<h2>Bruchrechnung kurz und knapp</h2>
+<style type="text/css">
+.box {
+        display: flex;
+      }
+
+      .box > * {
+        flex: 1 1 0;
+      }
+</style>
+<script language="javascript">
+function toggle(num) {
+var ele = document.getElementById("toggleText" + num);
+var text = document.getElementById("displayText" + num);
+if(ele.style.display == "block") {
+ele.style.display = "none";
+text.innerHTML = "show";
+}
+else {
+ele.style.display = "block";
+text.innerHTML = "hide";
+}
+}
+</script>
+<div id="brüche-kürzen-und-erweitern" class="section level3 unnumbered">
+<h3>Brüche kürzen und erweitern</h3>
+<p>Einen Bruch <span class="math inline">\(a \over b\)</span> mit einer Zahl <span class="math inline">\(c\)</span> <strong>erweitern</strong>, bedeutet, dass man <strong>den Zähler und den Nenner</strong> mit <span class="math inline">\(c\)</span> <strong>multipliziert</strong>: <span class="math inline">\(a \over b\)</span> erweitert mit <span class="math inline">\(c\)</span> ergibt also <span class="math inline">\(a \cdot c \over b \cdot c\)</span>.</p>
+<p><strong>Dividiert</strong> man <strong>Zähler und Nenner</strong> eines Bruches <span class="math inline">\(x \over y\)</span> durch dieselbe Zahl <span class="math inline">\(z\)</span>, sagt man, <span class="math inline">\(x \over y\)</span> wird mit <span class="math inline">\(z\)</span> <strong>gekürzt</strong>.</p>
+<p>Ein Bruch <span class="math inline">\(e \over f\)</span> heißt <strong>vollständig gekürzt</strong>, wenn Zähler und Nenner teilerfremd sind. <span class="math inline">\(2 \over 3\)</span> oder <span class="math inline">\(1 \over 4\)</span> sind beispielsweise vollständig gekürzt. <span class="math inline">\(9 \over 15\)</span> dagegen nicht, da man sowohl <span class="math inline">\(9\)</span> als auch <span class="math inline">\(15\)</span> durch <span class="math inline">\(3\)</span> dividieren kann.</p>
+<div id="section" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe" class="section level4 unnumbered">
+<h4>Aufgabe</h4>
+<div class="box">
+<div>
+<button id="displayText" onclick="javascript:toggle(1);">
+Erweitere <span class="math inline">\(1 \over 5\)</span> mit <span class="math inline">\(2\)</span>
+</button>
+<div id="toggleText1" style="display: none">
+<p><span class="math inline">\(2 \over 10\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(2);">
+Erweitere <span class="math inline">\(2 \over 3\)</span> mit <span class="math inline">\(5\)</span>
+</button>
+<div id="toggleText2" style="display: none">
+<p><span class="math inline">\(10 \over 15\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(3);">
+Erweitere <span class="math inline">\(3 \over 4\)</span> mit <span class="math inline">\(6\)</span>
+</button>
+<div id="toggleText3" style="display: none">
+<p><span class="math inline">\(18 \over 24\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(4);">
+Erweitere <span class="math inline">\(17 \over 19\)</span> mit <span class="math inline">\(3\)</span>
+</button>
+<div id="toggleText4" style="display: none">
+<p><span class="math inline">\(51 \over 57\)</span></p>
+</div>
+</div>
+<div>
+<button id="displayText" onclick="javascript:toggle(5);">
+Kürze vollständig: <span class="math inline">\(8 \over 12\)</span>
+</button>
+<div id="toggleText5" style="display: none">
+<p><span class="math inline">\(2 \over 3\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(6);">
+Kürze vollständig: <span class="math inline">\(8 \over 24\)</span>
+</button>
+<div id="toggleText6" style="display: none">
+<p><span class="math inline">\(1 \over 3\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(7);">
+Kürze vollständig: <span class="math inline">\(72 \over 48\)</span>
+</button>
+<div id="toggleText7" style="display: none">
+<p><span class="math inline">\(3 \over 2\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(8);">
+Kürze vollständig: <span class="math inline">\(21 \over 33\)</span>
+</button>
+<div id="toggleText8" style="display: none">
+<p><span class="math inline">\(7 \over 11\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div id="section-1" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="section-2" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+</div>
+<div id="brüche-in-dezimalzahlen-oder-prozentangaben-umwandeln" class="section level3 unnumbered">
+<h3>Brüche in Dezimalzahlen oder Prozentangaben umwandeln</h3>
+<p>Möchte man einen Bruch als Dezimalzahl schreiben, muss man den Zähler (schriftlich oder mit Hilfe des Taschenrechners) durch den Nenner dividieren.</p>
+<p>Eine Dezimalzahl kann man nun wiederum sehr einfach auch als Prozentzahl angeben: Man verschiebt einfach das Komma um zwei Stellen nach rechts und schreibt hinter die auf diese Weise entstandene Zahl ein %-Zeichen.</p>
+<div id="section-3" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-1" class="section level4 unnumbered">
+<h4>Aufgabe</h4>
+<div class="box">
+<div>
+<button id="displayText" onclick="javascript:toggle(9);">
+Schreibe als Dezimalzahl<span class="math inline">\(14 \over 10\)</span>
+</button>
+<div id="toggleText9" style="display: none">
+<p><span class="math inline">\(1,4\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(10);">
+Schreibe als Dezimalzahl<span class="math inline">\(14 \over 100\)</span>
+</button>
+<div id="toggleText10" style="display: none">
+<p><span class="math inline">\(0,14\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(11);">
+Schreibe als Dezimalzahl<span class="math inline">\(12 \over 15\)</span>
+</button>
+<div id="toggleText11" style="display: none">
+<p><span class="math inline">\(0,8\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(12);">
+Schreibe als Dezimalzahl<span class="math inline">\(-{6 \over 4}\)</span>
+</button>
+<div id="toggleText12" style="display: none">
+<p><span class="math inline">\(-1,5\)</span></p>
+</div>
+</div>
+<div>
+<button id="displayText" onclick="javascript:toggle(13);">
+Schreibe in Prozent: <span class="math inline">\(7 \over 20\)</span>
+</button>
+<div id="toggleText13" style="display: none">
+<p><span class="math inline">\(35\%\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(14);">
+Schreibe in Prozent: <span class="math inline">\(18 \over 48\)</span>
+</button>
+<div id="toggleText14" style="display: none">
+<p><span class="math inline">\(37,5\%\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(15);">
+Schreibe in Prozent: <span class="math inline">\(19 \over 38\)</span>
+</button>
+<div id="toggleText15" style="display: none">
+<p><span class="math inline">\(50\%\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(16);">
+Schreibe in Prozent: <span class="math inline">\(38 \over 19\)</span>
+</button>
+<div id="toggleText16" style="display: none">
+<p><span class="math inline">\(200\%\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div id="section-4" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="section-5" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+</div>
+<div id="mit-brüchen-rechnen" class="section level3 unnumbered">
+<h3>Mit Brüchen rechnen</h3>
+<p>Zwei Brüche werden <strong>multipliziert</strong>, indem man Zähler mit Zähler und Nenner mit Nenner multipliziert.
+<span class="math display">\[{a \over b} \cdot {c \over d} = {a \cdot c \over b \cdot d} \]</span></p>
+<p>Durch einen Bruch wird <strong>dividiert</strong>, indem <strong>mit seinem Kehrbruch multipliziert</strong> wird.
+<span class="math display">\[{e \over f} : {x \over y} = {e \cdot y \over f \cdot x}\]</span></p>
+<p>Sollen zwei Brüche <strong>addiert</strong> oder <strong>subtrahiert</strong> werden, muss man sie zunächst <strong>auf den gleichen Nenner bringen</strong>. Anschließend <strong>addiert</strong> bzw. <strong>subtrahiert</strong> man die Zähler.</p>
+<p><span class="math display">\[{m \over n}+{p \over q} = \frac{m \cdot q}{n \cdot q} + \frac{p \cdot n}{q \cdot n} = {m \cdot q + n \cdot p \over n \cdot q}\]</span>
+<span class="math display">\[{m \over n}-{p \over q} = \frac{m \cdot q}{n \cdot q} - \frac{p \cdot n}{q \cdot n} = {m \cdot q - n \cdot p \over n \cdot q}\]</span></p>
+<div id="section-6" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-2" class="section level4 unnumbered">
+<h4>Aufgabe</h4>
+<div class="box">
+<div>
+<button id="displayText" onclick="javascript:toggle(17);">
+<span class="math inline">\({1 \over 3}\cdot{2 \over 7}\)</span>
+</button>
+<div id="toggleText17" style="display: none">
+<p><span class="math inline">\(2 \over 21\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(18);">
+<span class="math inline">\(-{2 \over 5}\cdot{3 \over 4}\)</span>
+</button>
+<div id="toggleText18" style="display: none">
+<p><span class="math inline">\(-{3 \over 10}\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(19);">
+<span class="math inline">\(7\cdot{6 \over 49}\)</span>
+</button>
+<div id="toggleText19" style="display: none">
+<p><span class="math inline">\(6 \over 7\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(20);">
+<span class="math inline">\({3 \over 4}:{9 \over 10}\)</span>
+</button>
+<div id="toggleText20" style="display: none">
+<p><span class="math inline">\(5 \over 6\)</span></p>
+</div>
+</div>
+<div>
+<button id="displayText" onclick="javascript:toggle(21);">
+<span class="math inline">\({8 \over 9}:2\)</span>
+</button>
+<div id="toggleText21" style="display: none">
+<p><span class="math inline">\(4 \over 9\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(22);">
+<span class="math inline">\(-{15 \over 14}:(-{10 \over 21})\)</span>
+</button>
+<div id="toggleText22" style="display: none">
+<p><span class="math inline">\(9 \over 4\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(23);">
+<span class="math inline">\({5 \over 6}+{1 \over 4}\)</span>
+</button>
+<div id="toggleText23" style="display: none">
+<p><span class="math inline">\(13 \over 12\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(24);">
+<span class="math inline">\({5 \over 6}-{1 \over 4}\)</span>
+</button>
+<div id="toggleText24" style="display: none">
+<p><span class="math inline">\(7 \over 12\)</span></p>
+</div>
+</div>
+<div>
+<button id="displayText" onclick="javascript:toggle(25);">
+<span class="math inline">\({12 \over 5}+3\)</span>
+</button>
+<div id="toggleText25" style="display: none">
+<p><span class="math inline">\(27 \over 5\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(26);">
+<span class="math inline">\({2 \over 15}-{11 \over 6}\)</span>
+</button>
+<div id="toggleText26" style="display: none">
+<p><span class="math inline">\(-{\frac{17}{10}}\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(27);">
+<span class="math inline">\({7 \over 3}+{3 \over 2}\)</span>
+</button>
+<div id="toggleText27" style="display: none">
+<p><span class="math inline">\(23 \over 6\)</span></p>
+</div>
+<p><br></p>
+<button id="displayText" onclick="javascript:toggle(28);">
+<span class="math inline">\(4-{49 \over 64}\)</span>
+</button>
+<div id="toggleText28" style="display: none">
+<p><span class="math inline">\(207 \over 64\)</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="2-vorwissen.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="deskriptive-statistik-zum-nachlesen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "serif",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection",
+"scroll_highlighting": true,
+"scroll_highlight": true
+},
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

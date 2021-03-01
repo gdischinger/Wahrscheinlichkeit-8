@@ -1,7 +1,8 @@
 einführung---warum-du-dich-mit-wahrscheinlichkeiten-unbedingt-beschäftigen-solltest
 vorwissen
-checkliste
-eingangsquiz
+bruchrechnung-kurz-und-knapp
+deskriptive-statistik-zum-nachlesen
+wahrscheinlichkeit---da-war-doch-was
 mehrstufige-zufallsexperimente
 baumdiagramme
 ein-baumdiagramm---was-ist-das
