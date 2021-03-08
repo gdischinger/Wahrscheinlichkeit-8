@@ -1,26 +1,26 @@
 {
-    "id": "B6FFF147",
-    "path": "~/github/Lernpfade/8_Wahrscheinlichkeit/Wahrscheinlichkeit-8/index.Rmd",
-    "project_path": "index.Rmd",
+    "id": "5DF6B4ED",
+    "path": "~/github/Lernpfade/8_Wahrscheinlichkeit/Wahrscheinlichkeit-8/Vorwissen.Rmd",
+    "project_path": "Vorwissen.Rmd",
     "type": "r_markdown",
-    "hash": "2931136251",
+    "hash": "2725409105",
     "contents": "",
     "dirty": false,
-    "created": 1615173985732.0,
+    "created": 1615174713217.0,
     "source_on_save": false,
     "relative_order": 2,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "61,62",
-        "scrollLine": "42"
+        "cursorPosition": "1050,38",
+        "scrollLine": "1035"
     },
     "folds": "",
-    "lastKnownWriteTime": 1615174025,
+    "lastKnownWriteTime": 1615175430,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1615174025420,
+    "last_content_update": 1615175430741,
     "read_only": false,
     "read_only_alternatives": []
 }
