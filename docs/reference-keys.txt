@@ -3,9 +3,8 @@ vorwissen
 bruchrechnung-kurz-und-knapp
 deskriptive-statistik-zum-nachlesen
 wahrscheinlichkeit---da-war-doch-was
-mehrstufige-zufallsexperimente
 baumdiagramme
-ein-baumdiagramm---was-ist-das
+mehrstufige-zufallsexperimente
 wahrscheinlichkeiten-und-baumdiagramme
 produktregel
 summenregel
