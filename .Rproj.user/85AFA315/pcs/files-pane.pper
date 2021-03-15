@@ -2,7 +2,7 @@
     "sortOrder": [
         {
             "columnIndex": 2,
-            "ascending": false
+            "ascending": true
         }
     ],
     "path": "~/github/Lernpfade/8_Wahrscheinlichkeit/Wahrscheinlichkeit-8"

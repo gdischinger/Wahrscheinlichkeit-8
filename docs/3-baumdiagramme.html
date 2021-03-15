@@ -237,6 +237,148 @@ window.onload = function() {
             <section class="normal" id="section-">
 <div id="baumdiagramme" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Baumdiagramme</h1>
+<p>Wie du dich spätestens jetzt wieder erinnerst, geht es bei dem Thema “Wahrscheinlichkeit” eigentlich nur darum, richtig zu zählen.</p>
+<p>Entweder man führt ein Zufallsexperiment schrecklich oft durch und ermittelt die relativen Häufigkeiten, dann muss man also die Anzahl der Durchführungen des Zufallsexperimentes ordentlich mitzählen und eine saubere Strichliste für das Auftreten der einzelnen möglichen Ergebnisse führen und sie hinterher auszählen.</p>
+<p><img src="images/Strichliste.jpeg" height="250" /></p>
+<p>Oder - im Falle der Laplace-Wahrscheinlichkeit - man zählt die für das jeweilige Ereignis günstigen Ergebnisse (z.B. die Zahlen 2, 4 und 6, wenn das Ereignis “Würfeln einer geraden Zahl” lautet) und dividiert diese durch die Anzahl der möglichen Ergebnisse (beim sechsseitigen Würfel also die Ergebnisse 1, 2, 3, 4, 5 und 6). Hier gilt ja für die Wahrscheinlichkeit eines Ereignisses immer:</p>
+<p><span class="math inline">\(P(Ereignis) = \frac{\;fuer\;das\;Ereignis\;guenstige\;Ergebnisse}{alle\;moeglichen\;Ergebnisse}\)</span></p>
+<p>Betrachte für ein weiteres kleines Beispiel noch einmal kurz folgendes Glücksrad:</p>
+<p><img src="images/gl%C3%BCcksradZahlFarbe.png" height="250" /></p>
+<p>Da alle acht Kreissektoren gleich groß sind, bleibt das Glücksrad also bei jedem der acht Sektoren mit der gleichen Wahrscheinlichkeit stehen - hier handelt es sich um ein Laplace-Experimet, bei dem es acht mögliche Ergebnisse gibt. (Nein, genau auf einer Grenze zwischen zwei Sektoren kann das Glücksrad nicht stehen bleiben. So ist das in Mathe.) Das Glücksrad kann so stehen bleiben, dass der Zeiger auf den Sektor mit der 1 zeigt oder auf den Sektor mit der 2 oder auf den Sektor mit der 3 oder auf den Sektor mit der 4 oder auf den Sektor mit der 5 oder auf den Sektor mit der 6 oder auf den Sektor mit der 7 oder auf den Sektor mit der 8. (Puh)</p>
+<p>Möchte man nun berechnen, wie groß die Wahrscheinlichkeit ist, dass das Glücksrad so stehen bleibt, dass der Zeiger am Ende auf einen blauen Sektor zeigt, dann muss man also noch zählen, wie viele blaue Sektoren es gibt. Es gibt zwei blaue Sektoren: den mit der 1 und den mit der 5. Dann setzt man seine Zählergebnisse in die Laplace-Formel ein:</p>
+<p><span class="math display">\[P(blau)=\frac{2}{8}=\frac{1}{4}=0,25\]</span>
+Das war’s.</p>
+<p>In beiden Fällen (Strichliste und Laplace-Wahrscheinlichkeit) ermittelt man die Wahrscheinlichkeit also durch Abzählen. Mehr muss man nicht tun - nur richtig zählen sollte man.</p>
+<div id="wofür-dann-jetzt-ein-baum" class="section level4 unnumbered">
+<h4>Wofür dann jetzt ein Baum?</h4>
+<p>Beim Richtigzählen kann einem ein Baumdiagramm helfen. Es hilft einem nämlich den Überblick zu behalten. Sicher, wenn man nur abzählen soll, wie viele Ergebnisse es geben kann, wenn man mit einem sechseitigen Würfel würfelt, obiges Glücksrad dreht oder eine Münze wirft, dann braucht man kein Baumdiagramm, um den Überblick zu behalten. Zählen kann aber ganz schön schnell ganz schön schwierig werden.</p>
+<p>Wenn sich Frau D. anziehen muss, stellt sich natürlich (auch bei ihrem spärlich ausgestatteten Kleiderschrank) die Frage, welche Hose sie mit welchem Pulli kombinieren soll.</p>
+<p><img src="images/wasZiehIchAn.png" height="300" /></p>
+<p>Bei lediglich zwei Hosen und drei Pullis braucht man zugegebenermaßen auch nicht unbedingt einen helfenden Baum. Die sechs Möglichkeiten kann man vermutlich noch ohne Baumdiagramm notieren. Aber auch hier hilft der Baum, den Überblick zu behalten. Mit seiner Hilfe kann man alle Kleidungskombinationen übersichtlich darstellen.</p>
+<p>Jeder Pfad durch den Baum entspricht einer Kleidungskombination. Die Gesamtzahl der Möglichkeiten entspricht der Anzahl der Baumenden. Die Anzahl der unterschiedlichen Kombinationen lässt sich aber auch berechnen. Man erhält sie, indem man die Anzahlen der Möglichkeiten auf den einzelnen Stufen multipliziert. Hier gibt es 2 Hosen und 3 Pullis. Damit erhält man <span class="math inline">\(2 \cdot 3 = 6\)</span> Kleidungskombinationen.</p>
+</div>
+<div id="beispiel-1" class="section level4 unnumbered">
+<h4>Beispiel 1</h4>
+<p>Aus den Ziffern 2, 4 und 6 sollen dreistellige Zahlen gebildet werden. Erstelle ein Baumdiagramm, dem alle dreistelligen Zahlen entnommen werden können, die gebildet werden können, ..</p>
+<ol style="list-style-type: lower-alpha">
+<li>… wenn jede Ziffer nur einmal vorkommen darf.</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p><img src="images/Baumdiagramm1Beispiel1a.png" height="250" /></p>
+</div>
+<div id="section-102" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>… wenn jede Ziffer mehrmals vorkommen darf.</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p><img src="images/Baumdiagramm1Beispiel1b.png" height="250" /></p>
+</div>
+<div id="section-103" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Wie viele dreistellige Zahlen können in Teilaufgabe a), wie viele in Teilaufgabe b) gebildet werden?</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Wenn jede Ziffer nur einmal vorkommen darf, können folgende 6 Zahlen gebildet werden: 246, 264, 426, 462, 624, 642</p>
+<p>Wenn jede Ziffer mehrmals vorkommen darf, können 27 Zahlen gebildet werden. Du kannst sie die Pfade entlang ablesen. Die kleinste ist 222, die größte ist 666.</p>
+</div>
+<div id="section-104" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="beispiel-2" class="section level4 unnumbered">
+<h4>Beispiel 2</h4>
+<p>Pepe und Nele spielen “Schere, Stein, Papier”.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Stelle die möglichen Kombinationen in einem Baumdiagramm dar.</p></li>
+<li><p>Bei wie vielen Kombinationen gewinnt Pepe?</p></li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<ol style="list-style-type: lower-alpha">
+<li>Auf der ersten Stufe wird Pepes Wahl notiert, auf der zweiten Stufe steht die Wahl von Nele:</li>
+</ol>
+<p><img src="images/Baumdiagramm1Beispiel2a.png" height="250" /></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Die Pfade, die Spielsituationen darstellen, in denen Pepe gewinnt, sind markiert:</li>
+</ol>
+<p><img src="images/Baumdiagramm1Beispiel2b.png" height="250" /></p>
+</div>
+<div id="section-105" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-1-11" class="section level4 unnumbered">
+<h4>Aufgabe 1</h4>
+<p>In der Mensa der Schule kann man zwischen zwei Vorspeisen (Suppe, Salat), drei Hauptgerichten (Fleisch, vegetarisch, vegan) und zwei Nachspeisen (Joghurt, Obst) wählen.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Ermittle die Anzahl der möglichen Menüs.</p></li>
+<li><p>Stelle die Möglichkeiten in einem Baumdiagramm dar.</p></li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-106" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-2-11" class="section level4 unnumbered">
+<h4>Aufgabe 2</h4>
+<p>Ein Passwort besteht aus den Buchstaben H, U und T. Jeder Buchstabe kommt genau einmal vor. Ermittle die Anzahl der möglichen Passwörter…</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>… rechnerisch.</p></li>
+<li><p>… mit einem Baumdiagramm.</p></li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-107" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-3-5" class="section level4 unnumbered">
+<h4>Aufgabe 3</h4>
+<p>Emily verbringt ein paar Tage in Passau. Sie möchte den Passauer Dom und die Feste Oberhaus besichtigen sowie auf einem der berühmten Schiffe ein bisschen auf Donau und Inn herumschippern. Ermittle die Anzahl der Möglichkeiten für die Reihenfolge der Besichtigungen.</p>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-108" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-4-2" class="section level4 unnumbered">
+<h4>Aufgabe 4</h4>
+<p>In Peters Zimmer hängen vier Bilder. Er überlegt, die Bilder umzuhängen.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Ermittle die Anzahl der Möglichkeiten, die vier Bilder auf die vier Plätze zu verteilen.</p></li>
+<li><p>Peter sortiert ein Bild aus und hängt die anderen drei Bilder wieder auf. Ermittle, wie sich die Anzahl der Möglichkeiten ändert. Erläutere deine Lösung.</p></li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-109" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+</div>
 </div>
             </section>
 

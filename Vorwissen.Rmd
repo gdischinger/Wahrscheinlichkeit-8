@@ -1287,6 +1287,21 @@ c) Man würfelt zwei "normale" Würfel und bildet anschließend die Augensumme.
 
 #### {-}
 
+`r hide("Lösung")`
+
+a) Würfel mit acht Seiten: $\Omega =\{1,\;2,\;3,\;4,\;5,\;6,\;7,\;8\}$
+
+
+Würfel mit zwanzig Seiten: $\Omega =\{1,\;2,\;3,\;4,...,\;16,\;17,\;18,\;19,\;20\}$
+
+b) Erstes Glücksrad: $\Omega = \{rot,\;blau,\;gelb,\;gruen \}$
+
+Zweites Glücksrad:  $\Omega = \{rot,\;orange/Hauptgewinn,\;gelb,\;gruen,\;hellblau,\;dunkelblau \}$
+
+c) Die Augensumme bei einem Wurf mit zwei Würfeln: $\Omega =\{2,\;3,\;4,\;5,\;6,\;7,\;8,\;9,\;10,\;11,\;12\}$
+
+#### {-}
+
 ```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
 cat('<hr style="background-color:#3C6690;height:2px">')
 ```
@@ -1296,9 +1311,25 @@ Beschreibe passende Zufallsexperimente für folgende Ergebnismengen.
 
 a) $\Omega = \{weiß,\; schwarz,\; rot,\; blau \}$
 
+`r hide("Lösung")`
+
+Man dreht ein Glücksrad, das vier Sektoren mit den Farben weiß, schwarz, rot und blau hat.
+
+#### {-}
+
 b) $\Omega = \{Niete,\; kleiner\;Gewinn,\; mittlerer\;Gewinn,\; großer\;Gewinn \}$
 
+`r hide("Lösung")`
+
+Man zieht ein Los aus einer Lostrommel, die Nieten, kleine, mittlere und große Gewinne enthält.
+
+#### {-}
+
 c) $\Omega = \{Song1,\; Song2,\; Song3,\; Song4 \}$
+
+`r hide("Lösung")`
+
+Man wählt "zufällige Wiedergabe" bei einer Playliste, die nur vier Songs enthält.
 
 #### {-}
 
@@ -1359,13 +1390,41 @@ Als Zufallsexperiment zieht man nun eine Kugel aus der Urne. Formuliere Ereignis
 
 a) Die Ereignismenge umfasst 3 Ergebnisse.
 
+`r hide("Lösung")`
+
+Ereignis: Die Zahl auf der gezogenen Kugel ist durch 3 teilbar. Ereignismenge: $E=\{3,\;6,\;9\}$
+
+#### {-}
+
 b) Die Ereignismenge umfasst kein Ergebnis.
+
+`r hide("Lösung")`
+
+Ereignis: Es wird eine weiße Kugel gezogen. Ereignismenge: $E=\{\quad\}$
+
+#### {-}
 
 c) Die Ereignismenge umfasst 4 Ergebnisse.
 
+`r hide("Lösung")`
+
+Ereignis: Es wird eine Kugel gezogen, auf der eine Zahl steht, die kleiner ist als 5. Ereignismenge: $E=\{1,\;2,\;3,\;4\}$
+
+#### {-}
+
 d) Die Ereignismenge umfasst ein Ergebnis.
 
+`r hide("Lösung")`
+
+Ereignis: Die gelbe Kugel wird gezogen. Ereignismenge: $E=\{10\}$ 
+
+#### {-}
+
 e) Die Ereignismenge umfasst 6 Ergebnisse.
+
+`r hide("Lösung")`
+
+Ereignis: Es wird eine Kugel gezogen, auf der eine Zahl zwischen 1 und 6 steht. Ereignismenge: $E=\{1,\;2,\;3,\;4,\;5,\;6\}$
 
 #### {-}
 
@@ -1378,12 +1437,34 @@ Schreibe die Ereignismengen zu folgenden Ereignissen auf.
 
 a) Bei einem Würfelwurf fällt eine ungerade Zahl.
 
+`r hide("Lösung")`
+
+Ereignismenge: $E=\{1,\;3,\;5\}$
+
+#### {-}
+
 b) Beim Roulett wird kein schwarzes und kein rotes Feld getroffen.
+
+`r hide("Lösung")`
+
+Ereignismenge: $E=\{Null\}$ (Die Null ist ein grünes Feld.) 
+
+#### {-}
 
 c) Alle möglichen Geburtstage im Monat Februar für die gilt, dass sie nach dem 29.2. stattfinden.
 
+`r hide("Lösung")`
+
+Ereignismenge: $E=\{\quad\}$
+
+#### {-}
+
 d) Aus einem Skatspiel (32 Karten) wird entweder eine Herz-Karte gezogen oder ein Ass.
- 
+
+`r hide("Lösung")`
+
+Ereignismenge: $E=\{Herz7,\;Herz8,\;Herz9,\;Herz10,\;HerzBube,\;HerzDame,\;HerzKoenig,\;HerzAss,\;KaroAss,\;PikAss,\;KreuzAss\}$
+
 
 #### {-}
 
@@ -1396,12 +1477,33 @@ Formuliere zu den folgenden zu einem Würfelwurf gehörenden Ereignismengen pass
 
 a) $E=\{1,\;2,\;3\}$
 
+`r hide("Lösung")`
+
+Es wird eine Zahl gewürfelt, die kleiner ist als 4.
+
+#### {-}
+
 b) $E=\{2,\;4,\;6\}$
+
+`r hide("Lösung")`
+
+Es wird eine gerade Zahl gewürfelt.
+
+#### {-}
 
 c) $E=\{1\}$
 
+`r hide("Lösung")`
+
+Die Zahl Eins wird gewürfelt.
+
+#### {-}
+
 d) $E=\{5,\;6\}$
 
+`r hide("Lösung")`
+
+Es wird eine Zahl gewürfelt, die größer oder gleich 5 ist.
 
 #### {-}
 
@@ -1461,9 +1563,26 @@ Was bedeuten die folgenden mathematischen Ausdrücke? Schreibe als Satz.
 
 a) $P(Augensumme\;12\;mit\;zwei\;Wuerfeln)=\frac{1}{36}$
 
+`r hide("Lösung")`
+
+Die Wahrscheinlichkeit mit zwei Würfeln die Augensumme 12 zu würfeln ist $\frac{1}{36}$. Das heißt, würfelt man 100 Mal mit zwei Würfeln gleichzeitig und ermittelt jedesmal die Augensumme, kann man etwa dreimal die Augensumme 12 erwarten.
+
+#### {-}
+
 b) $P(blind\;eine\;gelbe\;Murmel\;aus\;der\;Hosentasche\;ziehen)=\frac{1}{4}$
 
+`r hide("Lösung")`
+
+Die Wahrscheinlichkeit blind eine gelbe Murmel aus der Hosentasche zu ziehen ist $\frac{1}{4}$. Das heißt, zieht man 100 Mal eine Murmel aus der Hosentasche (und steckt sie danach immer wieder zurück!), kann man erwarten, dass man etwa 25 Mal eine gelbe Murmel erwischt.
+
+#### {-}
+
 c) $P(blind\;ein\;h\;tippen)=\frac{1}{70}$
+
+
+`r hide("Lösung")`
+
+Die Wahrscheinlichkeit blind ein h zu tippen ist $\frac{1}{70}$. Das heißt, tippt man 100 Mal blind auf die Tastatur, kann man erwarten, dass man etwa einmal ein h erwischt hat.
 
 
 #### {-}
@@ -1477,8 +1596,17 @@ Schreibe die Sätze kurz und knapp als mathematischen Ausdruck.
 
 a) Die Wahrscheinlichkeit dafür, dass Nepomuk eine Antwort auf eine Frage weiß, ist 64%. Stellt man ihm also 100 vergleichbare Fragen, so kann man erwarten, dass er 64 von diesen Fragen beantworten kann.
 
+`r hide("Lösung")`
+
+$P(Antwort)=0,64$
+
+#### {-}
+
 b) Die Wahrscheinlichkeit dafür, dass ein Marmeladenbrot auf der Marmeladenseite landet, ist 87%. Schmeißt man also das Marmeladenbrot 100 Mal vom Tisch, kann man erwarten, dass es 87 Mal auf der Marmeladenseite landet. Leider ist dann keine Marmelade mehr auf der Marmeladenseite.
 
+`r hide("Lösung")`
+
+$P(Marmeladenseitenlandung)=0,87$
 
 #### {-}
 
@@ -1536,9 +1664,36 @@ Wirf das Schwein!
 
 a) Setze die Anzahl der Würfe auf 10. Wiederhole die Wurfserie ein paar Mal und beobachte die Ergebnisse (auch die relativen Häufigkeiten). Was stellst du fest?
 
+`r hide("Lösung")`
+
+Die relativen Häufigkeiten schwanken bzw. ändern sich sehr stark: Mal landet das Schwein in 100% der Fällen auf der Seite und nie in einer andere Position, mal landet es nur in 20% der Fälle auf der Seite...
+
+#### {-}
+
 b) Setze die Anzahl der Würfe auf 100. Wiederhole die Wurfserie ein paar Mal und beobachte die Ergebnisse (auch die relativen Häufigkeiten). Was stellst du fest?
 
+`r hide("Lösung")`
+ 
+ Die relativen Häufigkeiten schwanken bzw. ändern sich noch stark, aber nicht mehr so extrem wie in Teilaufgabe a). Es kann aber durchaus sein, dass beispielsweise keine Landung auf der Schnauze, auf der Backe oder im Stehen vorgekommen ist.
+
+#### {-}
+
 c) Setze die Anzahl der Würfe auf 10000. Wiederhole die Wurfserie ein paar Mal und beobachte die Ergebnisse (auch die relativen Häufigkeiten). Was stellst du fest?
+
+`r hide("Lösung")`
+
+Die relativen Häufigkeiten ändern sich von Wurfserie zu Wurfserie kaum oder gar nicht mehr. Die so erhaltenen relativen Häufigkeiten können nun als Wahrscheinlichkeiten für die verschiedenen Landepositionen angenommen werden. Auf diese Weise erhält man folgende Wahrscheinlichkeiten für die verschiedenen Landepositionen:
+
+$P(Seite)=65\%$
+
+$P(Ruecken)=25\%$
+
+$P(Stehen)=7\%$
+
+$P(Backe)=1\%$
+
+$P(Schnauze)=2\%$
+
 
 #### {-}
 
@@ -1554,10 +1709,41 @@ Drehe das Glücksrad!
 
 a) Drehe das Glücksrad ("Rad drehen") mindestens 200 Mal. Beobachte dabei, was sich in der Tabelle und was sich im Diagramm ändert. Führe drei Serien durch.
 
+`r hide("Lösung")`
+
+Anfangs schwanken die relativen Häufigkeiten stark. Je öfter man das Glücksrad gedreht hat, desto stabiler bleiben die relativen Häufigkeiten. 
+
+Diese Schwankungen werden auch im Diagramm deutlich. Zunächst springen die Farbpunkte noch wild herum. Mit zunehmender Wiederholung des Experimentes nähern sie sich aber immer mehr den Linien in der gleichen Farbe an.
+
+So könnte das Bild aussehen, wenn man das Glücksrad 1000 mal gedreht hat.
+
+<img src="./images/Glücksrad1000Mal.png" height="250" />
+
+#### {-}
+
 b) Beschreibe das Experiment in eigenen Worten.
 
-<!-- <img src="./images/Glücksrad1000Mal.png" height="250" /> -->
+`r hide("Lösung")`
 
+Man dreht ein Glücksrad, das 10 gleich große Sektoren hat. Einer davon ist rot, zwei sind blau, drei sind grün und vier Sektoren sind orange. 
+
+Nach jeder Umdrehung wird in einer Tabelle der Treffer mitprotokolliert. Bleibt das Glücksrad also beispielsweise bei einem grünen Sektor stehen, so wird die Trefferanzahl bei der Farbe grün um 1 erhöht. 
+
+Gleichzeitig werden alle relativen Häufigkeiten aktualisiert. Gab es bisher dreimal die Farbe blau und einmal orange, verändern sich die relativen Häufigkeiten bei einem ersten Treffer für grün wie folgt:
+
+blau: von $\frac{3}{4}$ auf $\frac{3}{5}$
+
+orange: von $\frac{1}{4}$ auf $\frac{1}{5}$
+
+grün: von $0$ auf $\frac{1}{5}$
+
+rot bleibt bei $0$
+
+Diese relativen Häufigkeiten werden nun zusätzlich in einem Diagramm festgehalten. Nach jeder Drehung des Glücksrades werden die aktualisierten relativen Häufigkeiten als farbige Punkte in das Diagramm gezeichnet. 
+
+Als Orientierungshilfe dienen farbige Striche in dem Diagramm. Sie repräsentieren die theoretisch erwartbaren Wahrscheinlichkeiten: Drehen eines Glücksrades ist ein Laplace-Experiment, denn alle Sektoren sind gleich wahrscheinlich. Für die Farben gilt damit: Rot hat eine Wahrscheinlichkeit von $P(rot)=\frac{1}{10}$ (ein Sektor ist rot), Blau hat eine Wahrscheinlichkeit von $P(blau)=\frac{2}{10}$ (zwei Sektoren sind blau), Grün hat eine Wahrscheinlichkeit von $P(gruen)=\frac{3}{10}$ (drei Sektoren sind grün) und Orange hat eine Wahrscheinlichkeit von $P(orange)=\frac{4}{10}$ (vier Sektoren sind orange).
+
+Je öfter man das Experiment durchführt, desto mehr nähern sich die Punkt für Punkt entstandenen farbigen Linien den Hilfslinien in derselben Farbe an.
 
 #### {-}
 
@@ -1570,7 +1756,23 @@ Hans arbeitet als Kontrolleur für die KVB. In letzter Zeit hat er 1235 zufälli
 
 a) Wie wahrscheinlich ist es, dass die nächste Person, die er kontrolliert, keinen Fahrschein hat?
 
+`r hide("Lösung")`
+Hans hat das Zufallsexperiment der Fahrscheinkontrolle 1235 durchgeführt. Das ist ja schon ziemlich häufig. Dabei kam 87-mal das Ergebnis "Schwarzfahrer:in" heraus. Mit dem Gesetz der großen Zahlen können wir die realtive Häufigkeit nun als Wahrscheinlichkeit annehmen, also:
+
+$$P(Schwarzfahrer:in)=\frac{87}{1235} \approx 0,07$$
+Die Wahrscheinlichkeit, dass die nächste Person, die er kontrolliert, keinen Fahrschein hat ist also 7%.
+
+#### {-}
+
 b) Mit wieviel Verlust muss die KVB jährlich rechnen, wenn sie monatlich 27.000.000 Fahrgäste transportiert und ein Fahrschein 3€ kostet?
+
+`r hide("Lösung")`
+
+Die KVB transportiert jährlich $27000000 \cdot 12 = 324000000$ Fahrgäste.
+
+Wenn ein Fahrgast mit einer Wahrscheinlichkeit von 7% ein:e Schwarzfahrer:in ist, dann können wir also von $324000000 \cdot 0,07 = 22680000$ Schwarzfahrer:innen jährlich ausgehen.
+
+Damit ergibt sich ein Verlust von $22680000 \cdot 3\;€ = 68040000\;€$ pro Jahr.
 
 #### {-}
 
@@ -1613,6 +1815,25 @@ C
 
 Welchen Würfel hat sie wahrscheinlich verwendet? Begründe deine Antwort.
 
+`r hide("Lösung")`
+
+Mit Hilfe der angegebenen Häufigkeiten kann man die relativen Häufigkeiten der Würfelergebnisse bestimmen. Diese nutzt man nun als Hinweis auf die tatsächliche Wahrscheinlichkeit eine bestimmte Augenzahl zu würfeln.
+
+Für die Eins gilt: $P(1)=\frac{36}{125} \approx 0,288$
+
+Für die Zwei gilt: $P(2)=\frac{69}{125} \approx 0,552$
+
+Für die Drei gilt: $P(3)=\frac{20}{125} \approx 0,16$
+
+Betrachtet man nun die Würfelnetze, kann man feststellen, dass bei den Würfelnetzen 1 und 3 die Augenzahl zwei genau die Hälfte der Seiten des Würfels einnimmt. Würfelt man 125 mal, kann man die Zwei zwischen 60 und 70 mal erwarten (etwa 50% der Würfelergebnisse). Das ist hier der Fall. In 69 von 125 Fällen wurde eine Zwei gewürfelt - oder in Prozent ausgedrückt: in 55,2% der Fällen.
+
+Da außerdem mehr Einsen als Dreien gefallen sind, ist es wahrscheinlich, dass die Eins auf mehr Würfelseiten vorkommt als die Drei. Das ist beim 1. Würfelnetz der Fall.
+
+Damit kann man schließen, dass wahrscheinlich ein Würfel mit dem ersten Würfelnetz verwendet wurde. Dies ist aber nur **wahrscheinlich** der verwendete Würfeln,
+
+**denn die relativen Häufigkeiten können bei geringer Anzahl von Versuchsdurchführungen von der theoretischen Wahrscheinlichkeit (durchaus auch weit!) abweichen. Daher könnte auch einer der beiden anderen Würfel verwendet worden sein - sie sind nur unwahrscheinlichere Kandidaten.**
+
+
 #### {-}
 
 ```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
@@ -1632,9 +1853,43 @@ Auf der Straße werden nun zufällig Passanten angesprochen. Wenn sie zahlende N
 
 a) ... Kunde von Amazon Music ist?
 
+`r hide("Lösung")`
+
+$P(Kunde\;von\;Amazon\;Music)=\frac{16356000}{136600000} \approx 0,12$
+
+Mit einer Wahrscheinlichkeit von ca. 12% ist der Nutzer ein Kunde von Amazon Music.
+
+#### {-}
+
 b) ... nicht Kunde von Apple Music ist?
 
+`r hide("Lösung")`
+
+Hier wird gefragt, wie wahrscheinlich es ist, dass der Nutzer **NICHT** Kunde von Apple Music ist. Hierfür muss man die Wahrscheinlichkeit berechnen, dass er Kunde von einem der anderen Dienste ist. Dazu addiert man die Kundenzahlen aller Streamingdienste, die nicht Appel Music sind:
+
+54520000 (Spotify) + 16356000 (Amazon Music) + 39527000 (Andere) = 110403000
+
+Damit ergibt sich für die Wahrscheinlichkeit, dass die befragte Person bei einem anderen Streamingdienst ist:
+
+$P(nicht\;bei\;Apple\;Music)=\frac{110403000}{136600000} \approx 0,81$
+
+Mit einer Wahrscheinlichkeit von ca. 81% ist der Nutzer **KEIN** Kunde von Apple Music.
+
+#### {-}
+
 c) ... Kunde von Spotify oder einem anderen Dienst (Andere) ist?
+
+`r hide("Lösung")`
+
+Hierfür addiert man die Kundenzahlen von Spotify und Andere:
+
+54520000 (Spotify) + 39527000 (Andere) = 94047000
+
+Damit ergibt sich für die Wahrscheinlichkeit, dass die befragte Person Kunde bei Spotify oder einem anderen Streamingdienst ist
+
+$P(bei\;Spotify\;oder\;einem\;anderen\;Dienst)=\frac{94047000}{136600000} \approx 0,69$
+
+Mit einer Wahrscheinlichkeit von ca. 69% ist der Nutzer Kunde bei Spotify oder einem anderen Streamingdienst.
 
 #### {-}
 
@@ -1697,11 +1952,41 @@ In einer Urne befinden sich 20 Kugeln, die mit den Zahlen von 1 bis 20 beschrift
 
 a) ... zieht sie die Kugel mit der Zahl 12?
 
+`r hide("Lösung")`
+
+Es gibt genau eine Kugel mit der Zahl 12: $E=\{12\}$. Die Wahrscheinlichkeit, diese eine Kugel zu ziehen, ist:
+
+$P(12)=\frac{1}{20}= 0,05 = 5\%$
+
+#### {-}
+
 b) ... zieht sie eine Kugel mit einer durch 3 teilbaren Zahl?
+
+`r hide("Lösung")`
+
+Es gibt 6 Kugeln, die mit einer durch 3 teilbaren Zahl beschriftet sind, die Kugeln mit der Aufschrift 3, 6, 9, 12, 15 oder 18: $E=\{3,\;6,\,9,\,12,\,15,\,18\}$. Die Wahrscheinlichkeit, eine dieser Kugeln zu ziehen, ist:
+
+$P(durch\;3\;teilbare\;Zahl)=\frac{6}{20}=0,3=30\%$
+
+#### {-}
 
 c) ... zieht sie eine Kugel mit einer Zahl, die größer als 11 ist?
 
+`r hide("Lösung")`
+
+Es gibt 9 Kugeln, die mit einer Zahl größer 11 beschriftet sind, die Kugel mit der Aufschrift 12, 13, 14, 15, 16, 17, 18, 19 oder 20: $E=\{12,\;13,\;14,\;15,\;16,\;17,\;18,\;19,\;20\}$. Die Wahrscheinlichkeit, eine dieser Kugeln zu ziehen, ist:
+
+$P(Zahl\;groesser\;11)=\frac{9}{20}=0,45=45\%$
+
+#### {-}
+
 d) ... zieht sie eine Kugel mit einer Quadratzahl?
+
+`r hide("Lösung")`
+
+Es gibt 4 Kugeln, die mit einer Quadratzahl beschriftet sind, die Kugeln mit der Aufschrift 1, 4, 9 oder 16: $E=\{1,\;4,\,9,\;16\}$. Die Wahrscheinlichkeit, eine dieser Kugeln zu ziehen, ist:
+
+$P(Quadratzahl)=\frac{4}{20}=0,2=20\%$
 
 
 #### {-}
@@ -1723,7 +2008,53 @@ Der Teufel schlägt dir ein kurzes Würfelspiel vor. Du darfst dich dabei für e
 
 a) Für welche Regel solltest du dich entscheiden? (Hier geht's um deine Seele!!)
 
+`r hide("Lösung")`
+
+Am besten entscheidest du dich dafür, bei einer Zahl kleiner 5 zu gewinnen, denn: 
+
+Bei einem Würfelwurf gibt es sechs mögliche Ergebnisse ($\Omega=\{1,\;2,\;3,\;4,\;5,\;6\}$) und zum Ereignis "eine Zahl kleiner 5 würfeln" gehören vier günstige Ergebnisse ($E=\{1,\;2,\;3,\;4\}$). 
+
+Die Wahrscheinlichkeit "eine Zahl kleiner 5" zu würfeln ist also:
+
+$$P(Zahl\;kleiner\;5\;würfeln)=\frac{4}{6} \approx 0,67$$
+
+In diesem Fall gewinnt man also mit einer Wahrscheinlichkeit von 67%.
+
+#### {-}
+
 b) Berechne für jeden der obigen Fälle die Gewinnwahrscheinlichkeit.
+
+`r hide("Lösung")`
+
+**Du würfelst mit einem normalen Spielwürfel und gewinnst bei einer geraden Zahl:**
+
+Bei einem Würfelwurf gibt es sechs mögliche Ergebnisse ($\Omega=\{1,\;2,\;3,\;4,\;5,\;6\}$) und zum Ereignis "eine gerade Zahl würfeln" gehören drei günstige Ergebnisse ($E=\{2,\;4,\;6\}$). 
+
+Die Wahrscheinlichkeit "eine gerade Zahl" zu würfeln ist also:
+
+$$P(gerade\;Zahl\;würfeln)=\frac{3}{6} = 0,5$$
+
+In diesem Fall gewinnt man also mit einer Wahrscheinlichkeit von 50%.
+
+**Du würfelst mit einem normalen Spielwürfel und gewinnst bei einer ungeraden Zahl:**
+
+Bei einem Würfelwurf gibt es sechs mögliche Ergebnisse ($\Omega=\{1,\;2,\;3,\;4,\;5,\;6\}$) und zum Ereignis "eine ungerade Zahl würfeln" gehören drei günstige Ergebnisse ($E=\{1,\;3,\;5\}$). 
+
+Die Wahrscheinlichkeit "eine ungerade Zahl" zu würfeln ist also:
+
+$$P(ungerade\;Zahl\;würfeln)=\frac{3}{6} = 0,5$$
+
+In diesem Fall gewinnt man also mit einer Wahrscheinlichkeit von 50%.
+
+**Du würfelst mit einem normalen Spielwürfel und gewinnst Zahl größer 5:**
+
+Bei einem Würfelwurf gibt es sechs mögliche Ergebnisse ($\Omega=\{1,\;2,\;3,\;4,\;5,\;6\}$) und zum Ereignis "eine Zahl größer 5 würfeln" gehört ein günstiges Ergebnis ($E=\{6\}$). 
+
+Die Wahrscheinlichkeit "eine Zahl größer 5" zu würfeln ist also:
+
+$$P(eine\;Zahl\;groesser\;5\;würfeln)=\frac{1}{6} \approx 0,167$$
+
+In diesem Fall gewinnt man also mit einer Wahrscheinlichkeit von 16,7%.
 
 #### {-}
 
@@ -1738,10 +2069,37 @@ Wie hoch ist die Wahrscheinlichkeit für folgende Ereignisse:
 
 a) Es wird eine Karte der Farbe Karo gezogen.
 
+`r hide("Lösung")`
+
+In dem Kartendeck gibt es insgesamt 32 Karten, von denen 8 Karten die Farbe Karo haben. Daher gilt:
+
+$P(eine\;Karokarte\;ziehen)=\frac{8}{32}=\frac{1}{4}=0,25$
+
+Mit einer Wahrscheinlichkeit von 25% wird eine Karokarte gezogen.
+
+#### {-}
+
 b) Es wird eine Dame gezogen.
+
+`r hide("Lösung")`
+
+In dem Kartendeck gibt es vier Damen. Daher gilt:
+
+$P(eine\;Dame\;wird\;gezogen)=\frac{4}{32}=0,125$
+
+Mit einer Wahrscheinlichkeit von 12,5% wird eine Dame gezogen.
+
+#### {-}
 
 c) Es wird keine 10 gezogen.
 
+`r hide("Lösung")`
+
+In dem Kartendeck gibt es vier Karten mit einer 10. Damit gibt es 28 andere Karten: also 28 Karten, auf denen **keine** 10 steht. Daher gilt:
+
+$P(keine\;10\;wird\;gezogen)=\frac{28}{32}= 0,875$
+
+Mit einer Wahrscheinlichkeit von 87,5% wird keine 10 gezogen.
 
 #### {-}
 
@@ -1758,13 +2116,61 @@ Befülle die Urne jeweils so, dass die geforderten Wahrscheinlichkeiten eintrete
 
 a) Die Wahrscheinlichkeit eine blaue Kugel zu ziehen ist 25%.
 
+`r hide("Lösung")`
+
+Das ist z.B. dann der Fall, wenn es **eine blaue** Kugel und **drei anders gefärbte** (beispielsweise rote) Kugeln gibt, da dann $P(blau\;Kugel)=\frac{1}{4}=0,25$ gilt. 
+
+Natürlich wäre aber auch eine Befüllung mit zwei blauen und 6 roten Kugeln möglich. Oder auch 3 blaue, 3 gelbe, 3 rote und 3 grüne Kugeln.... 
+
+#### {-}
+
 b) Die Wahrscheinlichkeit eine rote Kugel zu ziehen ist 10%.
+
+`r hide("Lösung")`
+
+Das ist z.B. dann der Fall, wenn es **eine rote** Kugeln und **neun anders gefärbte** (beispielsweise gelbe) Kugeln gibt, da dann $P(rote\;Kugel)=\frac{1}{10}=0,1$ gilt.
+
+Natürlich wäre aber auch eine Befüllung mit zehn roten und 90 grünen Kugeln möglich. Oder auch mit 5 roten, 5 gelben, 20 grüne und 20 blauen Kugeln....
+
+#### {-}
 
 c) Die Wahrscheinlichkeit eine grüne Kugel zu ziehen ist 15%.
 
+`r hide("Lösung")`
+
+Das ist z.B. dann der Fall, wenn es **drei grüne** Kugeln und **17 anders gefärbte** (beispielsweise blaue) Kugeln gibt, da dann $P(gruene\;Kugel)=\frac{3}{20}=0,15$ gilt.
+
+Natürlich wäre aber auch eine Befüllung mit 15 grünen und 85 blauen Kugeln möglich. Oder auch mit 6 grünen und 12 gelben, 11 blauen und 11 roten Kugeln...
+
+#### {-}
+
 d) Die Wahrscheinlichkeit eine gelbe Kugel zu ziehen ist 50%.
 
+`r hide("Lösung")`
+
+Das ist z.B. dann der Fall, wenn es **eine gelbe** Kugel und **eine anders gefärbte** (beispielsweise schwarze) Kugel gibt, da dann $P(gelbe\;Kugel)=\frac{1}{2}=0,5$ gilt.
+
+Natürlich wäre aber auch eine Befüllung mit 5 gelben und 5 schwarzen Kugeln möglich. Oder auch mit 12 gelben und 4 grünen, 4 blauen und 4 roten Kugeln...
+
+#### {-}
+
 e) Die Wahrscheinlichkeiten aus a), b), c) und d) sollen gleichzeitig eintreten.
+
+`r hide("Lösung")`
+
+Das ist z.B. dann der Fall, wenn es **zwei rote**, **drei grüne**, **fünf blaue** und **zehn gelbe** Kugeln gibt. Oder natürlich auch, wenn es 25 blaue, 10 rote, 15 grüne und 50 Kugeln gibt. 
+
+**Wie löst man diese Aufgabe?**
+
+Am besten macht man sich zunächst Gedanken darüber, wie viele Kugeln insgesamt in der Urne sein müssen. 
+
+Da die Summe der vorgegebenen Prozentzahlen in diesem Fall 100% ergibt, kann man einfach die Prozentzahl ohne das Prozentzeichen verwenden und hat dann insgesamt 100 Kugeln. 
+
+Sollte die Summe der vorgegebenen Prozentzahlen nicht 100 ergeben muss man sie entweder durch eine nicht vorgegebene Farbe auf 100% ergänzen oder man multipliziert die vorgegebenen Prozentzahlen geschickt mit dem gleichen Faktor, so dass ihre Summe anschließend 100% ergibt.
+
+Möchte man weniger als 100 Kugeln verwenden, kann man versuchen alle als Prozentzahlen gegebenen Anteile mit derselben Zahl zu kürzen. In unserem Beispiel geht das: Man kann die Porzentangaben $\frac{25}{100}$,  $\frac{10}{100}$, $\frac{15}{100}$ und $\frac{50}{100}$ alle mit 5 kürzen und erhält dann $\frac{5}{20}$, $\frac{2}{20}$, $\frac{3}{20}$ und $\frac{10}{20}$. Insgesamt benötigt man also 20 Kugeln. Die Zahl die jeweils im Zähler steht, gibt die Anzahl der von der jeweiligen Farbe benötigten Kugeln an.
+
+#### {-}
 
 <!-- Für später? -->
 
