@@ -170,9 +170,153 @@ Besonders übersichtlich lassen sich mehrstufige Zufallsexperimente in einem Bau
 
 <img src="./images/MünzWurfBaum.png" height="200" />
 
+Dabei ist es egal, ob man eine Münze zweimal wirft oder aber zwei Münzen gleichzeitig wirft. Im ersten Fall entspricht die erste Stufe dem ersten Münzwurf und die zweite Stufe dem zweiten Münzwurf. Im zweiten Fall entspricht die erste Stufe eben dem Wurf der einen und die zweite Stufe dem Wurf der anderen Münze. 
+
+In beiden Fällen hilft der Baum eine übersichtliche Darstellung der möglichen Ergebnisse zu erhalten. Diese kann man nun alle an den Pfadenden ablesen: $\Omega=\{KK,\; KZ,\; ZK,\; ZZ\}$, wobei K für Kopf (hier eigentlich eher Adler) und Z für Zahl steht. Gleichzeitig weiß man also auch, wie viele Ergebnisse möglich sind: 4.
+
 ## Wahrscheinlichkeiten und Baumdiagramme
+Wie du wahrscheinlich schon bemerkt hast, können an den Zweigen des Baumes auch Zahlen notiert werden.
+
+<img src="./images/MünzWurfBaum.png" height="200" />
+
+Dabei handelt es sich um die Wahrscheinlichkeit, mit der das jeweilige Teilergebnis zu erwarten ist. Die Wahrscheinlichkeit muss also schon bekannt sein. Ob du sie mit Hilfe des empirischen Gesetzes der großen Zahlen (also durch viele Wiederholungen eines Zufallsexperiments) herausgefunden hast oder sie Ergebnis einer theoretischen Überlegung ist (Laplace-Experiment), ist natürlich egal.
+
+Im Beispiel des Münzwurfs sind die Teilergebnisse "Kopf" oder "Zahl" mit einer Wahrscheinlichkeit von $\frac{1}{2}$ möglich. Dies gilt sowol für den ersten, als auch für den zweiten Münzwurf. 
 
 ### Produktregel
+Wie ermittelt man nun die Wahrscheinlichkeit der zusammengesetzten Ergebnisse?
+
+Betrachte noch einmal das Baumdiagramm für den zweifachen Münzwurf:
+
+<img src="./images/MünzWurfBaum.png" height="200" />
+
+Zu jedem der vier zusammengesetzten Ergebnisse ($\{KK,\; KZ,\; ZK,\; ZZ\}$), gehört ein Pfad - die Stufen des Pfades sind dabei die einzelnen Teilergebnisse. 
+
+Wie hoch ist also die Wahrscheinlichkeit dafür, zweimal "Kopf" zu werfen? Der Pfad, der zu dem Ergebnis zweimal Kopf gehört, ist blau gefärbt. Bei jedem der beiden Würfe ist das Teilergebnis "Kopf" mit einer Wahrscheinlichkeit von $\frac{1}{2}$ möglich. Die Wahrscheinlichkeit für das Ergebnis "Kopf-Kopf" (KK) ist also $\frac{1}{2}$ von $\frac{1}{2}$ und damit $\frac{1}{2}\cdot\frac{1}{2}=\frac{1}{4}$.
+
+
+Kurz und knapp fasst diese Überlegung die **Produktregel** oder auch **Pfadmultiplikationsregel** zusammen:
+
+#### Produktregel: {-}
+
+> Die **Wahrscheinlichkeit für ein zusammengesetztes Ergebnis** erhält man, indem man die einzelnen Wahrscheinlichkeiten entlang des zugehörigen Pfades multipliziert.
+
+Natürlich gilt auch für mehrstufige Zufallsexperimente, dass sich die Wahrscheinlichkeiten aller zusammengesetzten Ergebnisse zu 1 (zu 100%) addieren.
+
+#### Beispiel {-}
+
+<img src="./images/beispielProduktregel.png" height="200" />
+
+Das Glücksrad wird zweimal gedreht. Ermittle die Wahrscheinlichkeit, dass es zweimal bei Rot stehen bleibt. Erstelle dazu ein Baumdiagramm.
+
+`r hide("Lösung")`
+
+<img src="./images/BaumBeispielProduktregel.png" height="200" />
+
+Der Pfad ganz links stellt das Ergebnis "Rot-Rot" dar. Die Wahrscheinlichkeit für die Farbe Rot beträgt in jeder Drehung $\frac{2}{3}$.
+
+Nun multipliziert man die Einzelwahrscheinlichkeiten entlang des Pfades ganz links (das ist ja der Pfad, der zu "Rot-Rot" führt, erhält man die Wahrscheinlichkeit für "Rot-Rot" (RR).
+
+$P(RR)=\frac{2}{3}\cdot\frac{2}{3}=\frac{4}{9}$
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 1 {-}
+
+<img src="./images/ProduktregelAufgabe1.png" height="200" />
+
+Das Glücksrad wird zweimal gedreht.
+
+a) Zeichne das zugehörige Baumdiagramm und notiere die Wahrscheinlichkeiten an den Zweigen.
+
+b) Welche zusammengesetzten Ergebnisse sind möglich? Bestimme zudem jeweils die Wahrscheinlichkeit.
+
+c) Kontrolliere deine Überlegungen: Ergibt die Summe der Wahrscheinlichkeiten der zusammengesetzten Ergebnisse 1 (100%)?
+
+`r hide("Lösung")`
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 2 {-}
+
+<img src="./images/kartenFarben.png" height="200" />
+
+Jim spielt mit Lukas Karten. Lukas hat acht Karten auf der Hand: je zwei Karten von jeder Farbe (also zweimal Herz, zweimal Pik, zweimal Karo und zweimal Kreuz). Jim darf nun sein Glück versuchen, er gewinnt, wenn er zweimal hintereinander Karo zieht. 
+
+Er zieht blind eine Karte, notiert das Ergebnis und gibt die Karte zurück. Lukas mischt seine Karten und Jim hat noch einen Versuch, blind eine Karte zu ziehen.
+
+a) Erkläre, was das Ergebnis "Herz - Karo" bedeutet.
+
+b) Zeichne ein Baumdiagramm und trage die Wahrscheinlichkeiten ein. Markiere den/die Pfad(e), die zu Gewinnen führen.
+
+c) Nenne alle möglichen Ergebnisse und berechne ihre Wahrscheinlichkeiten.
+
+
+`r hide("Lösung")`
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 3 {-}
+Charlotte spielt Basketball. Sie trifft den Korb beim Basketballfreiwurf mit einer Wahrscheinlichkeit von 0,6 und darf dreimal werfen.
+
+<img src="./images/baskettball.png" height="200" />
+
+a) Zeichne ein Baumdiagramm mit Wahrscheinlichkeiten.
+
+b) Berechne die Wahrscheinlichkeit, dass Charlotte dreimal trifft.
+
+c) Berechne die Wahrscheinlichkeit für das Ergebnis "Korb - kein Korb - Korb".
+
+`r hide("Lösung")`
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 4 {-}
+
+<img src="./images/ProduktregelAufgabe4.png" height="200" />
+
+Die beiden Glücksräder werden gleichzeitig gedreht.
+
+a) Zeichne ein Baumdiagramm, in dem das linke Glücksrad auf der ersten und das rechte Glücksrad auf der zweiten Stufe ist. Trage die Wahrscheinlichkeiten ein.
+
+b) Zeichne ein Baumdiagramm, in dem das rechte Glücksrad auf der ersten und das linke Glücksrad auf der zweiten Stufe ist. Trage die Wahrscheinlichkeiten ein.
+
+c) Berechne die Wahrschinlichkeit dafür, dass beide Glücksräder Rot zeigen. Verwende einmal das Baumdiagramm aus Teilaufgabe a) und einmal das aus Teilaufgabe b). Vergleiche die Ergebnisse.
+
+`r hide("Lösung")`
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
 
 ### Summenregel
 

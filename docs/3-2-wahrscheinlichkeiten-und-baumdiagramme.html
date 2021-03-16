@@ -237,8 +237,116 @@ window.onload = function() {
             <section class="normal" id="section-">
 <div id="wahrscheinlichkeiten-und-baumdiagramme" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Wahrscheinlichkeiten und Baumdiagramme</h2>
+<p>Wie du wahrscheinlich schon bemerkt hast, können an den Zweigen des Baumes auch Zahlen notiert werden.</p>
+<p><img src="images/M%C3%BCnzWurfBaum.png" height="200" /></p>
+<p>Dabei handelt es sich um die Wahrscheinlichkeit, mit der das jeweilige Teilergebnis zu erwarten ist. Die Wahrscheinlichkeit muss also schon bekannt sein. Ob du sie mit Hilfe des empirischen Gesetzes der großen Zahlen (also durch viele Wiederholungen eines Zufallsexperiments) herausgefunden hast oder sie Ergebnis einer theoretischen Überlegung ist (Laplace-Experiment), ist natürlich egal.</p>
+<p>Im Beispiel des Münzwurfs sind die Teilergebnisse “Kopf” oder “Zahl” mit einer Wahrscheinlichkeit von <span class="math inline">\(\frac{1}{2}\)</span> möglich. Dies gilt sowol für den ersten, als auch für den zweiten Münzwurf.</p>
 <div id="produktregel" class="section level3" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Produktregel</h3>
+<p>Wie ermittelt man nun die Wahrscheinlichkeit der zusammengesetzten Ergebnisse?</p>
+<p>Betrachte noch einmal das Baumdiagramm für den zweifachen Münzwurf:</p>
+<p><img src="images/M%C3%BCnzWurfBaum.png" height="200" /></p>
+<p>Zu jedem der vier zusammengesetzten Ergebnisse (<span class="math inline">\(\{KK,\; KZ,\; ZK,\; ZZ\}\)</span>), gehört ein Pfad - die Stufen des Pfades sind dabei die einzelnen Teilergebnisse.</p>
+<p>Wie hoch ist also die Wahrscheinlichkeit dafür, zweimal “Kopf” zu werfen? Der Pfad, der zu dem Ergebnis zweimal Kopf gehört, ist blau gefärbt. Bei jedem der beiden Würfe ist das Teilergebnis “Kopf” mit einer Wahrscheinlichkeit von <span class="math inline">\(\frac{1}{2}\)</span> möglich. Die Wahrscheinlichkeit für das Ergebnis “Kopf-Kopf” (KK) ist also <span class="math inline">\(\frac{1}{2}\)</span> von <span class="math inline">\(\frac{1}{2}\)</span> und damit <span class="math inline">\(\frac{1}{2}\cdot\frac{1}{2}=\frac{1}{4}\)</span>.</p>
+<p>Kurz und knapp fasst diese Überlegung die <strong>Produktregel</strong> oder auch <strong>Pfadmultiplikationsregel</strong> zusammen:</p>
+<div id="produktregel-1" class="section level4 unnumbered">
+<h4>Produktregel:</h4>
+<blockquote>
+<p>Die <strong>Wahrscheinlichkeit für ein zusammengesetztes Ergebnis</strong> erhält man, indem man die einzelnen Wahrscheinlichkeiten entlang des zugehörigen Pfades multipliziert.</p>
+</blockquote>
+<p>Natürlich gilt auch für mehrstufige Zufallsexperimente, dass sich die Wahrscheinlichkeiten aller zusammengesetzten Ergebnisse zu 1 (zu 100%) addieren.</p>
+</div>
+<div id="beispiel" class="section level4 unnumbered">
+<h4>Beispiel</h4>
+<p><img src="images/beispielProduktregel.png" height="200" /></p>
+<p>Das Glücksrad wird zweimal gedreht. Ermittle die Wahrscheinlichkeit, dass es zweimal bei Rot stehen bleibt. Erstelle dazu ein Baumdiagramm.</p>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p><img src="images/BaumBeispielProduktregel.png" height="200" /></p>
+<p>Der Pfad ganz links stellt das Ergebnis “Rot-Rot” dar. Die Wahrscheinlichkeit für die Farbe Rot beträgt in jeder Drehung <span class="math inline">\(\frac{2}{3}\)</span>.</p>
+<p>Nun multipliziert man die Einzelwahrscheinlichkeiten entlang des Pfades ganz links (das ist ja der Pfad, der zu “Rot-Rot” führt, erhält man die Wahrscheinlichkeit für “Rot-Rot” (RR).</p>
+<p><span class="math inline">\(P(RR)=\frac{2}{3}\cdot\frac{2}{3}=\frac{4}{9}\)</span></p>
+</div>
+<div id="section-110" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-1-12" class="section level4 unnumbered">
+<h4>Aufgabe 1</h4>
+<p><img src="images/ProduktregelAufgabe1.png" height="200" /></p>
+<p>Das Glücksrad wird zweimal gedreht.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Zeichne das zugehörige Baumdiagramm und notiere die Wahrscheinlichkeiten an den Zweigen.</p></li>
+<li><p>Welche zusammengesetzten Ergebnisse sind möglich? Bestimme zudem jeweils die Wahrscheinlichkeit.</p></li>
+<li><p>Kontrolliere deine Überlegungen: Ergibt die Summe der Wahrscheinlichkeiten der zusammengesetzten Ergebnisse 1 (100%)?</p></li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-111" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-2-12" class="section level4 unnumbered">
+<h4>Aufgabe 2</h4>
+<p><img src="images/kartenFarben.png" height="200" /></p>
+<p>Jim spielt mit Lukas Karten. Lukas hat acht Karten auf der Hand: je zwei Karten von jeder Farbe (also zweimal Herz, zweimal Pik, zweimal Karo und zweimal Kreuz). Jim darf nun sein Glück versuchen, er gewinnt, wenn er zweimal hintereinander Karo zieht.</p>
+<p>Er zieht blind eine Karte, notiert das Ergebnis und gibt die Karte zurück. Lukas mischt seine Karten und Jim hat noch einen Versuch, blind eine Karte zu ziehen.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Erkläre, was das Ergebnis “Herz - Karo” bedeutet.</p></li>
+<li><p>Zeichne ein Baumdiagramm und trage die Wahrscheinlichkeiten ein. Markiere den/die Pfad(e), die zu Gewinnen führen.</p></li>
+<li><p>Nenne alle möglichen Ergebnisse und berechne ihre Wahrscheinlichkeiten.</p></li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-112" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-3-6" class="section level4 unnumbered">
+<h4>Aufgabe 3</h4>
+<p>Charlotte spielt Basketball. Sie trifft den Korb beim Basketballfreiwurf mit einer Wahrscheinlichkeit von 0,6 und darf dreimal werfen.</p>
+<p><img src="images/baskettball.png" height="200" /></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Zeichne ein Baumdiagramm mit Wahrscheinlichkeiten.</p></li>
+<li><p>Berechne die Wahrscheinlichkeit, dass Charlotte dreimal trifft.</p></li>
+<li><p>Berechne die Wahrscheinlichkeit für das Ergebnis “Korb - kein Korb - Korb”.</p></li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-113" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-4-3" class="section level4 unnumbered">
+<h4>Aufgabe 4</h4>
+<p><img src="images/ProduktregelAufgabe4.png" height="200" /></p>
+<p>Die beiden Glücksräder werden gleichzeitig gedreht.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Zeichne ein Baumdiagramm, in dem das linke Glücksrad auf der ersten und das rechte Glücksrad auf der zweiten Stufe ist. Trage die Wahrscheinlichkeiten ein.</p></li>
+<li><p>Zeichne ein Baumdiagramm, in dem das rechte Glücksrad auf der ersten und das linke Glücksrad auf der zweiten Stufe ist. Trage die Wahrscheinlichkeiten ein.</p></li>
+<li><p>Berechne die Wahrschinlichkeit dafür, dass beide Glücksräder Rot zeigen. Verwende einmal das Baumdiagramm aus Teilaufgabe a) und einmal das aus Teilaufgabe b). Vergleiche die Ergebnisse.</p></li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-114" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+<hr style="background-color:#3C6690;height:2px">
+</div>
 </div>
 <div id="summenregel" class="section level3" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> Summenregel</h3>
