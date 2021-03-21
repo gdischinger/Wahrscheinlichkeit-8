@@ -319,7 +319,126 @@ cat('<hr style="background-color:#3C6690;height:2px">')
 
 
 ### Summenregel
+Wirft man zwei Münzen gleichzeitig - oder eine Münze zweimal - gibt es zwei Möglichkeiten einmal "Kopf" und einmal "Zahl" zu erhalten. Entweder die erste Münze (der erste Wurf) zeigt "Kopf" und die zweite Münze (der zweite Wurf) zeigt "Zahl" oder umgekehrt. Das Ereignis "einmal Kopf und einmal Zahl" besteht also aus **zwei** Ergebnissen. 
 
+Entsprechend gibt es zum Ereignis "einmal Kopf und einmal Zahl" auch zwei Pfade im Baumdiagramm. Und auch wenn es langsam langweilig wird - betrachte hierfür doch bitte nochmal das Baumdiagramm für den zweifachen Münzwurf:
+
+<img src="./images/MuenzWurfSummenRegel.png" height="200" />
+
+Die Wahrscheinlichkeit dafür "einmal Kopf und einmal Zahl" zu werfen ergibt sich nun als die Summe der Wahrscheinlichkeiten der zum Ereignis gehörenden Pfade. Hier:
+
+$$\begin{align} P(einmal\;Kopf\;und\;einmal\;Zahl) &= P(KZ) + P(ZK) =\\
+{}\\
+&= \frac{1}{2} \cdot \frac{1}{2} + \frac{1}{2} \cdot \frac{1}{2} =\\
+{}\\
+&= \frac{1}{4} + \frac{1}{4} = \frac{1}{2} \end{align}$$
+
+Natürlich kann ein Ereignis auch aus mehr als zwei Ergebnissen bestehen.
+
+#### Summenregel: {-}
+
+> Die **Wahrscheinlichkeit für ein Ereignis** erhält man, indem man die Wahrscheinlichkeiten der zugehörigen Pfade addiert.
+
+
+#### Beispiel {-}
+<img src="./images/SummenRegelBeispielGRad.png" height="200" />
+
+Das Glücksrad wird zweimal gedreht. Berechne die Wahrscheinlichkeit, dass man zweimal die gleiche Farbe erhält.
+
+
+`r hide("Lösung")`
+
+Zunächst zeichnet man ein Baumdiagramm zu diesem Versuch.
+
+<img src="./images/SummenRegelBeispielBaum.png" height="200" />
+
+Das Ereignis "zweimal die gleiche Farbe" besteht aus drei Ergebnissen: "Rot-Rot", "Grün-Grün" und "Blau-Blau".
+
+Nun berechnet man die Wahrscheinlichkeiten für die einzelnen Pfade, die zum Ereignis gehören, und addiert sie dann:
+
+$$\begin{align} P(zweimal\;dieselbe\;Farbe) &= P(R,\;R)+P(G,\;G)+P(B,\;B) =\\
+{}\\
+                                            & = \frac{1}{2} \cdot \frac{1}{2} + \frac{1}{4} \cdot \frac{1}{4} + \frac{1}{4} \cdot \frac{1}{4} = \\
+                                            {}\\
+                                            &= \frac{1}{4} + \frac{1}{16} + \frac{1}{16} = \frac{3}{8} = 37,5\% \end{align}$$
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 1 {-}
+Folgendes Glücksrad wird dreimal gedreht:
+
+<img src="./images/SummenRegelBeispielGRad.png" height="200" />
+
+a) Zeichne ein Baumdiagramm, das zu diesem Zufallsexperiment passt.
+
+b) Notiere jeweils alle Ergebnisse, die zu den Ereignissen gehören:
+
+  + beim 1. und 2. Drehen Rot, beim 3. Drehen eine andere Farbe
+  + dreimal Blau
+  + drei verschiedene Farben
+  + insgesamt genau zweimal Grün
+
+`r hide("Beispiel")`
+
+"Insgesamt zweimal Blau und einmal Grün" besteht aus den Ergebnissen "Blau-BlauGrün", "Blau-Grün-Blau" und "Grün-Blau-Blau".
+
+#### {-}
+  
+c) Berechne die Wahrscheinlichkeit für jeden der Fälle aus Teilaufgabe b).
+
+`r hide("Lösung")`
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 2 {-}
+Die Wahrscheinlichkeit dafür, dass ein noch ungeborenes Kind ein Junge ist, beträgt 51,3%. Berechne die Wahrscheinlichkeit dafür, dass eine Familie mit drei Kindern ...
+
+a) ... genau einen Sohn hat.
+
+b) ... mindestens zwei Söhne hat.
+
+`r hide("Lösung")`
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 3 {-}
+<img src="./images/werkzeug.jpg" height="200" />
+
+Ennos Spiel-Werkzeugkiste ist voller Plastikschrauben: 20 mit einem Durchmesser von 6mm, 40 mit einem Durchmesser von 8mm und 60 mit einem Durchmesser von 10 mm. Unter dem Bett bewahrt er eine zweite Kiste auf, in der sich passende Muttern befinden. Zu jeder Sorte Schrauben gibt es die gleiche Anzahl an passenden Muttern.
+
+Enno entnimmt zufällig eine Schraube und eine Mutter. Berechne die Wahrscheinlichkeit, mit der beide zusammenpassen.
+
+`r hide("Lösung")`
+
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+### Baumdiagramme mit abhängigen Stufen
 
 
 ## Baumdiagramme geschickt nutzen

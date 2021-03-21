@@ -59,7 +59,7 @@ cat('<hr style="background-color:#3C6690;height:2px">')
 
 ### Aktuelles {-}
 
-+ Stichtag für das Kapitel 3.2.1 Produktregel ist der **22. März**
++ Stichtag für das Kapitel 3.2.1 Produktregel ist der **23. März**
 
 
 ```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}

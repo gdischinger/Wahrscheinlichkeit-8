@@ -8,6 +8,7 @@ mehrstufige-zufallsexperimente
 wahrscheinlichkeiten-und-baumdiagramme
 produktregel
 summenregel
+baumdiagramme-mit-abhängigen-stufen
 baumdiagramme-geschickt-nutzen
 übungsaufgaben
 abschlussquiz
