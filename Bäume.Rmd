@@ -335,6 +335,8 @@ $$\begin{align} P(einmal\;Kopf\;und\;einmal\;Zahl) &= P(KZ) + P(ZK) =\\
 
 Natürlich kann ein Ereignis auch aus mehr als zwei Ergebnissen bestehen.
 
+Kurz und knapp fasst diese Überlegung die **Summenregel** oder auch **Pfadadditionsregel** zusammen:
+
 #### Summenregel: {-}
 
 > Die **Wahrscheinlichkeit für ein Ereignis** erhält man, indem man die Wahrscheinlichkeiten der zugehörigen Pfade addiert.
