@@ -100,6 +100,11 @@ b) Stelle die Möglichkeiten in einem Baumdiagramm dar.
 
 `r hide("Lösung")`
 
+a) Es gibt $2\;(Vorspeisen) \cdot 3\;(Hauptgerichte) \cdot 2\;(Nachspeisen) = 12$ Menüs.
+
+b) 
+
+<img src="./images/mensaEssen.png" height="300" />
 
 #### {-}
 
@@ -118,6 +123,11 @@ b) ... mit einem Baumdiagramm.
 
 `r hide("Lösung")`
 
+a) Man kann $3 \cdot 2 \cdot 1 = 6$ verschiedene Passwörter erstellen.
+
+b) 
+
+<img src="./images/passwoerter.png" height="300" />
 
 #### {-}
 
@@ -131,6 +141,9 @@ Emily verbringt ein paar Tage in Passau. Sie möchte den Passauer Dom und die Fe
 
 `r hide("Lösung")`
 
+Emily hat $3 \cdot 2 \cdot 1 =6$ Möglichkeiten, ihre Tour zu gestalten:
+
+<img src="./images/passau.png" height="300" />
 
 #### {-}
 
@@ -145,10 +158,23 @@ In Peters Zimmer hängen vier Bilder. Er überlegt, die Bilder umzuhängen.
 
 a) Ermittle die Anzahl der Möglichkeiten, die vier Bilder auf die vier Plätze zu verteilen.
 
+`r hide("Lösung")`
+
+Peter hat $4 \cdot 3 \cdot 2 \cdot 1= 24$ Möglichkeiten, die vier Bilder auf die vier Plätze zu verteilen:
+
+<img src="./images/peterBilder1.png" height="250" />
+
+#### {-}
+
 b) Peter sortiert ein Bild aus und hängt die anderen drei Bilder wieder auf. Ermittle, wie sich die Anzahl der Möglichkeiten ändert. Erläutere deine Lösung.
 
 `r hide("Lösung")`
 
+Da Peter immer noch 4 Pätze zur Verfügung hat, hat er immer noch 24 Möglichkeiten, die nun mehr bloß drei Bilder auf die vier Plätze zu verteilen. Dabei verteilt er auch immer einen leeren Platz (also NIX).
+
+<img src="./images/peterBilder2.png" height="250" />
+
+Hätte Peter nicht nur ein Bild aussortiert, sonder zusätzlich noch beschlossen, dass beispielsweise an der Wand neben der Türe nichts mehr hängen soll, hätte er nur noch $3 \cdot 2 \cdot 1 = 6$ Möglichkeiten, die verbleibenden Bilder zu verteilen.
 
 #### {-}
 
@@ -234,11 +260,39 @@ Das Glücksrad wird zweimal gedreht.
 
 a) Zeichne das zugehörige Baumdiagramm und notiere die Wahrscheinlichkeiten an den Zweigen.
 
+`r hide("Lösung")`
+
+<img src="./images/pRegelA1.png" height="300" />
+
+#### {-}
+
 b) Welche zusammengesetzten Ergebnisse sind möglich? Bestimme zudem jeweils die Wahrscheinlichkeit.
+
+`r hide("Lösung")`
+
+Folgende zusammengesetzte Ergebnisse sind möglich: $\{Blau\;Blau,\; Blau\;Rot,\; Rot\;Blau,\; Rot\;Rot\}$
+
+Zu diesen gehören jeweils die folgenden Wahrscheinlichkeiten:
+
+$P(Blau\;Blau)= \frac{4}{5}\cdot\frac{4}{5}=\frac{16}{25}= 0,64$
+
+$P(Blau\;Rot)= \frac{4}{5}\cdot\frac{1}{5}=\frac{4}{25}=0,16$
+
+$P(Rot\;Blau)= \frac{1}{5}\cdot\frac{4}{5}=\frac{4}{25}=0,16$
+
+$P(Rot\;Rot)= \frac{1}{5}\cdot\frac{1}{5}=\frac{1}{25}= 0,04$
+
+#### {-}
+
 
 c) Kontrolliere deine Überlegungen: Ergibt die Summe der Wahrscheinlichkeiten der zusammengesetzten Ergebnisse 1 (100%)?
 
 `r hide("Lösung")`
+
+Ja, die Summe der Wahrscheinlichkeiten der zusammengesetzten Ergebnisse ergibt 1:
+
+$$\begin{align} &P(Blau\;Blau) + P(Blau\;Rot) + P(Rot\;Blau)+ P(Rot\;Rot) = \\
+=\; &0,64 + 0,16 + 0,16 + 0,04 = 1\end{align}$$
 
 #### {-}
 
@@ -257,12 +311,29 @@ Er zieht blind eine Karte, notiert das Ergebnis und gibt die Karte zurück. Luka
 
 a) Erkläre, was das Ergebnis "Herz - Karo" bedeutet.
 
+`r hide("Lösung")`
+
+Das Ergebnis "Herz-Karo" bedeutet, dass Jim im ersten Versuch eine Herz- und im zweiten Versuch eine Karo-Karte zieht.
+
+#### {-}
+
 b) Zeichne ein Baumdiagramm und trage die Wahrscheinlichkeiten ein. Markiere den/die Pfad(e), die zu Gewinnen führen.
+
+`r hide("Lösung")`
+
+<img src="./images/pRegelA2.png" height="300" />
+
+#### {-}
 
 c) Nenne alle möglichen Ergebnisse und berechne ihre Wahrscheinlichkeiten.
 
-
 `r hide("Lösung")`
+
+Folgende 16 Ergebnisse sind möglich:
+
+$\{HH,\; HP,\; HKa,\;HKr,\;PH,\;PP,\;PKa,\;PKr,\;KaH,\;KaP,\;\;KaKa,\;KaKr,\;KrH,\;KrP,\;KrKa,\;KrKr\}$
+
+Alle 16 Ergebnisse haben dieselbe Wahrscheinlichkeit, nämlich $\frac{1}{4}\cdot\frac{1}{4}=\frac{1}{16}=0,0625$.
 
 #### {-}
 
@@ -278,11 +349,33 @@ Charlotte spielt Basketball. Sie trifft den Korb beim Basketballfreiwurf mit ein
 
 a) Zeichne ein Baumdiagramm mit Wahrscheinlichkeiten.
 
+`r hide("Lösung")`
+
+<img src="./images/pRegelA3.png" height="300" />
+
+#### {-}
+
 b) Berechne die Wahrscheinlichkeit, dass Charlotte dreimal trifft.
+
+`r hide("Lösung")`
+
+Der zu diesem Ergebnis gehörende Pfad ist grün markiert. Multipliziert man die Wahrscheinlichkeiten entlang des Pfades ergibt sich:
+
+$P(Korb\;Korb\;Korb)=0,6\cdot0,6\cdot0,6=0,216$
+
+Charlotte trifft also mit einer Wahrscheinlichkeit von 21,6% dreimal.
+
+#### {-}
 
 c) Berechne die Wahrscheinlichkeit für das Ergebnis "Korb - kein Korb - Korb".
 
 `r hide("Lösung")`
+
+Der zu diesem Ergebnis gehörende Pfad ist orange markiert. Multipliziert man die Wahrscheinlichkeiten entlang des Pfades ergibt sich:
+
+$P(Korb\;kein\;Korb\;Korb)=0,6\cdot0,4\cdot0,6=0,144$
+
+Die Abfolge "Korb, kein Korb, Korb" hat also eine Wahrscheinlichkeit von 14,4%.
 
 #### {-}
 
@@ -299,11 +392,35 @@ Die beiden Glücksräder werden gleichzeitig gedreht.
 
 a) Zeichne ein Baumdiagramm, in dem das linke Glücksrad auf der ersten und das rechte Glücksrad auf der zweiten Stufe ist. Trage die Wahrscheinlichkeiten ein.
 
+`r hide("Lösung")`
+
+<img src="./images/pRegelA4a.png" height="300" />
+
+#### {-}
+
 b) Zeichne ein Baumdiagramm, in dem das rechte Glücksrad auf der ersten und das linke Glücksrad auf der zweiten Stufe ist. Trage die Wahrscheinlichkeiten ein.
+
+`r hide("Lösung")`
+
+<img src="./images/pRegelA4b.png" height="300" />
+
+#### {-}
 
 c) Berechne die Wahrschinlichkeit dafür, dass beide Glücksräder Rot zeigen. Verwende einmal das Baumdiagramm aus Teilaufgabe a) und einmal das aus Teilaufgabe b). Vergleiche die Ergebnisse.
 
 `r hide("Lösung")`
+
+1. Mit dem Baumdiagramm aus Teilaufgabe a) ergibt sich:
+
+$$P(Rot\;Rot)=\frac{1}{2}\cdot\frac{3}{8}=\frac{3}{16}=0,1875$$
+
+2. Mit dem Baumdiagramm aus Teilaufgabe b) ergibt sich:
+
+$$P(Rot\;Rot)=\frac{3}{8}\cdot\frac{1}{2}=\frac{3}{16}=0,1875$$
+
+Die Wahrscheinlichkeit, dass beide Glücksräder auf dem roten Sektor stehen bleiben, ist also 18,75%. 
+
+Dass die Wahrscheinlichkeit unabhängig davon ist, welches Glücksrad man auf welcher Stufe im Baumdiagramm einträgt, ist verständlich, wenn man sich daran erinnert, dass man die Faktoren bei der Multiplikation vertauschen darf.
 
 #### {-}
 

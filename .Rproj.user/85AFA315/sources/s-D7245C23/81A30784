@@ -3,7 +3,7 @@
     "path": "~/github/Lernpfade/8_Wahrscheinlichkeit/Wahrscheinlichkeit-8/Bäume.Rmd",
     "project_path": "Bäume.Rmd",
     "type": "r_markdown",
-    "hash": "3096584395",
+    "hash": "1181577690",
     "contents": "",
     "dirty": false,
     "created": 1615654336343.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "337,79",
-        "scrollLine": "322"
+        "cursorPosition": "422,128",
+        "scrollLine": "414"
     },
     "folds": "",
-    "lastKnownWriteTime": 1616371684,
+    "lastKnownWriteTime": 1616464181,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1616371684921,
+    "last_content_update": 1616464181545,
     "read_only": false,
     "read_only_alternatives": []
 }
