@@ -359,7 +359,7 @@ b) Berechne die Wahrscheinlichkeit, dass Charlotte dreimal trifft.
 
 `r hide("Lösung")`
 
-Der zu diesem Ergebnis gehörende Pfad ist grün markiert. Multipliziert man die Wahrscheinlichkeiten entlang des Pfades ergibt sich:
+Der zu diesem Ergebnis gehörende Pfad ist grün markiert. Multipliziert man die Wahrscheinlichkeiten entlang des Pfades, ergibt sich:
 
 $P(Korb\;Korb\;Korb)=0,6\cdot0,6\cdot0,6=0,216$
 
@@ -371,7 +371,7 @@ c) Berechne die Wahrscheinlichkeit für das Ergebnis "Korb - kein Korb - Korb".
 
 `r hide("Lösung")`
 
-Der zu diesem Ergebnis gehörende Pfad ist orange markiert. Multipliziert man die Wahrscheinlichkeiten entlang des Pfades ergibt sich:
+Der zu diesem Ergebnis gehörende Pfad ist orange markiert. Multipliziert man die Wahrscheinlichkeiten entlang des Pfades, ergibt sich:
 
 $P(Korb\;kein\;Korb\;Korb)=0,6\cdot0,4\cdot0,6=0,144$
 
@@ -420,7 +420,7 @@ $$P(Rot\;Rot)=\frac{3}{8}\cdot\frac{1}{2}=\frac{3}{16}=0,1875$$
 
 Die Wahrscheinlichkeit, dass beide Glücksräder auf dem roten Sektor stehen bleiben, ist also 18,75%. 
 
-Dass die Wahrscheinlichkeit unabhängig davon ist, welches Glücksrad man auf welcher Stufe im Baumdiagramm einträgt, ist verständlich, wenn man sich daran erinnert, dass man die Faktoren bei der Multiplikation vertauschen darf.
+Dass die Wahrscheinlichkeit unabhängig davon ist, welches Glücksrad man auf welcher Stufe im Baumdiagramm einträgt, ist verständlich, wenn man sich daran erinnert, dass man die Faktoren bei einer Multiplikation vertauschen darf.
 
 #### {-}
 
