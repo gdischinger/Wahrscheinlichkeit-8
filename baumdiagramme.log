@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.13)  23 MAR 2021 01:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.13)  23 MAR 2021 11:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -408,22 +408,22 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
 (./baumdiagramme.aux) ) 
 Here is how much of TeX's memory you used:
- 4268 strings out of 483130
- 81950 string characters out of 5963883
+ 4269 strings out of 483130
+ 81958 string characters out of 5963883
  522348 words of memory out of 5000000
- 19319 multiletter control sequences out of 15000+600000
+ 19320 multiletter control sequences out of 15000+600000
  535077 words of font info for 33 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  45i,8n,56p,10135b,305s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr10.pfb>
-Output written on baumdiagramme.pdf (3 pages, 24415 bytes).
+Output written on baumdiagramme.pdf (4 pages, 26639 bytes).
 PDF statistics:
- 18 PDF objects out of 1000 (max. 8388607)
- 11 compressed objects within 1 object stream
+ 21 PDF objects out of 1000 (max. 8388607)
+ 13 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
