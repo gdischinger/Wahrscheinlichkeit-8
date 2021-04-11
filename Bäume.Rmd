@@ -627,7 +627,159 @@ cat('<hr style="background-color:#3C6690;height:2px">')
 cat('<hr style="background-color:#3C6690;height:2px">')
 ```
 
+### Überprüfe dein Wissen {-}
+
+<img src="./images/hasenschulemann.jpg" height="300" />
+
+Die Osterferien sind vorbei und auch, wenn wir nicht wie Stups (der, dem immer alles schief geht) und die andern kleinen Hasen in die Schule dürfen, geht es doch weiter mit Mathe. Die Frage ist, erinnerst du dich noch an die Zeit vor den Ferien oder muss ich ein bisschen am Öhrchen ziehen, um der Erinnerung auf die Sprünge zu helfen?
+
+<img src="./images/ohrenlang.jpeg" height="300" />
+
+Da auch das sehr bewährte Ohren-lang-Ziehen im Distanzunterricht schwer umzusetzen ist, versuche ich es hier mit einem Erinnerungsquiz. 
+
+Bearbeite also folgendes Quiz. Solltest du bei einer Aufgabe Schwierigkeiten haben, lies nach, frag nach und versuch' sie dann nochmal. Viel Spaß!
+
+
+```{r out.width="95%", echo=FALSE}
+knitr::include_url("./iframes/Zqui.html") 
+```
+
+
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+
 ### Baumdiagramme mit abhängigen Stufen
+
+<img src="./images/gummibaerchenrotweiss.jpg" height="200" />
+
+Erinnere dich an die letzte Aufgabe aus dem Quiz: Amelie hatte noch 7 rote und 5 weiße Gummibärchen in ihrer Tüte und hat nacheinander zufällig zwei Gummibärchen herausgeholt und aufgegessen. Die Wahrscheinlichkeit dafür, dass sie zwei rote Gummibärchen erwischt, war $\frac{7}{12} \cdot \frac {6}{11} = \frac{7}{22}$. Warum? 
+
+(Denk mal kurz nach und lies erst weiter, wenn du die Lösung weißt...)
+
+Genau. Wenn sie ein Gummibärchen herausgeholt und aufgegessen hat, sind auf jeden Fall nur noch elf Gummibärchen in der Tüte: Entweder sie hat ein rotes Gummibärchen aufgegessen, dann hat sie noch sechs rote und fünf weiße Gummibärchen. Oder sie hat ein weißes Gummibärchen aufgegessen, dann hat sie immer noch sieben rote, aber nur noch vier weiße Gummibärchen. In jedem Fall ändern sich die Wahrscheinlichkeiten auf der zweiten Stufe des Baumdiagramms. Und da sie sich in Abhängigkeit vom Ausgang des Zufallsexperiments in der ersten Stufe ändern (wenn hat's erwischt? Ein weißes oder ein rotes Gummibärchen?), spricht man in diesem Fall spricht man von einem Baumdiagramm mit abhängigen Stufen.
+
+<img src="./images/gummibaerBeispiel.png" height="250" />
+
+Ein weiterer Name für diese Art der Zufallsversuche ist "Experiment ohne Zurücklegen". Das Gummibärchen wandert nicht wieder in die Tüte, sonst wären es ja nach wie vor 12 Gummibärchen. 
+
+#### Beachte: {-}
+
+> Es gibt Zufallsexperimente **mit** und Zufallsexperimente **ohne Zurücklegen**. 
+
+> Handelt es sich um ein Zufallsexperiment **mit Zurücklegen**, bleiben die Wahrscheinlichkeiten, die an den Pfaden notiert werden, auf allen Stufen des Baumdiagramms gleich. Beispiele sind: Mehrmaliges Würfeln (oder auch gleichzeitiges Würfeln mit mehreren Würfeln), wiederholtes Münzewerfen, wiederholtes Glücksraddrehen...
+
+> Handelt es sich um ein Zufallsexperiment **ohne Zurücklegen**, ändern sich die Wahrscheinlichkeiten, die an den Pfaden notiert werden, von Stufe zu Stufe. Beispiele sind: Lose, Kugeln, Karten, Schrauben oder Gummibärchen (oder sonst irgendwas) Ziehen, ohne dass die Lose, Kugeln, Karten, Schrauben oder Gummibärchen zurückgelegt werden. 
+
+> **Falls dir die Reihenfolge egal ist**, dann kannst du die Lose, Kugeln, Karten etc. auch gleichzeitig ziehen, in eine beliebige Reihenfolge bringen und dann den Baum passend zu deiner Reihenfolge malen. Mit jeder beliebigen Reihenfolge wirst du die gleiche "End-" Wahrscheinlichkeit erhalten. Du kannst dir das vielleicht so vorstellen: Du schließt die Augen und ziehst hintereinander fünf Kugeln, Lose, egal was aus einer Urne. Zwischendurch wird nicht geblinzelt. Hinterher liegen fünf Kugel in einer Reihe vor dir. Wenn dich die Reihenfolge nicht interessiert, hättest du genauso gut alle fünf gleichzeitig ziehen und irgendwie anordnen können.
+
+
+#### Beispiel {-}
+Aus einer Kiste mit fünf neuen und drei gebrauchten Pullis werden zwei Pullis entnommen. Ermittle die Wahrscheinlichkeit dafür, dass ein gebrauchter und ein neuer Pulli erwischt wurden. Zeichne dazu ein Baumdiagramm.
+
+`r hide("Lösung")`
+
+Beachte beim Zeichnen des Baumdiagramms, dass der erste Pulli nicht zurückgelegt wird!
+
+<img src="./images/beispielAbhaengigeStufen.png" height="200" />
+
+Man muss also folgende Fälle unterscheiden:
+
++ Der zuerst gezogene Pulli ist gebraucht. Dann gibt es noch zwei gebrauchte und fünf neue Pullis in der Kiste.
+
++ Der zuerst gezogene Pulli ist neu. Dann gibt es noch drei gebrauchte und vier neue Pullis in der Kiste.
+
+Das Ereignis "einmal gebraucht und einmal neu" setzt sich also aus den beiden Fällen (Pfaden) gebraucht-neu (gn) und neu-gebraucht (ng) zusammen. Für die Wahrscheinlichkeit dieses Ereignisses gilt also:
+
+$$\begin{align} P(E)&=P(gn)+P(ng)= \\
+{}\\
+&= \frac{3}{8}\cdot\frac{5}{7} + \frac{5}{8}\cdot\frac{3}{7} = \\
+{}\\
+&= \frac{15}{56} + \frac{15}{56} = \frac{15}{28} \approx 54\%\end{align}$$
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 1 {-}
+
+<img src="./images/abhaengStufenA1.png" height="200" />
+
+In einem Gefäß liegen drei weiße und zwei schwarze Kugeln. Zwei Kugeln werden nacheinander zufällig entnommen. Zeichne ein Baumdiagramm und berechne die Wahrscheinlichkeit dafür, dass zwei gleiche Kugeln gezogen werden,
+
+a) wenn die Kugeln zurückgelegt werden.
+
+b) wenn die Kugeln nicht zurückgelegt werden.
+
+c) Erkläre anschaulich, warum die Wahrscheinlichkeit in einem Fall größer ist.
+
+`r hide("Lösung")`
+
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 2 {-}
+
+<img src="./images/schokoEiKorb.jpeg" height="200" />
+
+In einem Korb liegen 12 Schokoladen-Ostereier. Drei davon sind mit Marzipan. Franka entnimmt dem Korb zwei Schoko-Eier. Zeichne ein Baumdiagramm und berechne die folgenden Wahrscheinlichkeiten:
+
+a) Sie erwischt zwei Marzipan-Eier.
+
+b) Sie erwischt ein Marzipan-Ei und ein Schoko-Ei mit anderer Füllung.
+
+c) Sie erwischt kein Marzipan-Ei.
+
+`r hide("Lösung")`
+
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 3 {-}
+
+<img src="./images/zombiball.jpeg" height="200" />
+
+Eine Zombiballgruppe besteht aus 13 Mädchen und 12 Jungen. Es sollen zufällig zwei Kinder bestimmt werden, die dann jeweils ihre Mannschaften wählen dürfen. Berechne die Wahrscheinlichkeit dafür, dass ein Junge und ein Mädchen bestimmt werden. Zeichne zunächst ein Baumdiagramm.
+
+`r hide("Lösung")`
+
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+### Übungsaufgaben {-}
 
 
 ## Baumdiagramme geschickt nutzen

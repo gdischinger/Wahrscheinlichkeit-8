@@ -213,11 +213,13 @@ window.onload = function() {
 <ul>
 <li class="chapter" data-level="3.2.1" data-path="3-2-wahrscheinlichkeiten-und-baumdiagramme.html"><a href="3-2-wahrscheinlichkeiten-und-baumdiagramme.html#produktregel"><i class="fa fa-check"></i><b>3.2.1</b> Produktregel</a></li>
 <li class="chapter" data-level="3.2.2" data-path="3-2-wahrscheinlichkeiten-und-baumdiagramme.html"><a href="3-2-wahrscheinlichkeiten-und-baumdiagramme.html#summenregel"><i class="fa fa-check"></i><b>3.2.2</b> Summenregel</a></li>
+<li class="chapter" data-level="" data-path="3-2-wahrscheinlichkeiten-und-baumdiagramme.html"><a href="3-2-wahrscheinlichkeiten-und-baumdiagramme.html#überprüfe-dein-wissen"><i class="fa fa-check"></i>Überprüfe dein Wissen</a></li>
 <li class="chapter" data-level="3.2.3" data-path="3-2-wahrscheinlichkeiten-und-baumdiagramme.html"><a href="3-2-wahrscheinlichkeiten-und-baumdiagramme.html#baumdiagramme-mit-abhängigen-stufen"><i class="fa fa-check"></i><b>3.2.3</b> Baumdiagramme mit abhängigen Stufen</a></li>
+<li class="chapter" data-level="" data-path="3-2-wahrscheinlichkeiten-und-baumdiagramme.html"><a href="3-2-wahrscheinlichkeiten-und-baumdiagramme.html#übungsaufgaben"><i class="fa fa-check"></i>Übungsaufgaben</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="3-3-baumdiagramme-geschickt-nutzen.html"><a href="3-3-baumdiagramme-geschickt-nutzen.html"><i class="fa fa-check"></i><b>3.3</b> Baumdiagramme geschickt nutzen</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="4-übungsaufgaben.html"><a href="4-übungsaufgaben.html"><i class="fa fa-check"></i><b>4</b> Übungsaufgaben</a></li>
+<li class="chapter" data-level="4" data-path="4-übungsaufgaben-1.html"><a href="4-übungsaufgaben-1.html"><i class="fa fa-check"></i><b>4</b> Übungsaufgaben</a></li>
 <li class="chapter" data-level="5" data-path="5-abschlussquiz.html"><a href="5-abschlussquiz.html"><i class="fa fa-check"></i><b>5</b> Abschlussquiz</a></li>
 </ul>
 
@@ -620,8 +622,122 @@ Lösung
 <hr style="background-color:#3C6690;height:2px">
 </div>
 </div>
+<div id="überprüfe-dein-wissen" class="section level3 unnumbered">
+<h3>Überprüfe dein Wissen</h3>
+<p><img src="images/hasenschulemann.jpg" height="300" /></p>
+<p>Die Osterferien sind vorbei und auch, wenn wir nicht wie Stups (der, dem immer alles schief geht) und die andern kleinen Hasen in die Schule dürfen, geht es doch weiter mit Mathe. Die Frage ist, erinnerst du dich noch an die Zeit vor den Ferien oder muss ich ein bisschen am Öhrchen ziehen, um der Erinnerung auf die Sprünge zu helfen?</p>
+<p><img src="images/ohrenlang.jpeg" height="300" /></p>
+<p>Da auch das sehr bewährte Ohren-lang-Ziehen im Distanzunterricht schwer umzusetzen ist, versuche ich es hier mit einem Erinnerungsquiz.</p>
+<p>Bearbeite also folgendes Quiz. Solltest du bei einer Aufgabe Schwierigkeiten haben, lies nach, frag nach und versuch’ sie dann nochmal. Viel Spaß!</p>
+<iframe src="./iframes/Zqui.html" width="95%" height="400px">
+</iframe>
+<div id="section-132" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+<hr style="background-color:#3C6690;height:2px">
+</div>
+</div>
 <div id="baumdiagramme-mit-abhängigen-stufen" class="section level3" number="3.2.3">
 <h3><span class="header-section-number">3.2.3</span> Baumdiagramme mit abhängigen Stufen</h3>
+<p><img src="images/gummibaerchenrotweiss.jpg" height="200" /></p>
+<p>Erinnere dich an die letzte Aufgabe aus dem Quiz: Amelie hatte noch 7 rote und 5 weiße Gummibärchen in ihrer Tüte und hat nacheinander zufällig zwei Gummibärchen herausgeholt und aufgegessen. Die Wahrscheinlichkeit dafür, dass sie zwei rote Gummibärchen erwischt, war <span class="math inline">\(\frac{7}{12} \cdot \frac {6}{11} = \frac{7}{22}\)</span>. Warum?</p>
+<p>(Denk mal kurz nach und lies erst weiter, wenn du die Lösung weißt…)</p>
+<p>Genau. Wenn sie ein Gummibärchen herausgeholt und aufgegessen hat, sind auf jeden Fall nur noch elf Gummibärchen in der Tüte: Entweder sie hat ein rotes Gummibärchen aufgegessen, dann hat sie noch sechs rote und fünf weiße Gummibärchen. Oder sie hat ein weißes Gummibärchen aufgegessen, dann hat sie immer noch sieben rote, aber nur noch vier weiße Gummibärchen. In jedem Fall ändern sich die Wahrscheinlichkeiten auf der zweiten Stufe des Baumdiagramms. Und da sie sich in Abhängigkeit vom Ausgang des Zufallsexperiments in der ersten Stufe ändern (wenn hat’s erwischt? Ein weißes oder ein rotes Gummibärchen?), spricht man in diesem Fall spricht man von einem Baumdiagramm mit abhängigen Stufen.</p>
+<p><img src="images/gummibaerBeispiel.png" height="250" /></p>
+<p>Ein weiterer Name für diese Art der Zufallsversuche ist “Experiment ohne Zurücklegen”. Das Gummibärchen wandert nicht wieder in die Tüte, sonst wären es ja nach wie vor 12 Gummibärchen.</p>
+<div id="beachte" class="section level4 unnumbered">
+<h4>Beachte:</h4>
+<blockquote>
+<p>Es gibt Zufallsexperimente <strong>mit</strong> und Zufallsexperimente <strong>ohne Zurücklegen</strong>.</p>
+</blockquote>
+<blockquote>
+<p>Handelt es sich um ein Zufallsexperiment <strong>mit Zurücklegen</strong>, bleiben die Wahrscheinlichkeiten, die an den Pfaden notiert werden, auf allen Stufen des Baumdiagramms gleich. Beispiele sind: Mehrmaliges Würfeln (oder auch gleichzeitiges Würfeln mit mehreren Würfeln), wiederholtes Münzewerfen, wiederholtes Glücksraddrehen…</p>
+</blockquote>
+<blockquote>
+<p>Handelt es sich um ein Zufallsexperiment <strong>ohne Zurücklegen</strong>, ändern sich die Wahrscheinlichkeiten, die an den Pfaden notiert werden, von Stufe zu Stufe. Beispiele sind: Lose, Kugeln, Karten, Schrauben oder Gummibärchen (oder sonst irgendwas) Ziehen, ohne dass die Lose, Kugeln, Karten, Schrauben oder Gummibärchen zurückgelegt werden.</p>
+</blockquote>
+<blockquote>
+<p><strong>Falls dir die Reihenfolge egal ist</strong>, dann kannst du die Lose, Kugeln, Karten etc. auch gleichzeitig ziehen, in eine beliebige Reihenfolge bringen und dann den Baum passend zu deiner Reihenfolge malen. Mit jeder beliebigen Reihenfolge wirst du die gleiche “End-” Wahrscheinlichkeit erhalten. Du kannst dir das vielleicht so vorstellen: Du schließt die Augen und ziehst hintereinander fünf Kugeln, Lose, egal was aus einer Urne. Zwischendurch wird nicht geblinzelt. Hinterher liegen fünf Kugel in einer Reihe vor dir. Wenn dich die Reihenfolge nicht interessiert, hättest du genauso gut alle fünf gleichzeitig ziehen und irgendwie anordnen können.</p>
+</blockquote>
+</div>
+<div id="beispiel-4" class="section level4 unnumbered">
+<h4>Beispiel</h4>
+<p>Aus einer Kiste mit fünf neuen und drei gebrauchten Pullis werden zwei Pullis entnommen. Ermittle die Wahrscheinlichkeit dafür, dass ein gebrauchter und ein neuer Pulli erwischt wurden. Zeichne dazu ein Baumdiagramm.</p>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Beachte beim Zeichnen des Baumdiagramms, dass der erste Pulli nicht zurückgelegt wird!</p>
+<p><img src="images/beispielAbhaengigeStufen.png" height="200" /></p>
+<p>Man muss also folgende Fälle unterscheiden:</p>
+<ul>
+<li><p>Der zuerst gezogene Pulli ist gebraucht. Dann gibt es noch zwei gebrauchte und fünf neue Pullis in der Kiste.</p></li>
+<li><p>Der zuerst gezogene Pulli ist neu. Dann gibt es noch drei gebrauchte und vier neue Pullis in der Kiste.</p></li>
+</ul>
+<p>Das Ereignis “einmal gebraucht und einmal neu” setzt sich also aus den beiden Fällen (Pfaden) gebraucht-neu (gn) und neu-gebraucht (ng) zusammen. Für die Wahrscheinlichkeit dieses Ereignisses gilt also:</p>
+<p><span class="math display">\[\begin{align} P(E)&amp;=P(gn)+P(ng)= \\
+{}\\
+&amp;= \frac{3}{8}\cdot\frac{5}{7} + \frac{5}{8}\cdot\frac{3}{7} = \\
+{}\\
+&amp;= \frac{15}{56} + \frac{15}{56} = \frac{15}{28} \approx 54\%\end{align}\]</span></p>
+</div>
+<div id="section-133" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-1-14" class="section level4 unnumbered">
+<h4>Aufgabe 1</h4>
+<p><img src="images/abhaengStufenA1.png" height="200" /></p>
+<p>In einem Gefäß liegen drei weiße und zwei schwarze Kugeln. Zwei Kugeln werden nacheinander zufällig entnommen. Zeichne ein Baumdiagramm und berechne die Wahrscheinlichkeit dafür, dass zwei gleiche Kugeln gezogen werden,</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>wenn die Kugeln zurückgelegt werden.</p></li>
+<li><p>wenn die Kugeln nicht zurückgelegt werden.</p></li>
+<li><p>Erkläre anschaulich, warum die Wahrscheinlichkeit in einem Fall größer ist.</p></li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-134" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-2-14" class="section level4 unnumbered">
+<h4>Aufgabe 2</h4>
+<p><img src="images/schokoEiKorb.jpeg" height="200" /></p>
+<p>In einem Korb liegen 12 Schokoladen-Ostereier. Drei davon sind mit Marzipan. Franka entnimmt dem Korb zwei Schoko-Eier. Zeichne ein Baumdiagramm und berechne die folgenden Wahrscheinlichkeiten:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Sie erwischt zwei Marzipan-Eier.</p></li>
+<li><p>Sie erwischt ein Marzipan-Ei und ein Schoko-Ei mit anderer Füllung.</p></li>
+<li><p>Sie erwischt kein Marzipan-Ei.</p></li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-135" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-3-8" class="section level4 unnumbered">
+<h4>Aufgabe 3</h4>
+<p><img src="images/zombiball.jpeg" height="200" /></p>
+<p>Eine Zombiballgruppe besteht aus 13 Mädchen und 12 Jungen. Es sollen zufällig zwei Kinder bestimmt werden, die dann jeweils ihre Mannschaften wählen dürfen. Berechne die Wahrscheinlichkeit dafür, dass ein Junge und ein Mädchen bestimmt werden. Zeichne zunächst ein Baumdiagramm.</p>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-136" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+<hr style="background-color:#3C6690;height:2px">
+</div>
+</div>
+<div id="übungsaufgaben" class="section level3 unnumbered">
+<h3>Übungsaufgaben</h3>
 </div>
 </div>
             </section>

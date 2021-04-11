@@ -1,0 +1,960 @@
+---
+title: "Überprüfe dein Wissen!"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{css, echo=FALSE}
+
+td, tr {
+     border-radius: 10px 10px 10px 10px;
+     padding: 25px 15px;
+     border: 0;
+} 
+
+tr:nth-child(odd){ 
+  border-radius: 10px 10px 10px 10px;
+  background-color: #cae1ff; !important 
+}
+
+
+td:hover { background-color: #dddd; !important }
+
+table {
+   color:black ;
+   /*background-color: #356185 !important;*/
+   background-color: transparent;
+}
+
+caption {
+    color:black;
+}
+
+# .book .book-body .page-wrapper .page-inner section.normal table td, .book .book-body .page-wrapper .page-inner section.normal table th {
+#     padding: 6px 13px;
+#     border: 0;
+# }
+}
+
+# ✓ {
+# 	color: #0c0;
+# }
+# 
+# ✗ {
+# 	color: #c00;
+# }
+```
+
+<form id="WZwischendurchquiz">
+<table border=0 cellspacing="0" cellpadding="5">
+
+<!-- Frage 1 -->
+<tr>
+<td colspan="4">1. Entscheide, ob es sich um ein Zufallsexperiment handelt.</td>
+<td><h3 id="stimmts1">  </h3></td>
+</tr>
+<tr>
+<td width=25%>
+<input id="1" name="q1" type="checkbox" value="1" />
+      Aus einem Beutel mit verschieden farbigen Murmeln wird eine gelbe Murmel gezogen.
+</td>
+<td width=25%>     
+<input id="2" name="q1" type="checkbox" value="2" />
+      Die Zeit, die bis zum Aufprall vergeht, wenn ein Stein aus 50 Metern Höhe zu Boden fällt. 
+</td>
+<td width=25%> 
+<input id="3" name="q1" type="checkbox" value="3" />
+      Aus einer Schublade werden blind zwei Socken gezogen.
+</td>
+<td width=25%> 
+<input id="4" name="q1" type="checkbox" value="4" />
+      Der Zeitpunkt, zu dem ein einzelnes Uranatom zerfällt.
+</td>
+</tr>
+
+<!-- Frage 2 -->
+<tr>
+<td colspan="4"> 2. Zwei Münzen werden geworfen. Was könnte die Ergebnismenge sein.</td>
+<td><h3 id="stimmts2">  </h3></td>
+</tr>
+<tr>
+<td>
+<input id="5" name="q2" type="checkbox" value="5" />
+      $\Omega=\{K,\;Z,\;K,\;Z\}$
+</td>
+<td>     
+<input id="6" name="q2" type="checkbox" value="6" />
+      $\Omega=\{KK,\;KZ,\;ZK,\;ZZ\}$
+</td>
+<td> 
+<input id="7" name="q2" type="checkbox" value="7" />
+       $\Omega=\{K,\;Z\}$
+</td>
+<td>
+<input id="8" name="q2" type="checkbox" value="8" />
+      $\Omega=\{gleich,\;gemischt\}$
+</td>
+</tr>
+
+<!-- Frage 3 -->
+<tr>
+<td colspan="4"> 3. Aus einem Beutel mit zwei roten, zwei blauen und zwei gelben Murmeln werden zwei Murmeln gezogen. Gib die Ergebnismenge an.</td>
+<td><h3 id="stimmts3">  </h3></td>
+</tr>
+<tr>
+<td width=25%>
+<input id="9" name="q3" type="checkbox" value="9" />
+      $\Omega=\{rot,\;blau,\;gelb\}$
+</td>
+<td width=25%>     
+<input id="10" name="q3" type="checkbox" value="10" />
+      $\Omega=\{rr,\;rb,\;rg,\;bb,\;br,\;bg,\;gg,\;gb,\;gr\}$ 
+</td>
+<td width=25%> 
+<input id="11" name="q3" type="checkbox" value="11" />
+      $\Omega=\{rr,\;rb,\;rg,\;bb,\;bg,\;gg\}$
+</td>
+<td width=25%> 
+<input id="12" name="q3" type="checkbox" value="12" />
+      $\Omega=\{rr,\;bb,\;gg\}$
+</td>
+</tr>
+
+<!-- Frage 4 -->
+<tr>
+<td colspan="4"> 4. Die Wahrscheinlichkeit, mit einem normalen Spielwürfel eine Primzahl zu würfeln, beträgt ... </td>
+<td><h3 id="stimmts4">  </h3></td>
+</tr>
+<tr>
+<td>
+<input id="13" name="q4" type="checkbox" value="13" />
+      $50\%$
+</td>
+<td>     
+<input id="14" name="q4" type="checkbox" value="14" />
+      $\frac{1}{6}+\frac{1}{6} = \frac{1}{3}$
+</td>
+<td> 
+<input id="15" name="q4" type="checkbox" value="15" />
+      $3\cdot\frac{1}{6}$
+</td>
+<td>
+<input id="16" name="q4" type="checkbox" value="16" />
+     $etwa\; 33\%$
+</td>
+</tr>
+
+<!-- Frage 5 -->
+<tr>
+<td colspan="4"> 5. Die Wahrscheinlichkeit, mit einem normalen Spielwürfel eine durch drei teilbare Zahl zu würfeln, beträgt ... </td>
+<td><h3 id="stimmts5">  </h3></td>
+</tr>
+<tr>
+<td width=25%>
+<input id="17" name="q5" type="checkbox" value="17" />
+      $50\%$
+</td>
+<td width=25%>     
+<input id="18" name="q5" type="checkbox" value="18" />
+       $\frac{1}{6}+\frac{1}{6} = \frac{1}{3}$
+</td>
+<td width=25%> 
+<input id="19" name="q5" type="checkbox" value="19" />
+      $3\cdot\frac{1}{6}$
+</td>
+<td width=25%> 
+<input id="20" name="q5" type="checkbox" value="20" />
+      $etwa\; 33\%$
+</td>
+</tr>
+
+<!-- Frage 6 -->
+<tr>
+<td colspan="4">  6. Bei welchem der folgenden Zufallsexperimente handelt es sich um ein Laplace-Experiment? </td>
+<td><h3 id="stimmts6">  </h3></td>
+</tr>
+<tr>
+<td>
+<input id="21" name="q6" type="checkbox" value="21" />
+      Eine Münze wird geworfen.
+</td>
+<td>     
+<input id="22" name="q6" type="checkbox" value="22" />
+      Eine Reißzwecke wird geworfen.
+</td>
+<td> 
+<input id="23" name="q6" type="checkbox" value="23" />
+      Ein quaderförmiger Baustein wird geworfen.
+</td>
+<td>
+<input id="24" name="q6" type="checkbox" value="24" />
+      Aus 32 Spielkarten wird eine Karte gezogen.
+</td>
+</tr>
+
+<!-- Frage 7 -->
+<tr>
+<td colspan="4">  7. Wird ein Zufallsexperiment sehr oft durchgeführt, so </td>
+<td><h3 id="stimmts7">  </h3></td>
+</tr>
+<tr>
+<td width=25%>
+<input id="25" name="q7" type="checkbox" value="25" />
+      hat auf jeden Fall der Teufel seine Finger im Spiel.
+</td>
+<td width=25%>     
+<input id="26" name="q7" type="checkbox" value="26" />
+      stabilisieren sich die absoluten Häufigkeiten eine Ergebnisses um einen festen Wert.
+</td>
+<td width=25%> 
+<input id="27" name="q7" type="checkbox" value="27" />
+       stabilisieren sich die relativen Häufigkeiten eines Ergebnisses um einen festen Wert.
+</td>
+<td width=25%> 
+<input id="28" name="q7" type="checkbox" value="28" />
+      kommen immer irgendwann alle möglichen Ergebnisse gleich oft vor.
+</td>
+</tr>
+
+<!-- Frage 8 -->
+<tr>
+<td colspan="4"> 8. Du würfelst mit einem normalen Spielwürfel. Nachdem du die zwölfte Eins in Folge gewürfelt hast, ... </td>
+<td><h3 id="stimmts8">  </h3></td>
+</tr>
+<tr>
+<td>
+<input id="29" name="q8" type="checkbox" value="29" />
+      ist die Wahrscheinlichkeit dafür, dass im nächsten Wurf noch einmal eine Eins kommt, $\frac{1}{30}$.
+</td>
+<td>     
+<input id="30" name="q8" type="checkbox" value="30" />
+       ist die Wahrscheinlichkeit dafür, dass im nächsten Wurf noch einmal eine Eins kommt, $\frac{1}{6}\cdot\frac{1}{6}\cdot\frac{1}{6}\cdot\frac{1}{6}\cdot\frac{1}{6}$.
+</td>
+<td> 
+<input id="31" name="q8" type="checkbox" value="31" />
+       ist die Wahrscheinlichkeit dafür, dass im nächsten Wurf noch einmal eine Eins kommt, $\frac{1}{6}$.
+</td>
+<td>
+<input id="32" name="q8" type="checkbox" value="32" />
+       ist die Wahrscheinlichkeit dafür, dass im nächsten Wurf eine Vier kommt, $\frac{1}{6}$.
+</td>
+</tr>
+
+<!-- Frage 9 -->
+<tr>
+<td colspan="4"> 9. Peter würfelt 600.000 mal. Es ist zu erwarten, dass er ... </td>
+<td><h3 id="stimmts9">  </h3></td>
+</tr>
+<tr>
+<td width=25%>
+<input id="33" name="q9" type="checkbox" value="33" />
+      ungefähr 300.000 mal eine gerade Zahl würfelt.
+</td>
+<td width=25%>     
+<input id="34" name="q9" type="checkbox" value="34" />
+       ungefähr 100.000 mal eine Eins würfelt.
+</td>
+<td width=25%> 
+<input id="35" name="q9" type="checkbox" value="35" />
+     ungefähr 400.000. mal eine Vier würfelt.
+</td>
+<td width=25%> 
+<input id="36" name="q9" type="checkbox" value="36" />
+      mehr Zweien als Dreien würfelt.
+</td>
+</tr>
+
+<!-- Frage 10 -->
+<tr>
+<td colspan="4"> 10. Anna hat für ihr Fahrrad ein vierstelliges Zahlenschloss mit den Ziffern von 0 bis 9. Wie viele verschiedene Zahlenkombinationen kann sie einstellen. </td>
+<td><h3 id="stimmts10">  </h3></td>
+</tr>
+<tr>
+<td>
+<input id="37" name="q10" type="checkbox" value="37" />
+      $10000$
+</td>
+<td>     
+<input id="38" name="q10" type="checkbox" value="38" />
+      $10^4$
+</td>
+<td> 
+<input id="39" name="q10" type="checkbox" value="39" />
+      $9999$
+</td>
+<td>
+<input id="40" name="q10" type="checkbox" value="40" />
+      $9^4$
+</td>
+</tr>
+
+<!-- Frage 11 -->
+<tr>
+<td colspan="4"> 11. Ein Passwort muss aus zwei Buchstaben (es gibt 26 Buchstaben) und zwei Ziffern (0,...,9) bestehen. Wie viele Möglichkeiten gibt es, das Passwort zu erzeugen, wenn die Buchstaben und die Ziffern auch mehrmals vorkommen dürfen. </td>
+<td><h3 id="stimmts11">  </h3></td>
+</tr>
+<tr>
+<td width=25%>
+<input id="41" name="q11" type="checkbox" value="41" />
+      $1040$
+</td>
+<td width=25%>     
+<input id="42" name="q11" type="checkbox" value="42" />
+      $72$ 
+</td>
+<td width=25%> 
+<input id="43" name="q11" type="checkbox" value="43" />
+      $67600$ 
+</td>
+<td width=25%> 
+<input id="44" name="q11" type="checkbox" value="44" />
+     $776$ 
+</td>
+</tr>
+
+<!-- Frage 12 -->
+<tr>
+<td colspan="4"> 12. Jedes siebte Ü-Ei enthält Nina das Nilpferd. Wie wahrscheinlich ist es, beim Kauf von zwei Eiern leer auszugehen. </td>
+<td><h3 id="stimmts12">  </h3></td>
+</tr>
+<tr>
+<td>
+<input id="45" name="q12" type="checkbox" value="45" />
+      $\frac{12}{14} \approx 85,7\%$
+</td>
+<td>     
+<input id="46" name="q12" type="checkbox" value="46" />
+      $(\frac{6}{7})^2 = \frac{36}{49}$
+</td>
+<td> 
+<input id="47" name="q12" type="checkbox" value="47" />
+      $\frac{6}{7} \cdot 2 \approx 1,7$
+</td>
+<td>
+<input id="48" name="q12" type="checkbox" value="48" />
+      $\frac{6}{7} \cdot \frac{6}{7} \approx 73,5\%$
+</td>
+</tr>
+
+<!-- Frage 13 -->
+<tr>
+<td colspan="4"> 13. Jedes siebte Ü-Ei enthält Emil den Elefanten. Wie wahrscheinlich ist es, beim Kauf von sieben Eiern leer auszugehen.</td>
+<td><h3 id="stimmts13">  </h3></td>
+</tr>
+<tr>
+<td width=25%>
+<input id="49" name="q13" type="checkbox" value="49" />
+      $\frac{6}{7} \cdot 7 \approx 6\%$
+</td>
+<td width=25%>     
+<input id="50" name="q13" type="checkbox" value="50" />
+      $(\frac{6}{7})^7 \approx 34\%$
+</td>
+<td width=25%> 
+<input id="51" name="q13" type="checkbox" value="51" />
+      $\frac{6}{7} \cdot \frac{1}{7} \approx 12\%$
+</td>
+<td width=25%> 
+<input id="52" name="q13" type="checkbox" value="52" />
+      $0\%.$ Wenn man sieben Eier kauft, muss ein Emil dabei sein, da ja in jedem siebten Ei ein Emil steckt.
+</td>
+</tr>
+
+<!-- Frage 14 -->
+<tr>
+<td colspan="2"> 14. Das abgebildete Glücksrad wird zweimal gedreht. Wie hoch ist die Wahrscheinlichkeit dafür, dass es beide Male nicht auf dem roten Feld stehen bleibt. </td>
+<td colspan="2"> <input type="image" src="../images/SummenRegelBeispielGRad.png" height="100px"></td>
+<td><h3 id="stimmts14">  </h3></td>
+</tr>
+<tr>
+<td>
+<input id="53" name="q14" type="checkbox" value="53" />
+      $\frac{1}{4} + \frac{1}{4} = 50\%$
+</td>
+<td>     
+<input id="54" name="q14" type="checkbox" value="54" />
+       $1-\frac{1}{2}\cdot\frac{1}{2}=75\%$
+</td>
+<td> 
+<input id="55" name="q14" type="checkbox" value="55" />
+       $2\cdot \frac{1}{4} \cdot \frac{1}{4} = 12,5\%$
+</td>
+<td>
+<input id="56" name="q14" type="checkbox" value="56" />
+      $4 \cdot \frac{1}{4} \cdot \frac{1}{4} = 25\%$
+</td>
+</tr>
+
+<!-- Frage 15 -->
+<tr>
+<td colspan="4"> 15. Amelie hat noch sieben rote und fünf weiße Gummibärchen in ihrer Tüte. Sie greift nacheinander zufällig zwei Gummibärchen heraus und isst sie auf. </td>
+<td><h3 id="stimmts15">  </h3></td>
+</tr>
+<tr>
+<td width=25%>
+<input id="57" name="q15" type="checkbox" value="57" />
+      Die Wahrscheinlichkeit für zwei rote Gummibärchen ist $\frac{7}{12}\cdot\frac{6}{11} = \frac{7}{22}$
+</td>
+<td width=25%>     
+<input id="58" name="q15" type="checkbox" value="58" />
+      Die Wahrscheinlichkeit für zwei rote Gummibärchen ist $\frac{7}{12}\cdot\frac{7}{12} = \frac{49}{144}$
+</td>
+<td width=25%> 
+<input id="59" name="q15" type="checkbox" value="59" />
+      Die Wahrscheinlichkeit für zwei rote Gummibärchen ist $\frac{7}{12}\cdot 2 = \frac{14}{12}$   
+</td>
+<td width=25%> 
+<input id="60" name="q15" type="checkbox" value="60" />
+      Die Wahrscheinlichkeit für zwei rote Gummibärchen ist $\frac{7}{12}\cdot\frac{6}{12} = \frac{7}{24}$
+</td>
+</tr>
+
+
+
+</table>
+
+<!-- Fragen zu Ende - Auswertungsbutton - Auswertung -->
+
+<br><br>
+
+<input onclick="gradeTest()" name="submit" type="button" value="Überprüfen"/>
+
+<br>
+
+Du hast <span id="ergebnis"> noch keine </span> von <span id="anzahlFragen"> all den </span> Aufgaben richtig gelöst!
+</form>
+
+
+<br><br>
+
+<!-- Auswertungsfunktion -->
+ 
+```{js, echo=FALSE}
+
+function gradeTest() {
+   //variables with global implications
+   var totalQuestions = 15;
+   var correctAnswers = 0;
+   var alertText;
+   var i;
+   var x1;
+   var x2;
+   var x3;
+   var x4;
+   var x5;
+   var x6;
+   var x7;
+   var x8;
+   var x9;
+   var x10;
+   var x11;
+   var x12;
+   var x13;
+   var x14;
+   var x15;
+   
+<!-- Frage 1 -->
+   
+   var a1 = document.getElementsByName('q1');
+   var a1answers = new Array();
+   var a1right = new Array('1','3','4');
+   var a1bool = true;
+ 
+   for(i = 0; i < a1.length; i++) {
+      if(a1[i].checked) {
+         a1answers.push(a1[i].value);
+      }
+   }
+   a1answers.sort();
+   a1right.sort();
+   if(a1answers.length == a1right.length) {
+      for(i = 0; i < a1answers.length; i++) {
+         if(a1answers[i] != a1right[i]) {
+            a1bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a1bool = false;
+   }
+   if(a1bool == true) {
+      correctAnswers++;
+      x1 = '<font color = #0d0>✓</font>';
+   }
+   else{ x1 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 2    -->
+   
+   var a2 = document.getElementsByName('q2');
+   var a2answers = new Array();
+   var a2right = new Array('6');
+   var a2bool = true;
+ 
+   for(i = 0; i < a2.length; i++) {
+      if(a2[i].checked) {
+         a2answers.push(a2[i].value);
+      }
+   }
+   a2answers.sort();
+   a2right.sort();
+   if(a2answers.length == a2right.length) {
+      for(i = 0; i < a2answers.length; i++) {
+         if(a2answers[i] != a2right[i]) {
+            a2bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a2bool = false;
+   }
+   if(a2bool == true) {
+      correctAnswers++;
+      x2 = '<font color = #0d0>✓</font>';
+   }
+   else{ x2 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 3    -->
+   
+   var a3 = document.getElementsByName('q3');
+   var a3answers = new Array();
+   var a3right = new Array('10');
+   var a3bool = true;
+ 
+   for(i = 0; i < a3.length; i++) {
+      if(a3[i].checked) {
+         a3answers.push(a3[i].value);
+      }
+   }
+   a3answers.sort();
+   a3right.sort();
+   if(a3answers.length == a3right.length) {
+      for(i = 0; i < a3answers.length; i++) {
+         if(a3answers[i] != a3right[i]) {
+            a3bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a3bool = false;
+   }
+   if(a3bool == true) {
+      correctAnswers++;
+      x3 = '<font color = #0d0>✓</font>';
+   }
+   else{ x3 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 4 -->
+
+var a4 = document.getElementsByName('q4');
+   var a4answers = new Array();
+   var a4right = new Array('13','15');
+   var a4bool = true;
+ 
+   for(i = 0; i < a4.length; i++) {
+      if(a4[i].checked) {
+         a4answers.push(a4[i].value);
+      }
+   }
+   a4answers.sort();
+   a4right.sort();
+   if(a4answers.length == a4right.length) {
+      for(i = 0; i < a4answers.length; i++) {
+         if(a4answers[i] != a4right[i]) {
+            a4bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a4bool = false;
+   }
+   if(a4bool == true) {
+      correctAnswers++;
+      x4 = '<font color = #0d0>✓</font>';
+   }
+   else{ x4 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 5    -->
+
+var a5 = document.getElementsByName('q5');
+   var a5answers = new Array();
+   var a5right = new Array('18','20');
+   var a5bool = true;
+ 
+   for(i = 0; i < a5.length; i++) {
+      if(a5[i].checked) {
+         a5answers.push(a5[i].value);
+      }
+   }
+   a5answers.sort();
+   a5right.sort();
+   if(a5answers.length == a5right.length) {
+      for(i = 0; i < a5answers.length; i++) {
+         if(a5answers[i] != a5right[i]) {
+            a5bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a5bool = false;
+   }
+   if(a5bool == true) {
+      correctAnswers++;
+      x5 = '<font color = #0d0>✓</font>';
+   }
+   else{ x5 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 6    -->
+   
+   var a6 = document.getElementsByName('q6');
+   var a6answers = new Array();
+   var a6right = new Array('21','24');
+   var a6bool = true;
+ 
+   for(i = 0; i < a6.length; i++) {
+      if(a6[i].checked) {
+         a6answers.push(a6[i].value);
+      }
+   }
+   a6answers.sort();
+   a6right.sort();
+   if(a6answers.length == a6right.length) {
+      for(i = 0; i < a6answers.length; i++) {
+         if(a6answers[i] != a6right[i]) {
+            a6bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a6bool = false;
+   }
+   if(a6bool == true) {
+      correctAnswers++;
+      x6 = '<font color = #0d0>✓</font>';
+   }
+   else{ x6 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 7 -->
+
+var a7 = document.getElementsByName('q7');
+   var a7answers = new Array();
+   var a7right = new Array('27');
+   var a7bool = true;
+ 
+   for(i = 0; i < a7.length; i++) {
+      if(a7[i].checked) {
+         a7answers.push(a7[i].value);
+      }
+   }
+   a7answers.sort();
+   a7right.sort();
+   if(a7answers.length == a7right.length) {
+      for(i = 0; i < a7answers.length; i++) {
+         if(a7answers[i] != a7right[i]) {
+            a7bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a7bool = false;
+   }
+   if(a7bool == true) {
+      correctAnswers++;
+      x7 = '<font color = #0d0>✓</font>';
+   }
+   else{ x7 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 8    -->
+
+var a8 = document.getElementsByName('q8');
+   var a8answers = new Array();
+   var a8right = new Array('31','32');
+   var a8bool = true;
+ 
+   for(i = 0; i < a8.length; i++) {
+      if(a8[i].checked) {
+         a8answers.push(a8[i].value);
+      }
+   }
+   a8answers.sort();
+   a8right.sort();
+   if(a8answers.length == a8right.length) {
+      for(i = 0; i < a8answers.length; i++) {
+         if(a8answers[i] != a8right[i]) {
+            a8bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a8bool = false;
+   }
+   if(a8bool == true) {
+      correctAnswers++;
+      x8 = '<font color = #0d0>✓</font>';
+   }
+   else{ x8 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 9    -->
+
+var a9 = document.getElementsByName('q9');
+   var a9answers = new Array();
+   var a9right = new Array('33','34');
+   var a9bool = true;
+ 
+   for(i = 0; i < a9.length; i++) {
+      if(a9[i].checked) {
+         a9answers.push(a9[i].value);
+      }
+   }
+   a9answers.sort();
+   a9right.sort();
+   if(a9answers.length == a9right.length) {
+      for(i = 0; i < a9answers.length; i++) {
+         if(a9answers[i] != a9right[i]) {
+            a9bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a9bool = false;
+   }
+   if(a9bool == true) {
+      correctAnswers++;
+      x9 = '<font color = #0d0>✓</font>';
+   }
+   else{ x9 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 10    -->
+
+var a10 = document.getElementsByName('q10');
+   var a10answers = new Array();
+   var a10right = new Array('37','38');
+   var a10bool = true;
+ 
+   for(i = 0; i < a10.length; i++) {
+      if(a10[i].checked) {
+         a10answers.push(a10[i].value);
+      }
+   }
+   a10answers.sort();
+   a10right.sort();
+   if(a10answers.length == a10right.length) {
+      for(i = 0; i < a10answers.length; i++) {
+         if(a10answers[i] != a10right[i]) {
+            a10bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a10bool = false;
+   }
+   if(a10bool == true) {
+      correctAnswers++;
+      x10 = '<font color = #0d0>✓</font>';
+   }
+   else{ x10 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 11    -->
+
+var a11 = document.getElementsByName('q11');
+   var a11answers = new Array();
+   var a11right = new Array('43');
+   var a11bool = true;
+ 
+   for(i = 0; i < a11.length; i++) {
+      if(a11[i].checked) {
+         a11answers.push(a11[i].value);
+      }
+   }
+   a11answers.sort();
+   a11right.sort();
+   if(a11answers.length == a11right.length) {
+      for(i = 0; i < a11answers.length; i++) {
+         if(a11answers[i] != a11right[i]) {
+            a11bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a11bool = false;
+   }
+   if(a11bool == true) {
+      correctAnswers++;
+      x11 = '<font color = #0d0>✓</font>';
+   }
+   else{ x11 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 12 -->
+
+var a12 = document.getElementsByName('q12');
+   var a12answers = new Array();
+   var a12right = new Array('46','48');
+   var a12bool = true;
+ 
+   for(i = 0; i < a12.length; i++) {
+      if(a12[i].checked) {
+         a12answers.push(a12[i].value);
+      }
+   }
+   a12answers.sort();
+   a12right.sort();
+   if(a12answers.length == a12right.length) {
+      for(i = 0; i < a12answers.length; i++) {
+         if(a12answers[i] != a12right[i]) {
+            a12bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a12bool = false;
+   }
+   if(a12bool == true) {
+      correctAnswers++;
+      x12 = '<font color = #0d0>✓</font>';
+   }
+   else{ x12 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 13 -->
+
+var a13 = document.getElementsByName('q13');
+   var a13answers = new Array();
+   var a13right = new Array('50');
+   var a13bool = true;
+ 
+   for(i = 0; i < a13.length; i++) {
+      if(a13[i].checked) {
+         a13answers.push(a13[i].value);
+      }
+   }
+   a13answers.sort();
+   a13right.sort();
+   if(a13answers.length == a13right.length) {
+      for(i = 0; i < a13answers.length; i++) {
+         if(a13answers[i] != a13right[i]) {
+            a13bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a13bool = false;
+   }
+   if(a13bool == true) {
+      correctAnswers++;
+      x13 = '<font color = #0d0>✓</font>';
+   }
+   else{ x13 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 14    -->
+
+var a14 = document.getElementsByName('q14');
+   var a14answers = new Array();
+   var a14right = new Array('56');
+   var a14bool = true;
+ 
+   for(i = 0; i < a14.length; i++) {
+      if(a14[i].checked) {
+         a14answers.push(a14[i].value);
+      }
+   }
+   a14answers.sort();
+   a14right.sort();
+   if(a14answers.length == a14right.length) {
+      for(i = 0; i < a14answers.length; i++) {
+         if(a14answers[i] != a14right[i]) {
+            a14bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a14bool = false;
+   }
+   if(a14bool == true) {
+      correctAnswers++;
+      x14 = '<font color = #0d0>✓</font>';
+   }
+   else{ x14 = '<font color = #f00>✗</font>' ;}
+   
+<!-- Frage 15    -->
+
+var a15 = document.getElementsByName('q15');
+   var a15answers = new Array();
+   var a15right = new Array('57');
+   var a15bool = true;
+ 
+   for(i = 0; i < a15.length; i++) {
+      if(a15[i].checked) {
+         a15answers.push(a15[i].value);
+      }
+   }
+   a15answers.sort();
+   a15right.sort();
+   if(a15answers.length == a15right.length) {
+      for(i = 0; i < a15answers.length; i++) {
+         if(a15answers[i] != a15right[i]) {
+            a15bool = false;
+            break;
+         }
+      }
+   }
+   else {
+      a15bool = false;
+   }
+   if(a15bool == true) {
+      correctAnswers++;
+      x15 = '<font color = #0d0>✓</font>';
+   }
+   else{ x15 = '<font color = #f00>✗</font>' ;}
+   
+
+
+<!-- AuswertungsErgebnis -->
+
+   if(correctAnswers == totalQuestions) {
+      alertText = "Alles richtig! Bestens!";
+   }
+   else {
+      alertText = "Du hast " + correctAnswers + " von " + totalQuestions + " Antworten richtig!";
+   }
+   document.getElementById('ergebnis').innerHTML = correctAnswers;
+   document.getElementById('anzahlFragen').innerHTML = totalQuestions;
+   
+   document.getElementById('stimmts1').innerHTML = x1;
+   document.getElementById('stimmts2').innerHTML = x2;
+   document.getElementById('stimmts3').innerHTML = x3;
+   document.getElementById('stimmts4').innerHTML = x4;
+   document.getElementById('stimmts5').innerHTML = x5;
+   document.getElementById('stimmts6').innerHTML = x6;
+   document.getElementById('stimmts7').innerHTML = x7;
+   document.getElementById('stimmts8').innerHTML = x8;
+   document.getElementById('stimmts9').innerHTML = x9;
+   document.getElementById('stimmts10').innerHTML = x10;
+   document.getElementById('stimmts11').innerHTML = x11;
+   document.getElementById('stimmts12').innerHTML = x12;
+   document.getElementById('stimmts13').innerHTML = x13;
+   document.getElementById('stimmts14').innerHTML = x14;
+   document.getElementById('stimmts15').innerHTML = x15;
+   <!-- alert(alertText); -->
+}
+
+
+
+
+```
