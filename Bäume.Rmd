@@ -781,5 +781,109 @@ cat('<hr style="background-color:#3C6690;height:2px">')
 
 ### Übungsaufgaben {-}
 
+#### Aufgabe 1 {-}
+
+Drei Karten mit den Ziffern 2, 3 und 7 werden verdeckt gemischt. Anschließend wird eine Karte gezogen und aufgedeckt. Danach wird eine zweite Karte gezogen und hinter die erste Karte gelegt, so dass eine zweistellige Zahl entsteht.
+
+a) Zeichne ein Baumdiagramm. Welche zweistelligen Zahlen können entstehen? Wie groß ist die Wahrscheinlichkeit, dass die Zahl 37 entsteht?
+
+b) Berechne die Wahrscheinlichkeit dafür, dass die entstandene Zahl durch 9 teilbar ist.
+
+`r hide("Lösung")`
+
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 2 {-}
+
+<img src="./images/bottleFlip.jpeg" height="200" />
+
+David übt den Bottle Flip. Dabei soll eine Wasserflasche so in die Luft geworfen werden, dass sie "im Stehen" (mit dem Flaschenboden auf dem Tisch) landet. Mit einer Wahrscheinlichkeit von 20% schafft David den Bottle Flip.
+
+a) Zeichne ein Baumdiagramm.
+
+b) Berechne die Wahrscheinlichkeit dafür, dass David den Bottle Flip dreimal hintereinander schafft.
+
+c) Berechne die Wahrscheinlichkeit dafür, dass die Flasche bei einem von drei Würfen stehen bleibt.
+
+d) Berechne die Wahrscheinlichkeit dafür, dass die Flasche bei drei Würfen nicht zweimal nacheinander stehen bleibt.
+
+e) Nach einigem Üben wird David besser. Die Wahrscheinlichkeit für zwei erfolgreiche Bottle Flips hintereinander liegt jetzt bei 9%. Berechne die Wahrscheinlichkeit, dass ein Bottle Flip misslingt
+
+
+`r hide("Lösung")`
+
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+
+#### Aufgabe 3 {-}
+
+<img src="./images/bogenSchuetze.jpeg" height="200" />
+
+Ein Bogenschütze trifft beim ersten Schuss mit einer Wahrscheinlichkeit von 0,8. War der erste Versuch ein Treffer, so trifft der Schütze beim zweiten Versuch mit der gleichen Wahrscheinlichkeit. Geht der erste Schuss daneben, dann verringert sich die Treffsicherheit beim zweiten Versuch auf 0,7. Es wird zweimal geschossen.
+
+a) Zeichne ein Baumdiagramm.
+
+b) Berechne die Wahrscheinlichkeit für genau einen Treffer.
+
+
+`r hide("Lösung")`
+
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+
+#### Aufgabe 4 {-}
+Niklas hat zwei Beutel mit Losen. Im ersten Beutel befinden sich zwei Nieten und ein Gewinn. Im zweiten Beutel gibt es drei Nieten und drei Gewinne. Es wird zufällig ein Beutel ausgewählt und aus diesem ein Los gezogen. Niklas überlegt: "Insgesamt gibt es vier Gewinne und neun Lose. Die Wahrscheinlichkeit für einen Gewinn ist also $\frac{4}{9}$."
+
+Nimm Stellung. Zeichne dazu ein Baumdiagramm.
+
+
+`r hide("Lösung")`
+
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+
+#### Aufgabe 5 {-}
+
+<img src="./images/abhBaumA5.png" height="200" />
+
+a) Ergänze die fehlenden Wahrscheinlichkeiten im Baumdiagramm.
+
+b) Erfinde eine zum Baumdiagramm passende Aufgabenstellung.
+
+
+`r hide("Lösung")`
+
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
 
 ## Baumdiagramme geschickt nutzen
