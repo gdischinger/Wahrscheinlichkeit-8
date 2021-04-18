@@ -722,12 +722,29 @@ In einem Gefäß liegen drei weiße und zwei schwarze Kugeln. Zwei Kugeln werden
 
 a) wenn die Kugeln zurückgelegt werden.
 
+`r hide("Lösung")`
+
+<img src="./images/abhaengStufenA1BaumA.png" height="200" />
+
+$$ P(zwei\;gleiche\;Kugeln) = \frac{2}{5}\cdot\frac{2}{5} + \frac{3}{5} \cdot\frac{3}{5} = \frac{4}{25} + \frac{9}{25} = \frac{16}{25} = 64\% $$
+
+#### {-}
+
 b) wenn die Kugeln nicht zurückgelegt werden.
+
+`r hide("Lösung")`
+
+<img src="./images/abhaengStufenA1BaumB.png" height="200" />
+
+$$ P(zwei\;gleiche\;Kugeln) = \frac{2}{5}\cdot\frac{1}{4} + \frac{3}{5} \cdot\frac{1}{2} = \frac{1}{10} + \frac{3}{10} = \frac{4}{10} = 40\% $$
+
+#### {-}
 
 c) Erkläre anschaulich, warum die Wahrscheinlichkeit in einem Fall größer ist.
 
 `r hide("Lösung")`
 
+Während bei der Version mit Zurücklegen die Anteile der weißen bzw. schwarzen Kugeln bei jeder Ziehung gleich bleiben (womit ja auch die im Baumdiagramm notierten Wahrscheinlichkeiten auf allen Stufen dieselben sind), verringert sich der Anteil der weißen (bzw. schwarzen) Kugeln mit jeder Ziehung einer weißen (bzw. schwarzen) Kugel von Stufen zu Stufe.
 
 #### {-}
 
@@ -742,14 +759,39 @@ cat('<hr style="background-color:#3C6690;height:2px">')
 
 In einem Korb liegen 12 Schokoladen-Ostereier. Drei davon sind mit Marzipan. Franka entnimmt dem Korb zwei Schoko-Eier. Zeichne ein Baumdiagramm und berechne die folgenden Wahrscheinlichkeiten:
 
+`r hide("Baumdiagramm")`
+
+<img src="./images/abhaengStufenA2.png" height="200" />
+
+#### {-}
+
 a) Sie erwischt zwei Marzipan-Eier.
 
+`r hide("Lösung")`
+
+Möchte man die Wahrscheinlichkeit dafür berechnen, dass sie zwei Marzipan-Eier erwischt, muss man den gelb markierten Pfad betrachten:
+
+$P(zweimal\;Marzipan)= \frac{1}{4} \cdot \frac{2}{11} = \frac{1}{22} \approx 4,5\%$
+
+#### {-}
+
 b) Sie erwischt ein Marzipan-Ei und ein Schoko-Ei mit anderer Füllung.
+
+`r hide("Lösung")`
+
+Möchte man die Wahrscheinlichkeit dafür berechnen, dass sie ein Marzipan-Ei und ein Schoko-Ei mit anderer Füllung erwischt, muss man die grün markierten Pfade betrachten:
+
+$P(einmal\;Marzipan,\;einmal\;kein\;Marzipan)= \frac{3}{4} \cdot \frac{3}{11} + \frac{1}{4} \cdot \frac{9}{11} = \frac{18}{44} \approx 41\%$
+
+#### {-}
 
 c) Sie erwischt kein Marzipan-Ei.
 
 `r hide("Lösung")`
 
+Möchte man die Wahrscheinlichkeit dafür berechnen, dass sie kein Marzipan-Eier erwischt, muss man den orange markierten Pfad betrachten:
+
+$P(kein\;Marzipan)= \frac{3}{4} \cdot \frac{8}{11} = \frac{6}{11} \approx 54,5\%$
 
 #### {-}
 
@@ -766,6 +808,9 @@ Eine Zombiballgruppe besteht aus 13 Mädchen und 12 Jungen. Es sollen zufällig 
 
 `r hide("Lösung")`
 
+<img src="./images/abhaengStufenA3.png" height="200" />
+
+$P(Junge\;\&\;Maedchen) = \frac{13}{25} \cdot \frac{12}{24} + \frac{12}{25} \cdot \frac{13}{24} = \frac{13}{25} \approx 52\%$
 
 #### {-}
 
@@ -787,10 +832,27 @@ Drei Karten mit den Ziffern 2, 3 und 7 werden verdeckt gemischt. Anschließend w
 
 a) Zeichne ein Baumdiagramm. Welche zweistelligen Zahlen können entstehen? Wie groß ist die Wahrscheinlichkeit, dass die Zahl 37 entsteht?
 
+`r hide("Lösung")`
+
+<img src="./images/abhaengStufenUebungA1a.png" height="200" />
+
+Folgende zweistellige Zahlen können entstehen: $23,\;27,\;32,\;37,\;72,\;73$
+
+Die Wahrscheinlichkeit für die Zahl 37 ist:
+
+$P(37) = \frac{1}{3}\cdot\frac{1}{2}=\frac{1}{6} \approx 16,7\%$
+
+#### {-}
+
 b) Berechne die Wahrscheinlichkeit dafür, dass die entstandene Zahl durch 9 teilbar ist.
 
 `r hide("Lösung")`
 
+<img src="./images/abhaengStufenUebungA1b.png" height="200" />
+
+Durch 9 teilbar sind 27 und 72. Die Wahrscheinlichkeit für eine durch 9 teilbare Zahl ist also:
+
+$P(durch\;9\;teilbar)= \frac{1}{3}\cdot\frac{1}{2} + \frac{1}{3}\cdot\frac{1}{2} = \frac{2}{6} \approx 33,3\%$
 
 #### {-}
 
@@ -807,17 +869,75 @@ David übt den Bottle Flip. Dabei soll eine Wasserflasche so in die Luft geworfe
 
 a) Zeichne ein Baumdiagramm.
 
+`r hide("Lösung")`
+
+<img src="./images/abhaengStufenUebungA2a.png" height="200" />
+
+#### {-}
+
+
 b) Berechne die Wahrscheinlichkeit dafür, dass David den Bottle Flip dreimal hintereinander schafft.
-
-c) Berechne die Wahrscheinlichkeit dafür, dass die Flasche bei einem von drei Würfen stehen bleibt.
-
-d) Berechne die Wahrscheinlichkeit dafür, dass die Flasche bei drei Würfen nicht zweimal nacheinander stehen bleibt.
-
-e) Nach einigem Üben wird David besser. Die Wahrscheinlichkeit für zwei erfolgreiche Bottle Flips hintereinander liegt jetzt bei 9%. Berechne die Wahrscheinlichkeit, dass ein Bottle Flip misslingt
-
 
 `r hide("Lösung")`
 
+<img src="./images/abhaengStufenUebungA2b.png" height="200" />
+
+Die Wahscheinlichkeit dafür, dass David den Bottle Flip dreimal hintereinander schafft, erhält man, wenn man die Wahrscheinlichkeiten entlang des rot markierten Pfades multipliziert:
+
+$P(drei\;Bottle\;Flips\;hintereinander)=0,2 \cdot 0,2 \cdot 0,2 = 0,008 =0,8\%$
+
+#### {-}
+
+c) Berechne die Wahrscheinlichkeit dafür, dass die Flasche bei einem von drei Würfen stehen bleibt.
+
+`r hide("Lösung")`
+
+<img src="./images/abhaengStufenUebungA2c.png" height="200" />
+
+Die Wahscheinlichkeit dafür, dass bei einem von drei Würfen stehen bleibt, erhält man, wenn man die Wahrscheinlichkeiten entlang der hellblau markierten Pfade multipliziert und die Pfadwahrscheinlichkeiten addiert:
+
+$P(einer\;von\;drei\;Bottle\;Flips\;gelingt)= 3 \cdot 0,2 \cdot 0,8 \cdot 0,8 = 0,384 =38,4\%$
+
+#### {-}
+
+d) Berechne die Wahrscheinlichkeit dafür, dass die Flasche bei drei Würfen nicht zweimal nacheinander stehen bleibt.
+
+`r hide("Lösung")`
+
+<img src="./images/abhaengStufenUebungA2d.png" height="200" />
+
+Die Wahscheinlichkeit dafür, dass die Flasche bei drei Würfen nicht zweimal nacheinander stehen bleibt, erhält man, wenn man die Wahrscheinlichkeiten entlang der blau markierten Pfade multipliziert und die Pfadwahrscheinlichkeiten addiert:
+
+$$\begin{align} P(einer\;von\;drei\;Bottle\;Flips\;gelingt) &= 0,2 \cdot 0,2 \cdot 0,8 + 3 \cdot 0,2 \cdot 0,8 \cdot 0,8 + 0,8^3 = \\ &= 0,928 = 92,8\%\end{align}$$
+
+#### {-}
+
+e) Nach einigem Üben wird David besser. Die Wahrscheinlichkeit für zwei erfolgreiche Bottle Flips hintereinander liegt jetzt bei 9%. Berechne die Wahrscheinlichkeit, dass ein Bottle Flip misslingt
+
+`r hide("Lösung")`
+
+<img src="./images/abhaengStufenUebungA2e.png" height="200" />
+
+Aus der Wahrscheinlichkeit für zwei erfolgreiche Bottle Flips hintereinander kann man die Wahrscheinlichkeit für einen gelungenen Bottle Flip berechnen, denn es gilt
+
+$$P(zwei\;gelungene\;Bottle\;Flips) = x \cdot x  = 0,09\quad,$$
+wobei $x$ die Wahrscheinlichkeit für einen gelungenen Bottle Flip ist. 
+
+[Bedenke: Die Wahrscheinlichkeit 0,09 ergibt sich, wenn man die unbekannten (aber gleich bleibenden) Wahrscheinlichkeiten entlang der hellgrün markierten Pfade multipliziert!]
+
+Es gilt also: $0,09 = x^2$ 
+
+Diese Gleichung löst man, indem man auf beiden Seiten die Wurzel zieht:
+
+$$\begin{align} 0,09 & = x^2 \quad\quad|\sqrt{\;}\\
+\sqrt{0,09} &= x \\
+0,3 &= x \\
+30\% &= x
+\end{align}$$
+
+Wenn die Wahrscheinlichkeit dafür, dass ein Bottle Flip gelingt 30% ist, muss die Wahrscheinlichkeit dafür, dass ein Bottle Flip misslingt 70% sein, da die beiden Wahrscheinlichkeiten zusammen 100% ergeben müssen.
+
+Die Wahrscheinlichkeit dafür, dass David ein Bottle Flip misslingt, beträgt also 70%.
 
 #### {-}
 
@@ -835,11 +955,20 @@ Ein Bogenschütze trifft beim ersten Schuss mit einer Wahrscheinlichkeit von 0,8
 
 a) Zeichne ein Baumdiagramm.
 
+`r hide("Lösung")`
+
+<img src="./images/abhaengStufenUebungA3.png" height="200" />
+
+#### {-}
+
 b) Berechne die Wahrscheinlichkeit für genau einen Treffer.
 
 
 `r hide("Lösung")`
 
+Die Wahscheinlichkeit dafür, dass der Schütze genau einmal trifft, erhält man, wenn man die Wahrscheinlichkeiten entlang der pink markierten Pfade multipliziert und die Pfadwahrscheinlichkeiten addiert:
+
+$P(genau\;ein\;Treffer)= 0,8 \cdot 0,2 + 0,2 \cdot 0,7 = 0,3 = 30\%$
 
 #### {-}
 
@@ -854,9 +983,17 @@ Niklas hat zwei Beutel mit Losen. Im ersten Beutel befinden sich zwei Nieten und
 
 Nimm Stellung. Zeichne dazu ein Baumdiagramm.
 
-
 `r hide("Lösung")`
 
+<img src="./images/abhaengStufenUebungA4.png" height="200" />
+
+Zunächst wird zufällig ein Beutel gewählt. Dabei ist die Wahrscheinlichkeit für jeden der beiden Beutel 50%. Anschließend wird aus dem gewählten Beutel ein Los gezogen. Als Wahrscheinlichkeit für einen Gewinn ergibt sich also:
+
+$P(Gewinn) = \frac{1}{2} \cdot \frac{1}{3} + \frac{1}{2} \cdot \frac{1}{2} = \frac{5}{12} \approx 41,67\%$
+
+Damit ist die Wahrscheinlichkeit geringer als von Niklas angenommen ($\frac{4}{9} \approx 44,4\%$). 
+
+Da die beiden Beutel nicht den gleichen Inhalt haben, ist "alles zusammenwerfen" nicht dasselbe wie nicht zu wissen, aus welchem Beutel man überhaupt ziehen wird.
 
 #### {-}
 
@@ -872,11 +1009,18 @@ cat('<hr style="background-color:#3C6690;height:2px">')
 
 a) Ergänze die fehlenden Wahrscheinlichkeiten im Baumdiagramm.
 
+`r hide("Lösung")`
+
+<img src="./images/abhBaumA5a.png" height="200" />
+
+#### {-}
+
 b) Erfinde eine zum Baumdiagramm passende Aufgabenstellung.
 
 
 `r hide("Lösung")`
 
+In einer Lostrommel sind sieben Gewinne und drei Nieten. Anna zieht zwei Lose. Berechne die Wahrscheinlichkeit dafür, dass sie genau einen Gewinn zieht.
 
 #### {-}
 
@@ -887,3 +1031,282 @@ cat('<hr style="background-color:#3C6690;height:2px">')
 
 
 ## Baumdiagramme geschickt nutzen
+
+### Verkürzte Baumdiagramme
+
+<img src="./images/nina.jpeg" height="200" />
+
+Du erinnerst dich sicher noch an das Quiz und die Aufgaben mit Nina und Emil, die jeweils in jedem siebten Ü-Ei stecken. Im Fall von Nina wurden nur zwei Eier erworben und man sollte die Wahrscheinlichkeit berechnen, dass man leider leer ausgeht. In diesem Fall ist ein Bäumchen noch schnell skizziert:
+
+<img src="./images/keineNina.png" height="200" />
+
+Die Wahrscheinlichkeit, dass in beiden Fällen leider keine Nina im Ü-Ei ist, ergibt sich also mit Hilfe der Produktregel: 
+
+$$P(keine\;Nina)= \frac{6}{7} \cdot \frac{6}{7} = (\frac{6}{7})^2 = \frac{36}{49} \approx 73,5\%$$
+
+Anders sieht es bei der Emil Aufgabe aus. Hier werden sieben Eier gekauft. Möchte man nun noch den ganzen Baum zeichnen, muss man entweder sehr klein schreiben oder ein großes Blatt zur Hand nehmen... Hier lohnt es sich den Baum zu verkürzen und nur den Pfad zu skizzieren, der zum Ereignis Leerausgehen gehört.
+
+<img src="./images/keinEmil.png" height="200" />
+
+Auch wenn der Pfad hier nur skizziert wurde und man sich den Rest des Baumes gespart hat, erhält man die Wahrscheinlichkeit dafür, leer auszugehen, natürlich genau wie im Fall der Nilpferddame Nina mit Hilfe der Produktregel:
+
+$$P(kein\;Emil)= \underbrace{\frac{6}{7} \cdot \frac{6}{7} \cdot \dots \cdot \frac{6}{7}}_{7\;mal} = (\frac{6}{7})^7 = \frac{279936}{823543} \approx 34\%$$
+
+#### Beachte: {-}
+
+> Beim Zeichnen von Baumdiagrammen kann man sich oft Arbeit sparen, indem man
+>
+> + nur die Pfade des Baumdiagramms zeichnet, die zu dem Ereignis gehören, das einen interessiert und/oder
+>
+> + mehrere Ergebnisse zu einem Pfad in einem Baumdiagramm zusammenfasst.
+
+#### Beispiel 1 {-}
+
+<img src="./images/gluecksrad10.png" height="200" />
+
+Beim Glücksrad auf dem Straßenfest gewinnt man einen Blumentopf, wenn man bei zweimaligem Drehen zweimal eine 10 erhält. Samuel möchte mit einem Baumdiagramm die Wahrscheinlichkeit für einen Blumentopf ermitteln und beginnt, zehn Pfade zu zeichenen. 
+
+Gib ihm einen Tipp, wie er stattdessen vorgehen soll und ermittle die Wahrscheinlichkeit einen Blumentopf zu gewinnen.
+
+`r hide("Lösung")`
+
+Da man nur die Fälle *10* oder *nicht 10* unterscheiden muss, kann Samuel die möglichen Ergebnisse 1 bis 9 zum Ereignis *nicht 10* zusammenfassen. Damit erhält er folgenden verkürzten Baum:
+
+<img src="./images/verkuerzBaumBeispiel1A.png" height="200" />
+
+Er kann den Baum sogar noch kürzer darstellen, schließlich interessiert er sich nur für das Ergebnis *zweimal 10*:
+
+<img src="./images/verkuerzBaumBeispiel1B.png" height="200" />
+
+Mit Hilfe der Produktregel erhält man in jedem Fall die Wahrscheinlichkeit für einen Blumentopf:
+
+$P(Blumentopf)=\frac{1}{10} \cdot \frac{1}{10} = \frac{1}{100} = 1\%$
+
+#### {-}
+
+#### Beispiel 2 {-}
+Ermittle die Wahrscheinlichkeit, bei dreimaligem Würfeln mit einem normalen Spielwürfel genau zwei Sechsen zu erhalten.
+
+`r hide("Lösung")`
+
+Es ist nicht nötig für alle Ergebnisse 1 bis 6 im Baumdiagramm Pfade zu zeichnen, da man sich nur für das Ergebnis *6* interessiert. Deshalb genügt es, die beiden Fälle *6* und *keine 6* zu unterscheiden.
+
+<img src="./images/verkuerzBaumBeispiel2.png" height="200" />
+
+Zum Ergebnis *genau zweimal Sechs* gehören die drei zusammengesetzten Ergebnisse $(6,\;6,\;keine\;6)$, $(6,\;keine\;6,\;6)$ und $(keine\;6,\;6,\;6)$.
+
+Es reicht aus, nur die zu diesen drei Ergebnissen die Pfade zu zeichnen und ihre Wahrscheinlichkeiten zu bestimmen. Die Wahrscheinlichkeiten dieser drei Pfade muss man dann noch addieren, um die Wahrscheinlichkeit für *genau zweimal Sechs* zu erhalten.
+
+$$\begin{align}
+P(genau\;zweimal\;6) &= P(6,\;6,\;keine\;6) + P(6,\;keine\;6,\;6) + P(keine\;6,\;6,\;6) =\\
+{}\\
+&= \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{5}{6} + \frac{1}{6} \cdot \frac{5}{6} \cdot \frac{1}{6} + \frac{5}{6} \cdot \frac{1}{6} \cdot \frac{1}{6} = \frac{15}{216} \approx 6,9\%
+\end{align}$$
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 1 {-}
+Luca würfelt viermal hintereinander. Bestimme die Wahrscheinlichkeit, dass er vier Sechsen würfelt. Zeichne dazu eine verkürztes Baumdiagramm.
+
+`r hide("Lösung")`
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 2 {-}
+Afra soll fünf gegebene Flüsse der Länge nach ordnen. Da Afra nur von Rhein und Donau überhaupt mal irgendetwas gehört hat und diese beiden Flüsse leider nicht dabei sind, ordnet sie die Flüsse rein zufällig. Ermittle, mit welcher Wahrscheinlichkeit sie die richtige Reihenfolge erhält.
+
+`r hide("Lösung")`
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 3 {-}
+
+<img src="./images/verkuerzBaumA3.png" height="200" />
+
+In einer Schale sind vier Kugeln versteckt, die mit den Ziffern von 1 bis 4 beschriftet sind. Elise, Lore und Finn sollen die Wahrscheinlichkeit berechnen, erst eine gerade und dann eine ungerade Zahl zu ziehen, wenn blind (also zufällig) und mit Zurücklegen gezogen wird.
+
+a) Beurteile die Lösungen von Elise und Finn.
+
+**Elises Lösung:**
+
+<img src="./images/verkuerzBaumA3a1.png" height="200" />
+
+$$\begin{align}
+P(gerade,\;ungerade) &= P(2,\;1) + P(2,\;3) + P(4,\;1) + P(4,\;3) =\\
+{}\\
+&=\frac{1}{4} \cdot \frac{1}{4} + \frac{1}{4} \cdot \frac{1}{4} +\frac{1}{4} \cdot \frac{1}{4} + \frac{1}{4} \cdot \frac{1}{4} =\\
+{}\\
+& = 4\cdot \frac{1}{16} = \frac{1}{4} = 25\%
+\end{align}$$
+
+**Finns Lösung:**
+
+<img src="./images/verkuerzBaumA3a2.png" height="200" />
+
+$$P(gerade,\;ungerade)=\frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4} = 25\%$$
+
+
+b) Lores Baumdiagramm hat nur einen Pfad. Kann das richtig sein? Begründe.
+
+`r hide("Lösung")`
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+
+
+
+### Wahrscheinlichkeit des Gegenereignisses
+
+<img src="./images/blumentopf.jpeg" height="200" />
+
+Mara die den bewährten Glücksradstand auf dem nächsten Straßenfest ausrichten soll, fragt sich, mit welcher Wahrscheinlichkeit man an ihrem Stand **keinen** Blumentopf gewinnt, um abschätzen zu können, wie viele Blumentöpfe sie vorsorglich dabei haben sollte. 
+
+Die Regeln sind wie jedes Jahr unverändert: Es wird zweimal hintereinander gedreht, wer zweimal eine 10 hat, hat gewonnen.
+
+<img src="./images/gluecksrad10.png" height="200" />
+
+Natürlich könnte Mara nun beginnen ein Baumdiagramm mit 10 Pfaden (für die Zahlen von 1 bis 10) pro Stufe zu zeichnen. Dann müsste sie die Wahrscheinlichkeiten aller Pfade, in denen eine oder keine 10 vorkommt, ermitteln und diese Wahrscheinlichkeiten anschließend noch addieren. Das ist viel Arbeit und Mara ist (manchmal ein bisschen) faul.
+
+Stattdessen überlegt sie sich, dass sie die Aufgabe mit Hilfe des Gegenereignisses lösen könnte. 
+
+> Das **Gegenereignis** tritt genau dann ein, wenn das Ereignis nicht eintritt. Es besteht aus genau den zusammengesetzten Ergebnissen, die nicht zum Ereignis gehören.
+
++ Das Gegenereignis zu *eine 6 würfeln* ist also *keine 6 - also eine 1, 2, 3, 4 oder 5* würfeln. 
+
++ Das Gegenereignis zu *Zahl werfen* ist beim Münzwurf *keine Zahl und damit Kopf werfen*. Wirft man die Münze fünfmal, so ist das Gegenereignis zu fünfmal Zahl werfen *in mindestens einem der fünf Würfe Kopf werfen* (also einmal Kopf und viermal Zahl, zweimal Kopf und dreimal Zahl, viermal Kopf und einmal Zahl oder fünfmal Kopf)
+
++ Das Gegenereignis von keinmal oder nur einmal 10 beim Glücksrad (kein Blumentopf) ist zweimal 10 (Blumentopf).
+
+#### Beachte: {-}
+> Für ein Ereignis $E$ und seine Gegenereignis $\bar{E}$ gilt: $P(E)+P(\bar{E})=1 (100\%)$. 
+>
+> Mit anderen Worten: Die Wahrscheinlichkeiten eines Ereignisses und des zugehörigen Gegenereignisses ergänzen sich zu 100%. 
+>
+> Die Wahrscheinlichkeit von Ereignissen mit sehr vielen Ergebnissen kann man oft schneller ermitteln, wenn man die Wahrscheinlichkeit des Gegenereignisses bestimmt.
+
+Mara fragt also einfach Samuel, wie hoch denn die Wahrscheinlichkeit ist, einen Blumentopf zu gewinnen (Gegenereignis) und rechnet dann:
+
+$$\begin{align}
+P(keinen\;Blumentopf\;gewinnen) &= 1- P(einen\;Blumentopf\;gewinnen) =\\
+&= 1 - \frac{1}{100} = \frac{99}{100} = 99\%
+\end{align}$$
+
+#### Beispiel {-}
+Ermittle die Wahrscheinlichkeit, bei dreimaligem Würfeln mindestens eine 6 zu erhalten.
+
+`r hide("Lösung")`
+
+Das Gegenereignis zu *mindestens eine 6* ist *keine 6* bei dreimaligem Würfeln. Zeichne für diesen Fall ein verkürztes Baumdiagramm und bestimme dann die Wahrscheinlichkeit des Gegenereignisses:
+
+<img src="./images/gegenEreigBaumBeispiel.png" height="200" />
+
+$P(dreimal\;keine\;6)= \frac{5}{6}\cdot\frac{5}{6}\cdot\frac{5}{6} = \frac{125}{216} \approx 58\%$
+
+Da die Summe der Wahrscheinlichkeiten von Ereignis und Gegenereignis 1 (100%) ist, kann man nun die gesuchte Wahrscheinlichkeit berechnen:
+
+$P(mindestens\;eine\;6)= 1 - P(dreimal\;keine\;6) = 1- \frac{125}{216} = \frac{91}{216} \approx 42\%$
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 1 {-}
+Gib das Gegenereignis in Worten an.
+
+a) Beim Werfen eines Spielwürfels erhält man eine gerade Augenzahl.
+
+b) Ein Würfel wird dreimal geworfen. Es fällt mindestens zweimal eine gerade Augenzahl.
+
+c) Eine zufällig ausgewählte natürliche Zahl zwischen 1 und 49 ist kleiner als 20.
+
+d) Aus einem Beutel mit acht verschiedenfarbigen Kugeln wird eine gelbe Kugel gezogen.
+
+e) Aus einem Beutel mit acht farbigen Kugeln werden zwei Kugeln entnommen. Beide Kugeln sind gelb.
+
+f) Bei der zufällgien Auswahl zweier Schüler:innen einer achten Klasse werden ein Mädchen und ein Junge gewählt.
+
+g) Eine Münze wird zehnmal geworfen, es fällt höchstens sechsmal Wappen.
+
+h) Beim Ziehen von acht Losen erhält man mindestens fünf Gewinne.
+
+i) Ein Würfel wird fünfmal geworfen. Es fällt genau zweimal eine Sechs.
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 2 {-}
+Leos Fussballtrainer sagt, dass die Mannschaft jedes Spiel mit einer Wahrscheinlichkeit von 70% gewinnt. Zwei Spiele vor Schluss der Saison ist klar, dass die Mannschaft noch mindestens eins gewinnen muss, um Meister zu werden.
+
+a) Stelle die Situation in einem Baumdiagramm dar. Markiere die Pfade für das Ereignis "die Mannschaft gewinnt noch mindestens ein Spiel" und sein Gegenereignis mit unterschiedlichen Farben. Gib das Gegenereignis in Worten an.
+
+b) Berechne die Wahrscheinlichkeit, dass die Mannschaft noch mindestens ein Spiel gewinnt.
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 3 {-}
+
+<img src="./images/gegenEreigA3.png" height="100" />
+
+In einer Schale liegen drei rote, drei blaue und drei weiße Kugeln. Viky zieht drei Kugeln ohne Zurücklegen. Berechne die Wahrscheinlichkeit dafür, dass sie
+
+a) drei rote Kugeln,
+
+b) keine rote Kugel,
+
+c) mindestens eine rote Kugel
+
+zieht.
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+#### Aufgabe 4 {-}
+
+<img src="./images/handyakku.jpeg" height="100" />
+
+Bei der Produktion von Handyakkus sind durchschnittlich 2% defekt. In einer Packung werden vier Akkus geliefert. Berechne die Wahrscheinlichkeit, dass in der Packung mindestens ein defekter Akku ist.
+
+#### {-}
+
+
+```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
+cat('<hr style="background-color:#3C6690;height:2px">')
+```
+
+

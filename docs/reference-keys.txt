@@ -10,5 +10,7 @@ produktregel
 summenregel
 baumdiagramme-mit-abhängigen-stufen
 baumdiagramme-geschickt-nutzen
+verkürzte-baumdiagramme
+wahrscheinlichkeit-des-gegenereignisses
 übungsaufgaben-1
 abschlussquiz

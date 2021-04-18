@@ -217,7 +217,11 @@ window.onload = function() {
 <li class="chapter" data-level="3.2.3" data-path="3-2-wahrscheinlichkeiten-und-baumdiagramme.html"><a href="3-2-wahrscheinlichkeiten-und-baumdiagramme.html#baumdiagramme-mit-abhängigen-stufen"><i class="fa fa-check"></i><b>3.2.3</b> Baumdiagramme mit abhängigen Stufen</a></li>
 <li class="chapter" data-level="" data-path="3-2-wahrscheinlichkeiten-und-baumdiagramme.html"><a href="3-2-wahrscheinlichkeiten-und-baumdiagramme.html#übungsaufgaben"><i class="fa fa-check"></i>Übungsaufgaben</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="3-3-baumdiagramme-geschickt-nutzen.html"><a href="3-3-baumdiagramme-geschickt-nutzen.html"><i class="fa fa-check"></i><b>3.3</b> Baumdiagramme geschickt nutzen</a></li>
+<li class="chapter" data-level="3.3" data-path="3-3-baumdiagramme-geschickt-nutzen.html"><a href="3-3-baumdiagramme-geschickt-nutzen.html"><i class="fa fa-check"></i><b>3.3</b> Baumdiagramme geschickt nutzen</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="3-3-baumdiagramme-geschickt-nutzen.html"><a href="3-3-baumdiagramme-geschickt-nutzen.html#verkürzte-baumdiagramme"><i class="fa fa-check"></i><b>3.3.1</b> Verkürzte Baumdiagramme</a></li>
+<li class="chapter" data-level="3.3.2" data-path="3-3-baumdiagramme-geschickt-nutzen.html"><a href="3-3-baumdiagramme-geschickt-nutzen.html#wahrscheinlichkeit-des-gegenereignisses"><i class="fa fa-check"></i><b>3.3.2</b> Wahrscheinlichkeit des Gegenereignisses</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="4-übungsaufgaben-1.html"><a href="4-übungsaufgaben-1.html"><i class="fa fa-check"></i><b>4</b> Übungsaufgaben</a></li>
 <li class="chapter" data-level="5" data-path="5-abschlussquiz.html"><a href="5-abschlussquiz.html"><i class="fa fa-check"></i><b>5</b> Abschlussquiz</a></li>
@@ -240,7 +244,226 @@ window.onload = function() {
             <section class="normal" id="section-">
 <div id="baumdiagramme-geschickt-nutzen" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Baumdiagramme geschickt nutzen</h2>
+<div id="verkürzte-baumdiagramme" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Verkürzte Baumdiagramme</h3>
+<p><img src="images/nina.jpeg" height="200" /></p>
+<p>Du erinnerst dich sicher noch an das Quiz und die Aufgaben mit Nina und Emil, die jeweils in jedem siebten Ü-Ei stecken. Im Fall von Nina wurden nur zwei Eier erworben und man sollte die Wahrscheinlichkeit berechnen, dass man leider leer ausgeht. In diesem Fall ist ein Bäumchen noch schnell skizziert:</p>
+<p><img src="images/keineNina.png" height="200" /></p>
+<p>Die Wahrscheinlichkeit, dass in beiden Fällen leider keine Nina im Ü-Ei ist, ergibt sich also mit Hilfe der Produktregel:</p>
+<p><span class="math display">\[P(keine\;Nina)= \frac{6}{7} \cdot \frac{6}{7} = (\frac{6}{7})^2 = \frac{36}{49} \approx 73,5\%\]</span></p>
+<p>Anders sieht es bei der Emil Aufgabe aus. Hier werden sieben Eier gekauft. Möchte man nun noch den ganzen Baum zeichnen, muss man entweder sehr klein schreiben oder ein großes Blatt zur Hand nehmen… Hier lohnt es sich den Baum zu verkürzen und nur den Pfad zu skizzieren, der zum Ereignis Leerausgehen gehört.</p>
+<p><img src="images/keinEmil.png" height="200" /></p>
+<p>Auch wenn der Pfad hier nur skizziert wurde und man sich den Rest des Baumes gespart hat, erhält man die Wahrscheinlichkeit dafür, leer auszugehen, natürlich genau wie im Fall der Nilpferddame Nina mit Hilfe der Produktregel:</p>
+<p><span class="math display">\[P(kein\;Emil)= \underbrace{\frac{6}{7} \cdot \frac{6}{7} \cdot \dots \cdot \frac{6}{7}}_{7\;mal} = (\frac{6}{7})^7 = \frac{279936}{823543} \approx 34\%\]</span></p>
+<div id="beachte-1" class="section level4 unnumbered">
+<h4>Beachte:</h4>
+<blockquote>
+<p>Beim Zeichnen von Baumdiagrammen kann man sich oft Arbeit sparen, indem man</p>
+<ul>
+<li><p>nur die Pfade des Baumdiagramms zeichnet, die zu dem Ereignis gehören, das einen interessiert und/oder</p></li>
+<li><p>mehrere Ergebnisse zu einem Pfad in einem Baumdiagramm zusammenfasst.</p></li>
+</ul>
+</blockquote>
+</div>
+<div id="beispiel-1-1" class="section level4 unnumbered">
+<h4>Beispiel 1</h4>
+<p><img src="images/gluecksrad10.png" height="200" /></p>
+<p>Beim Glücksrad auf dem Straßenfest gewinnt man einen Blumentopf, wenn man bei zweimaligem Drehen zweimal eine 10 erhält. Samuel möchte mit einem Baumdiagramm die Wahrscheinlichkeit für einen Blumentopf ermitteln und beginnt, zehn Pfade zu zeichenen.</p>
+<p>Gib ihm einen Tipp, wie er stattdessen vorgehen soll und ermittle die Wahrscheinlichkeit einen Blumentopf zu gewinnen.</p>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Da man nur die Fälle <em>10</em> oder <em>nicht 10</em> unterscheiden muss, kann Samuel die möglichen Ergebnisse 1 bis 9 zum Ereignis <em>nicht 10</em> zusammenfassen. Damit erhält er folgenden verkürzten Baum:</p>
+<p><img src="images/verkuerzBaumBeispiel1A.png" height="200" /></p>
+<p>Er kann den Baum sogar noch kürzer darstellen, schließlich interessiert er sich nur für das Ergebnis <em>zweimal 10</em>:</p>
+<p><img src="images/verkuerzBaumBeispiel1B.png" height="200" /></p>
+<p>Mit Hilfe der Produktregel erhält man in jedem Fall die Wahrscheinlichkeit für einen Blumentopf:</p>
+<p><span class="math inline">\(P(Blumentopf)=\frac{1}{10} \cdot \frac{1}{10} = \frac{1}{100} = 1\%\)</span></p>
+</div>
+<div id="section-154" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+</div>
+<div id="beispiel-2-1" class="section level4 unnumbered">
+<h4>Beispiel 2</h4>
+<p>Ermittle die Wahrscheinlichkeit, bei dreimaligem Würfeln mit einem normalen Spielwürfel genau zwei Sechsen zu erhalten.</p>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Es ist nicht nötig für alle Ergebnisse 1 bis 6 im Baumdiagramm Pfade zu zeichnen, da man sich nur für das Ergebnis <em>6</em> interessiert. Deshalb genügt es, die beiden Fälle <em>6</em> und <em>keine 6</em> zu unterscheiden.</p>
+<p><img src="images/verkuerzBaumBeispiel2.png" height="200" /></p>
+<p>Zum Ergebnis <em>genau zweimal Sechs</em> gehören die drei zusammengesetzten Ergebnisse <span class="math inline">\((6,\;6,\;keine\;6)\)</span>, <span class="math inline">\((6,\;keine\;6,\;6)\)</span> und <span class="math inline">\((keine\;6,\;6,\;6)\)</span>.</p>
+<p>Es reicht aus, nur die zu diesen drei Ergebnissen die Pfade zu zeichnen und ihre Wahrscheinlichkeiten zu bestimmen. Die Wahrscheinlichkeiten dieser drei Pfade muss man dann noch addieren, um die Wahrscheinlichkeit für <em>genau zweimal Sechs</em> zu erhalten.</p>
+<p><span class="math display">\[\begin{align}
+P(genau\;zweimal\;6) &amp;= P(6,\;6,\;keine\;6) + P(6,\;keine\;6,\;6) + P(keine\;6,\;6,\;6) =\\
+{}\\
+&amp;= \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{5}{6} + \frac{1}{6} \cdot \frac{5}{6} \cdot \frac{1}{6} + \frac{5}{6} \cdot \frac{1}{6} \cdot \frac{1}{6} = \frac{15}{216} \approx 6,9\%
+\end{align}\]</span></p>
+</div>
+<div id="section-155" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-1-16" class="section level4 unnumbered">
+<h4>Aufgabe 1</h4>
+<p>Luca würfelt viermal hintereinander. Bestimme die Wahrscheinlichkeit, dass er vier Sechsen würfelt. Zeichne dazu eine verkürztes Baumdiagramm.</p>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-156" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-2-16" class="section level4 unnumbered">
+<h4>Aufgabe 2</h4>
+<p>Afra soll fünf gegebene Flüsse der Länge nach ordnen. Da Afra nur von Rhein und Donau überhaupt mal irgendetwas gehört hat und diese beiden Flüsse leider nicht dabei sind, ordnet sie die Flüsse rein zufällig. Ermittle, mit welcher Wahrscheinlichkeit sie die richtige Reihenfolge erhält.</p>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-157" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-3-10" class="section level4 unnumbered">
+<h4>Aufgabe 3</h4>
+<p><img src="images/verkuerzBaumA3.png" height="200" /></p>
+<p>In einer Schale sind vier Kugeln versteckt, die mit den Ziffern von 1 bis 4 beschriftet sind. Elise, Lore und Finn sollen die Wahrscheinlichkeit berechnen, erst eine gerade und dann eine ungerade Zahl zu ziehen, wenn blind (also zufällig) und mit Zurücklegen gezogen wird.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Beurteile die Lösungen von Elise und Finn.</li>
+</ol>
+<p><strong>Elises Lösung:</strong></p>
+<p><img src="images/verkuerzBaumA3a1.png" height="200" /></p>
+<p><span class="math display">\[\begin{align}
+P(gerade,\;ungerade) &amp;= P(2,\;1) + P(2,\;3) + P(4,\;1) + P(4,\;3) =\\
+{}\\
+&amp;=\frac{1}{4} \cdot \frac{1}{4} + \frac{1}{4} \cdot \frac{1}{4} +\frac{1}{4} \cdot \frac{1}{4} + \frac{1}{4} \cdot \frac{1}{4} =\\
+{}\\
+&amp; = 4\cdot \frac{1}{16} = \frac{1}{4} = 25\%
+\end{align}\]</span></p>
+<p><strong>Finns Lösung:</strong></p>
+<p><img src="images/verkuerzBaumA3a2.png" height="200" /></p>
+<p><span class="math display">\[P(gerade,\;ungerade)=\frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4} = 25\%\]</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Lores Baumdiagramm hat nur einen Pfad. Kann das richtig sein? Begründe.</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+</div>
+<div id="section-158" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+</div>
+<div id="wahrscheinlichkeit-des-gegenereignisses" class="section level3" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Wahrscheinlichkeit des Gegenereignisses</h3>
+<p><img src="images/blumentopf.jpeg" height="200" /></p>
+<p>Mara die den bewährten Glücksradstand auf dem nächsten Straßenfest ausrichten soll, fragt sich, mit welcher Wahrscheinlichkeit man an ihrem Stand <strong>keinen</strong> Blumentopf gewinnt, um abschätzen zu können, wie viele Blumentöpfe sie vorsorglich dabei haben sollte.</p>
+<p>Die Regeln sind wie jedes Jahr unverändert: Es wird zweimal hintereinander gedreht, wer zweimal eine 10 hat, hat gewonnen.</p>
+<p><img src="images/gluecksrad10.png" height="200" /></p>
+<p>Natürlich könnte Mara nun beginnen ein Baumdiagramm mit 10 Pfaden (für die Zahlen von 1 bis 10) pro Stufe zu zeichnen. Dann müsste sie die Wahrscheinlichkeiten aller Pfade, in denen eine oder keine 10 vorkommt, ermitteln und diese Wahrscheinlichkeiten anschließend noch addieren. Das ist viel Arbeit und Mara ist (manchmal ein bisschen) faul.</p>
+<p>Stattdessen überlegt sie sich, dass sie die Aufgabe mit Hilfe des Gegenereignisses lösen könnte.</p>
+<blockquote>
+<p>Das <strong>Gegenereignis</strong> tritt genau dann ein, wenn das Ereignis nicht eintritt. Es besteht aus genau den zusammengesetzten Ergebnissen, die nicht zum Ereignis gehören.</p>
+</blockquote>
+<ul>
+<li><p>Das Gegenereignis zu <em>eine 6 würfeln</em> ist also <em>keine 6 - also eine 1, 2, 3, 4 oder 5</em> würfeln.</p></li>
+<li><p>Das Gegenereignis zu <em>Zahl werfen</em> ist beim Münzwurf <em>keine Zahl und damit Kopf werfen</em>. Wirft man die Münze fünfmal, so ist das Gegenereignis zu fünfmal Zahl werfen <em>in mindestens einem der fünf Würfe Kopf werfen</em> (also einmal Kopf und viermal Zahl, zweimal Kopf und dreimal Zahl, viermal Kopf und einmal Zahl oder fünfmal Kopf)</p></li>
+<li><p>Das Gegenereignis von keinmal oder nur einmal 10 beim Glücksrad (kein Blumentopf) ist zweimal 10 (Blumentopf).</p></li>
+</ul>
+<div id="beachte-2" class="section level4 unnumbered">
+<h4>Beachte:</h4>
+<blockquote>
+<p>Für ein Ereignis <span class="math inline">\(E\)</span> und seine Gegenereignis <span class="math inline">\(\bar{E}\)</span> gilt: <span class="math inline">\(P(E)+P(\bar{E})=1 (100\%)\)</span>.</p>
+<p>Mit anderen Worten: Die Wahrscheinlichkeiten eines Ereignisses und des zugehörigen Gegenereignisses ergänzen sich zu 100%.</p>
+<p>Die Wahrscheinlichkeit von Ereignissen mit sehr vielen Ergebnissen kann man oft schneller ermitteln, wenn man die Wahrscheinlichkeit des Gegenereignisses bestimmt.</p>
+</blockquote>
+<p>Mara fragt also einfach Samuel, wie hoch denn die Wahrscheinlichkeit ist, einen Blumentopf zu gewinnen (Gegenereignis) und rechnet dann:</p>
+<p><span class="math display">\[\begin{align}
+P(keinen\;Blumentopf\;gewinnen) &amp;= 1- P(einen\;Blumentopf\;gewinnen) =\\
+&amp;= 1 - \frac{1}{100} = \frac{99}{100} = 99\%
+\end{align}\]</span></p>
+</div>
+<div id="beispiel-5" class="section level4 unnumbered">
+<h4>Beispiel</h4>
+<p>Ermittle die Wahrscheinlichkeit, bei dreimaligem Würfeln mindestens eine 6 zu erhalten.</p>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Das Gegenereignis zu <em>mindestens eine 6</em> ist <em>keine 6</em> bei dreimaligem Würfeln. Zeichne für diesen Fall ein verkürztes Baumdiagramm und bestimme dann die Wahrscheinlichkeit des Gegenereignisses:</p>
+<p><img src="images/gegenEreigBaumBeispiel.png" height="200" /></p>
+<p><span class="math inline">\(P(dreimal\;keine\;6)= \frac{5}{6}\cdot\frac{5}{6}\cdot\frac{5}{6} = \frac{125}{216} \approx 58\%\)</span></p>
+<p>Da die Summe der Wahrscheinlichkeiten von Ereignis und Gegenereignis 1 (100%) ist, kann man nun die gesuchte Wahrscheinlichkeit berechnen:</p>
+<p><span class="math inline">\(P(mindestens\;eine\;6)= 1 - P(dreimal\;keine\;6) = 1- \frac{125}{216} = \frac{91}{216} \approx 42\%\)</span></p>
+</div>
+<div id="section-159" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-1-17" class="section level4 unnumbered">
+<h4>Aufgabe 1</h4>
+<p>Gib das Gegenereignis in Worten an.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Beim Werfen eines Spielwürfels erhält man eine gerade Augenzahl.</p></li>
+<li><p>Ein Würfel wird dreimal geworfen. Es fällt mindestens zweimal eine gerade Augenzahl.</p></li>
+<li><p>Eine zufällig ausgewählte natürliche Zahl zwischen 1 und 49 ist kleiner als 20.</p></li>
+<li><p>Aus einem Beutel mit acht verschiedenfarbigen Kugeln wird eine gelbe Kugel gezogen.</p></li>
+<li><p>Aus einem Beutel mit acht farbigen Kugeln werden zwei Kugeln entnommen. Beide Kugeln sind gelb.</p></li>
+<li><p>Bei der zufällgien Auswahl zweier Schüler:innen einer achten Klasse werden ein Mädchen und ein Junge gewählt.</p></li>
+<li><p>Eine Münze wird zehnmal geworfen, es fällt höchstens sechsmal Wappen.</p></li>
+<li><p>Beim Ziehen von acht Losen erhält man mindestens fünf Gewinne.</p></li>
+<li><p>Ein Würfel wird fünfmal geworfen. Es fällt genau zweimal eine Sechs.</p></li>
+</ol>
+</div>
+<div id="section-160" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-2-17" class="section level4 unnumbered">
+<h4>Aufgabe 2</h4>
+<p>Leos Fussballtrainer sagt, dass die Mannschaft jedes Spiel mit einer Wahrscheinlichkeit von 70% gewinnt. Zwei Spiele vor Schluss der Saison ist klar, dass die Mannschaft noch mindestens eins gewinnen muss, um Meister zu werden.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Stelle die Situation in einem Baumdiagramm dar. Markiere die Pfade für das Ereignis “die Mannschaft gewinnt noch mindestens ein Spiel” und sein Gegenereignis mit unterschiedlichen Farben. Gib das Gegenereignis in Worten an.</p></li>
+<li><p>Berechne die Wahrscheinlichkeit, dass die Mannschaft noch mindestens ein Spiel gewinnt.</p></li>
+</ol>
+</div>
+<div id="section-161" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-3-11" class="section level4 unnumbered">
+<h4>Aufgabe 3</h4>
+<p><img src="images/gegenEreigA3.png" height="100" /></p>
+<p>In einer Schale liegen drei rote, drei blaue und drei weiße Kugeln. Viky zieht drei Kugeln ohne Zurücklegen. Berechne die Wahrscheinlichkeit dafür, dass sie</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>drei rote Kugeln,</p></li>
+<li><p>keine rote Kugel,</p></li>
+<li><p>mindestens eine rote Kugel</p></li>
+</ol>
+<p>zieht.</p>
+</div>
+<div id="section-162" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
+</div>
+<div id="aufgabe-4-5" class="section level4 unnumbered">
+<h4>Aufgabe 4</h4>
+<p><img src="images/handyakku.jpeg" height="100" /></p>
+<p>Bei der Produktion von Handyakkus sind durchschnittlich 2% defekt. In einer Packung werden vier Akkus geliefert. Berechne die Wahrscheinlichkeit, dass in der Packung mindestens ein defekter Akku ist.</p>
+</div>
+<div id="section-163" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<hr style="background-color:#3C6690;height:2px">
 
+</div>
+</div>
 </div>
 <!-- </div> -->
             </section>
