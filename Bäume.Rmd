@@ -726,7 +726,7 @@ a) wenn die Kugeln zurückgelegt werden.
 
 <img src="./images/abhaengStufenA1BaumA.png" height="200" />
 
-$$ P(zwei\;gleiche\;Kugeln) = \frac{2}{5}\cdot\frac{2}{5} + \frac{3}{5} \cdot\frac{3}{5} = \frac{4}{25} + \frac{9}{25} = \frac{16}{25} = 64\% $$
+$P(zwei\;gleiche\;Kugeln) = \frac{2}{5}\cdot\frac{2}{5} + \frac{3}{5} \cdot\frac{3}{5} = \frac{4}{25} + \frac{9}{25} = \frac{13}{25} = 52\%$
 
 #### {-}
 
@@ -1115,6 +1115,10 @@ Luca würfelt viermal hintereinander. Bestimme die Wahrscheinlichkeit, dass er v
 
 `r hide("Lösung")`
 
+<img src="./images/verkuerzBaumA1.png" height="200" />
+
+$P(viermal\;6)=(\frac{1}{6})^4 \approx 0,00077\; (\approx 0,077\%)$
+
 #### {-}
 
 
@@ -1123,9 +1127,13 @@ cat('<hr style="background-color:#3C6690;height:2px">')
 ```
 
 #### Aufgabe 2 {-}
-Afra soll fünf gegebene Flüsse der Länge nach ordnen. Da Afra nur von Rhein und Donau überhaupt mal irgendetwas gehört hat und diese beiden Flüsse leider nicht dabei sind, ordnet sie die Flüsse rein zufällig. Ermittle, mit welcher Wahrscheinlichkeit sie die richtige Reihenfolge erhält.
+Afra soll fünf gegebene Flüsse der Länge nach ordnen, wobei sie mit dem längsten Fluss beginnen soll. Da Afra nur von Rhein und Donau überhaupt mal irgendetwas gehört hat und diese beiden Flüsse leider nicht dabei sind, ordnet sie die Flüsse rein zufällig. Ermittle, mit welcher Wahrscheinlichkeit sie die richtige Reihenfolge erhält.
 
 `r hide("Lösung")`
+
+<img src="./images/verkuerzBaumA2.png" height="350" />
+
+$P(richtige\;Reihenfolge)=\frac{1}{5}\cdot\frac{1}{4}\cdot\frac{1}{3}\cdot\frac{1}{2}\cdot1 = \frac{1}{120} \approx 0,008333333 \; (\approx 0,83\%)$
 
 #### {-}
 
@@ -1160,10 +1168,26 @@ P(gerade,\;ungerade) &= P(2,\;1) + P(2,\;3) + P(4,\;1) + P(4,\;3) =\\
 
 $$P(gerade,\;ungerade)=\frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4} = 25\%$$
 
+`r hide("Lösung")`
+
+Beide Lösungen sind richtig. Finns Lösung ist aber deutlich effizienter, da er sich auf die für die Fragestellung relevanten Informationen konzentriert.
+
+Während man Elises Lösung detailliert alle zusammengesetzten Ergebnisse [(2, 1), (2, 3), (4, 1), (4, 3)], die zum Ereignis (gerade, ungerade) gehören, entnehmen kann, untersucht Finn gleich das gefragte Ereignis.
+
+Im Hinblick auf den Arbeitsaufwand und damit auf Effizienz ist Finns Lösung also besser.
+
+#### {-}
+
 
 b) Lores Baumdiagramm hat nur einen Pfad. Kann das richtig sein? Begründe.
 
 `r hide("Lösung")`
+
+Das kann richtig sein, wenn Lore nur den interessanten Pfad gezeichnet hat. Zur Orientierung ist Lores Baum hier in das Szenario eingebettet:
+
+<img src="./images/verkuerzBaumA3b.png" height="150" />
+
+Während in obigem Baum die Abzweigungen noch skizziert sind, könnte Lore sogar diese weggelassen haben. Dann hat sie tatsächlich nur einen Pfad.
 
 #### {-}
 
@@ -1238,21 +1262,73 @@ Gib das Gegenereignis in Worten an.
 
 a) Beim Werfen eines Spielwürfels erhält man eine gerade Augenzahl.
 
+`r hide("Lösung")`
+
+Beim Werfen eines Spielwürfels erhät man eine ungerade Augenzahl (keine gerade Augenzahl).
+
+#### {-}
+
 b) Ein Würfel wird dreimal geworfen. Es fällt mindestens zweimal eine gerade Augenzahl.
+
+`r hide("Lösung")`
+
+Ein Würfel wird dreimal geworfen. Es fällt höchstens einmal eine gerade Augenzahl.
+
+#### {-}
 
 c) Eine zufällig ausgewählte natürliche Zahl zwischen 1 und 49 ist kleiner als 20.
 
+`r hide("Lösung")`
+
+Eine zufällig ausgewählte natürliche Zahl zwischen 1 und 49 ist größer oder gleich 20.
+
+#### {-}
+
 d) Aus einem Beutel mit acht verschiedenfarbigen Kugeln wird eine gelbe Kugel gezogen.
+
+`r hide("Lösung")`
+
+Aus einem Beutel mit acht verschiedenfarbigen Kugeln wird eine Kugel gezogen, die nicht die Farbe gelb hat.
+
+#### {-}
 
 e) Aus einem Beutel mit acht farbigen Kugeln werden zwei Kugeln entnommen. Beide Kugeln sind gelb.
 
-f) Bei der zufällgien Auswahl zweier Schüler:innen einer achten Klasse werden ein Mädchen und ein Junge gewählt.
+`r hide("Lösung")`
+
+Aus einem Beutel mit acht farbigen Kugeln werden zwei Kugeln entnommen. Höchstens eine der beiden Kugeln ist gelb.
+
+#### {-}
+
+f) Bei der zufälligen Auswahl zweier Schüler:innen einer achten Klasse werden ein Mädchen und ein Junge gewählt.
+
+`r hide("Lösung")`
+
+Bei der zufälligen Auswahl zweier Schüler:innen einer achten Klasse werden entweder zwei Mädchen oder zwei Jungen gewählt (wird ein gleichgeschlechtliches Paar gewält). 
+
+#### {-}
 
 g) Eine Münze wird zehnmal geworfen, es fällt höchstens sechsmal Wappen.
 
+`r hide("Lösung")`
+
+Eine Münze wird zehnmal geworfen. Es fällt mindestens siebenmal Wappen.
+
+#### {-}
+
 h) Beim Ziehen von acht Losen erhält man mindestens fünf Gewinne.
 
+`r hide("Lösung")`
+
+Beim Ziehen von acht Losen erhält man höchstens vier Gewinne.
+
+#### {-}
+
 i) Ein Würfel wird fünfmal geworfen. Es fällt genau zweimal eine Sechs.
+
+`r hide("Lösung")`
+
+Ein Würfel wird fünfmal geworfen. Es fallen keine, eine oder mindestens drei Sechsen.
 
 #### {-}
 
@@ -1266,7 +1342,32 @@ Leos Fussballtrainer sagt, dass die Mannschaft jedes Spiel mit einer Wahrscheinl
 
 a) Stelle die Situation in einem Baumdiagramm dar. Markiere die Pfade für das Ereignis "die Mannschaft gewinnt noch mindestens ein Spiel" und sein Gegenereignis mit unterschiedlichen Farben. Gib das Gegenereignis in Worten an.
 
+`r hide("Lösung")`
+
+<img src="./images/gegenEreigBaumA2.png" height="200" />
+
+Das Gegenereignis zu "die Mannschaft gewinnt noch mindestens ein Spiel" ist "die Mannschaft gewinnt kein Spiel" (genauso kann man natürlich auch sagen: "die Mannschaft verliert beide Spiele").
+
+#### {-}
+
 b) Berechne die Wahrscheinlichkeit, dass die Mannschaft noch mindestens ein Spiel gewinnt.
+
+`r hide("Lösung")`
+
+**1. (etwas längerer) Weg:**
+
+Man kann die Wahrscheinlichkeit entweder als Summe der Pfade, die zum Ereignis gehören berechnen:
+
+$$\begin{align} P(Mannschaft\;gewinnt\;mindestens\;ein\;Spiel)&= 0,7\cdot0,7 + 0,7\cdot0,3 + 0,3\cdot0,7 = \\
+&= 0,91 =91\%\end{align}$$
+
+${}\\$
+
+**2. (kürzerer) Weg:**
+
+Oder man berechnet die Wahrscheinlichkeit, indem man die Wahrscheinlichkeit des Gegenereignisses ermittelt und ausnutzt, dass $P(Ereignis)+P(Gegenereignis)=1$ gilt:
+
+$P(Mannschaft\;gewinnt\;mindestens\;ein\;Spiel)= 1-0.3*0.3 = 1-0.09=0.91=91\%$
 
 #### {-}
 
@@ -1283,11 +1384,37 @@ In einer Schale liegen drei rote, drei blaue und drei weiße Kugeln. Viky zieht 
 
 a) drei rote Kugeln,
 
+`r hide("Lösung")`
+
+Hier ist nur ein Pfad interessant:
+
+<img src="./images/gegenEreigBaumA3a.png" height="200" />
+
+$P(drei\;rote\;Kugeln) = \frac{3}{9} \cdot \frac{2}{8} \cdot \frac{1}{7} = \frac{1}{84} \approx 1,2\%$
+
+#### {-}
+
 b) keine rote Kugel,
+
+`r hide("Lösung")`
+
+Fast man die weißen und blauen Kugeln zu *nicht roten* Kugeln zusammen, ist auch hier nur ein Pfad interessant:
+
+<img src="./images/gegenEreigBaumA3b.png" height="200" />
+
+$P(keine\;rote\;Kugel) = \frac{6}{9} \cdot \frac{5}{8} \cdot \frac{4}{7} = \frac{5}{21} \approx 23,8\%$
+
+#### {-}
 
 c) mindestens eine rote Kugel
 
 zieht.
+
+`r hide("Lösung")`
+
+*Mindestens eine rote Kugel ziehen* ist das Gegenereignis zu *keine rote Kugel ziehen*. Daher kann man sich die Aufgabe sehr einfach machen und das Ergebnis aus Teilaufgabe b verwenden. Damit gilt:
+
+$$\begin{align} P(mindestens\;eine\;rote\;Kugel) &= 1 - P(keine\;rote\;Kugel) =\\ &= 1 - \frac{5}{21} = \frac{16}{21} \approx 76,2\% \end{align}$$
 
 #### {-}
 
@@ -1301,6 +1428,16 @@ cat('<hr style="background-color:#3C6690;height:2px">')
 <img src="./images/handyakku.jpeg" height="100" />
 
 Bei der Produktion von Handyakkus sind durchschnittlich 2% defekt. In einer Packung werden vier Akkus geliefert. Berechne die Wahrscheinlichkeit, dass in der Packung mindestens ein defekter Akku ist.
+
+`r hide("Lösung")`
+
+Hier kann man sich die Aufgabe wieder vereinfachen, indem man die Gegenwahrscheinlichkeit berechnet. Das Gegenereignis zu *mindestens ein Akku ist defekt* ist *kein Akku ist defekt*. Damit muss man nur einen Pfad beachten.
+
+<img src="./images/gegenEreigBaumA4.png" height="250" />
+
+$$\begin{align} P(mindestens\;ein\;Akku\;ist\;defekt) &= 1 - P(kein\;Akku\;ist\;defekt) = \\
+&= 1 - (\frac{49}{50})^4 \approx 0,0776 \; (\approx 7,76\%)
+\end{align}$$
 
 #### {-}
 

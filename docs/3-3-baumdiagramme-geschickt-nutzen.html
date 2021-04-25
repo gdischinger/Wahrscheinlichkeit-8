@@ -312,6 +312,8 @@ P(genau\;zweimal\;6) &amp;= P(6,\;6,\;keine\;6) + P(6,\;keine\;6,\;6) + P(keine\
 <button>
 Lösung
 </button>
+<p><img src="images/verkuerzBaumA1.png" height="200" /></p>
+<p><span class="math inline">\(P(viermal\;6)=(\frac{1}{6})^4 \approx 0,00077\; (\approx 0,077\%)\)</span></p>
 </div>
 <div id="section-156" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -319,11 +321,13 @@ Lösung
 </div>
 <div id="aufgabe-2-16" class="section level4 unnumbered">
 <h4>Aufgabe 2</h4>
-<p>Afra soll fünf gegebene Flüsse der Länge nach ordnen. Da Afra nur von Rhein und Donau überhaupt mal irgendetwas gehört hat und diese beiden Flüsse leider nicht dabei sind, ordnet sie die Flüsse rein zufällig. Ermittle, mit welcher Wahrscheinlichkeit sie die richtige Reihenfolge erhält.</p>
+<p>Afra soll fünf gegebene Flüsse der Länge nach ordnen, wobei sie mit dem längsten Fluss beginnen soll. Da Afra nur von Rhein und Donau überhaupt mal irgendetwas gehört hat und diese beiden Flüsse leider nicht dabei sind, ordnet sie die Flüsse rein zufällig. Ermittle, mit welcher Wahrscheinlichkeit sie die richtige Reihenfolge erhält.</p>
 <div class='solution'>
 <button>
 Lösung
 </button>
+<p><img src="images/verkuerzBaumA2.png" height="350" /></p>
+<p><span class="math inline">\(P(richtige\;Reihenfolge)=\frac{1}{5}\cdot\frac{1}{4}\cdot\frac{1}{3}\cdot\frac{1}{2}\cdot1 = \frac{1}{120} \approx 0,008333333 \; (\approx 0,83\%)\)</span></p>
 </div>
 <div id="section-157" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -348,6 +352,16 @@ P(gerade,\;ungerade) &amp;= P(2,\;1) + P(2,\;3) + P(4,\;1) + P(4,\;3) =\\
 <p><strong>Finns Lösung:</strong></p>
 <p><img src="images/verkuerzBaumA3a2.png" height="200" /></p>
 <p><span class="math display">\[P(gerade,\;ungerade)=\frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4} = 25\%\]</span></p>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Beide Lösungen sind richtig. Finns Lösung ist aber deutlich effizienter, da er sich auf die für die Fragestellung relevanten Informationen konzentriert.</p>
+<p>Während man Elises Lösung detailliert alle zusammengesetzten Ergebnisse [(2, 1), (2, 3), (4, 1), (4, 3)], die zum Ereignis (gerade, ungerade) gehören, entnehmen kann, untersucht Finn gleich das gefragte Ereignis.</p>
+<p>Im Hinblick auf den Arbeitsaufwand und damit auf Effizienz ist Finns Lösung also besser.</p>
+</div>
+<div id="section-158" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Lores Baumdiagramm hat nur einen Pfad. Kann das richtig sein? Begründe.</li>
 </ol>
@@ -355,8 +369,11 @@ P(gerade,\;ungerade) &amp;= P(2,\;1) + P(2,\;3) + P(4,\;1) + P(4,\;3) =\\
 <button>
 Lösung
 </button>
+<p>Das kann richtig sein, wenn Lore nur den interessanten Pfad gezeichnet hat. Zur Orientierung ist Lores Baum hier in das Szenario eingebettet:</p>
+<p><img src="images/verkuerzBaumA3b.png" height="150" /></p>
+<p>Während in obigem Baum die Abzweigungen noch skizziert sind, könnte Lore sogar diese weggelassen haben. Dann hat sie tatsächlich nur einen Pfad.</p>
 </div>
-<div id="section-158" class="section level4 unnumbered">
+<div id="section-159" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
 <hr style="background-color:#3C6690;height:2px">
 </div>
@@ -403,7 +420,7 @@ Lösung
 <p>Da die Summe der Wahrscheinlichkeiten von Ereignis und Gegenereignis 1 (100%) ist, kann man nun die gesuchte Wahrscheinlichkeit berechnen:</p>
 <p><span class="math inline">\(P(mindestens\;eine\;6)= 1 - P(dreimal\;keine\;6) = 1- \frac{125}{216} = \frac{91}{216} \approx 42\%\)</span></p>
 </div>
-<div id="section-159" class="section level4 unnumbered">
+<div id="section-160" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
 <hr style="background-color:#3C6690;height:2px">
 </div>
@@ -411,18 +428,103 @@ Lösung
 <h4>Aufgabe 1</h4>
 <p>Gib das Gegenereignis in Worten an.</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>Beim Werfen eines Spielwürfels erhält man eine gerade Augenzahl.</p></li>
-<li><p>Ein Würfel wird dreimal geworfen. Es fällt mindestens zweimal eine gerade Augenzahl.</p></li>
-<li><p>Eine zufällig ausgewählte natürliche Zahl zwischen 1 und 49 ist kleiner als 20.</p></li>
-<li><p>Aus einem Beutel mit acht verschiedenfarbigen Kugeln wird eine gelbe Kugel gezogen.</p></li>
-<li><p>Aus einem Beutel mit acht farbigen Kugeln werden zwei Kugeln entnommen. Beide Kugeln sind gelb.</p></li>
-<li><p>Bei der zufällgien Auswahl zweier Schüler:innen einer achten Klasse werden ein Mädchen und ein Junge gewählt.</p></li>
-<li><p>Eine Münze wird zehnmal geworfen, es fällt höchstens sechsmal Wappen.</p></li>
-<li><p>Beim Ziehen von acht Losen erhält man mindestens fünf Gewinne.</p></li>
-<li><p>Ein Würfel wird fünfmal geworfen. Es fällt genau zweimal eine Sechs.</p></li>
+<li>Beim Werfen eines Spielwürfels erhält man eine gerade Augenzahl.</li>
 </ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Beim Werfen eines Spielwürfels erhät man eine ungerade Augenzahl (keine gerade Augenzahl).</p>
 </div>
-<div id="section-160" class="section level4 unnumbered">
+<div id="section-161" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Ein Würfel wird dreimal geworfen. Es fällt mindestens zweimal eine gerade Augenzahl.</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Ein Würfel wird dreimal geworfen. Es fällt höchstens einmal eine gerade Augenzahl.</p>
+</div>
+<div id="section-162" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Eine zufällig ausgewählte natürliche Zahl zwischen 1 und 49 ist kleiner als 20.</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Eine zufällig ausgewählte natürliche Zahl zwischen 1 und 49 ist größer oder gleich 20.</p>
+</div>
+<div id="section-163" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Aus einem Beutel mit acht verschiedenfarbigen Kugeln wird eine gelbe Kugel gezogen.</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Aus einem Beutel mit acht verschiedenfarbigen Kugeln wird eine Kugel gezogen, die nicht die Farbe gelb hat.</p>
+</div>
+<div id="section-164" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Aus einem Beutel mit acht farbigen Kugeln werden zwei Kugeln entnommen. Beide Kugeln sind gelb.</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Aus einem Beutel mit acht farbigen Kugeln werden zwei Kugeln entnommen. Höchstens eine der beiden Kugeln ist gelb.</p>
+</div>
+<div id="section-165" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Bei der zufälligen Auswahl zweier Schüler:innen einer achten Klasse werden ein Mädchen und ein Junge gewählt.</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Bei der zufälligen Auswahl zweier Schüler:innen einer achten Klasse werden entweder zwei Mädchen oder zwei Jungen gewählt (wird ein gleichgeschlechtliches Paar gewält).</p>
+</div>
+<div id="section-166" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>Eine Münze wird zehnmal geworfen, es fällt höchstens sechsmal Wappen.</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Eine Münze wird zehnmal geworfen. Es fällt mindestens siebenmal Wappen.</p>
+</div>
+<div id="section-167" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>Beim Ziehen von acht Losen erhält man mindestens fünf Gewinne.</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Beim Ziehen von acht Losen erhält man höchstens vier Gewinne.</p>
+</div>
+<div id="section-168" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol style="list-style-type: lower-roman">
+<li>Ein Würfel wird fünfmal geworfen. Es fällt genau zweimal eine Sechs.</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Ein Würfel wird fünfmal geworfen. Es fallen keine, eine oder mindestens drei Sechsen.</p>
+</div>
+<div id="section-169" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
 <hr style="background-color:#3C6690;height:2px">
 </div>
@@ -430,11 +532,34 @@ Lösung
 <h4>Aufgabe 2</h4>
 <p>Leos Fussballtrainer sagt, dass die Mannschaft jedes Spiel mit einer Wahrscheinlichkeit von 70% gewinnt. Zwei Spiele vor Schluss der Saison ist klar, dass die Mannschaft noch mindestens eins gewinnen muss, um Meister zu werden.</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>Stelle die Situation in einem Baumdiagramm dar. Markiere die Pfade für das Ereignis “die Mannschaft gewinnt noch mindestens ein Spiel” und sein Gegenereignis mit unterschiedlichen Farben. Gib das Gegenereignis in Worten an.</p></li>
-<li><p>Berechne die Wahrscheinlichkeit, dass die Mannschaft noch mindestens ein Spiel gewinnt.</p></li>
+<li>Stelle die Situation in einem Baumdiagramm dar. Markiere die Pfade für das Ereignis “die Mannschaft gewinnt noch mindestens ein Spiel” und sein Gegenereignis mit unterschiedlichen Farben. Gib das Gegenereignis in Worten an.</li>
 </ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p><img src="images/gegenEreigBaumA2.png" height="200" /></p>
+<p>Das Gegenereignis zu “die Mannschaft gewinnt noch mindestens ein Spiel” ist “die Mannschaft gewinnt kein Spiel” (genauso kann man natürlich auch sagen: “die Mannschaft verliert beide Spiele”).</p>
 </div>
-<div id="section-161" class="section level4 unnumbered">
+<div id="section-170" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Berechne die Wahrscheinlichkeit, dass die Mannschaft noch mindestens ein Spiel gewinnt.</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p><strong>1. (etwas längerer) Weg:</strong></p>
+<p>Man kann die Wahrscheinlichkeit entweder als Summe der Pfade, die zum Ereignis gehören berechnen:</p>
+<p><span class="math display">\[\begin{align} P(Mannschaft\;gewinnt\;mindestens\;ein\;Spiel)&amp;= 0,7\cdot0,7 + 0,7\cdot0,3 + 0,3\cdot0,7 = \\
+&amp;= 0,91 =91\%\end{align}\]</span></p>
+<p><span class="math inline">\({}\\\)</span></p>
+<p><strong>2. (kürzerer) Weg:</strong></p>
+<p>Oder man berechnet die Wahrscheinlichkeit, indem man die Wahrscheinlichkeit des Gegenereignisses ermittelt und ausnutzt, dass <span class="math inline">\(P(Ereignis)+P(Gegenereignis)=1\)</span> gilt:</p>
+<p><span class="math inline">\(P(Mannschaft\;gewinnt\;mindestens\;ein\;Spiel)= 1-0.3*0.3 = 1-0.09=0.91=91\%\)</span></p>
+</div>
+<div id="section-171" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
 <hr style="background-color:#3C6690;height:2px">
 </div>
@@ -443,13 +568,43 @@ Lösung
 <p><img src="images/gegenEreigA3.png" height="100" /></p>
 <p>In einer Schale liegen drei rote, drei blaue und drei weiße Kugeln. Viky zieht drei Kugeln ohne Zurücklegen. Berechne die Wahrscheinlichkeit dafür, dass sie</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>drei rote Kugeln,</p></li>
-<li><p>keine rote Kugel,</p></li>
-<li><p>mindestens eine rote Kugel</p></li>
+<li>drei rote Kugeln,</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Hier ist nur ein Pfad interessant:</p>
+<p><img src="images/gegenEreigBaumA3a.png" height="200" /></p>
+<p><span class="math inline">\(P(drei\;rote\;Kugeln) = \frac{3}{9} \cdot \frac{2}{8} \cdot \frac{1}{7} = \frac{1}{84} \approx 1,2\%\)</span></p>
+</div>
+<div id="section-172" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>keine rote Kugel,</li>
+</ol>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Fast man die weißen und blauen Kugeln zu <em>nicht roten</em> Kugeln zusammen, ist auch hier nur ein Pfad interessant:</p>
+<p><img src="images/gegenEreigBaumA3b.png" height="200" /></p>
+<p><span class="math inline">\(P(keine\;rote\;Kugel) = \frac{6}{9} \cdot \frac{5}{8} \cdot \frac{4}{7} = \frac{5}{21} \approx 23,8\%\)</span></p>
+</div>
+<div id="section-173" class="section level4 unnumbered">
+<h4 class="unnumbered"></h4>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>mindestens eine rote Kugel</li>
 </ol>
 <p>zieht.</p>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p><em>Mindestens eine rote Kugel ziehen</em> ist das Gegenereignis zu <em>keine rote Kugel ziehen</em>. Daher kann man sich die Aufgabe sehr einfach machen und das Ergebnis aus Teilaufgabe b verwenden. Damit gilt:</p>
+<p><span class="math display">\[\begin{align} P(mindestens\;eine\;rote\;Kugel) &amp;= 1 - P(keine\;rote\;Kugel) =\\ &amp;= 1 - \frac{5}{21} = \frac{16}{21} \approx 76,2\% \end{align}\]</span></p>
 </div>
-<div id="section-162" class="section level4 unnumbered">
+<div id="section-174" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
 <hr style="background-color:#3C6690;height:2px">
 </div>
@@ -457,8 +612,17 @@ Lösung
 <h4>Aufgabe 4</h4>
 <p><img src="images/handyakku.jpeg" height="100" /></p>
 <p>Bei der Produktion von Handyakkus sind durchschnittlich 2% defekt. In einer Packung werden vier Akkus geliefert. Berechne die Wahrscheinlichkeit, dass in der Packung mindestens ein defekter Akku ist.</p>
+<div class='solution'>
+<button>
+Lösung
+</button>
+<p>Hier kann man sich die Aufgabe wieder vereinfachen, indem man die Gegenwahrscheinlichkeit berechnet. Das Gegenereignis zu <em>mindestens ein Akku ist defekt</em> ist <em>kein Akku ist defekt</em>. Damit muss man nur einen Pfad beachten.</p>
+<p><img src="images/gegenEreigBaumA4.png" height="250" /></p>
+<p><span class="math display">\[\begin{align} P(mindestens\;ein\;Akku\;ist\;defekt) &amp;= 1 - P(kein\;Akku\;ist\;defekt) = \\
+&amp;= 1 - (\frac{49}{50})^4 \approx 0,0776 \; (\approx 7,76\%)
+\end{align}\]</span></p>
 </div>
-<div id="section-163" class="section level4 unnumbered">
+<div id="section-175" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
 <hr style="background-color:#3C6690;height:2px">
 
