@@ -871,7 +871,7 @@ a) Zeichne ein Baumdiagramm.
 
 `r hide("Lösung")`
 
-<img src="./images/abhaengStufenUebungA2a.png" height="200" />
+<img src="./images/abhaengStufenUebungA2a.png" height="300" />
 
 #### {-}
 
@@ -880,7 +880,7 @@ b) Berechne die Wahrscheinlichkeit dafür, dass David den Bottle Flip dreimal hi
 
 `r hide("Lösung")`
 
-<img src="./images/abhaengStufenUebungA2b.png" height="200" />
+<img src="./images/abhaengStufenUebungA2b.png" height="300" />
 
 Die Wahscheinlichkeit dafür, dass David den Bottle Flip dreimal hintereinander schafft, erhält man, wenn man die Wahrscheinlichkeiten entlang des rot markierten Pfades multipliziert:
 
@@ -892,7 +892,7 @@ c) Berechne die Wahrscheinlichkeit dafür, dass die Flasche bei einem von drei W
 
 `r hide("Lösung")`
 
-<img src="./images/abhaengStufenUebungA2c.png" height="200" />
+<img src="./images/abhaengStufenUebungA2c.png" height="300" />
 
 Die Wahscheinlichkeit dafür, dass bei einem von drei Würfen stehen bleibt, erhält man, wenn man die Wahrscheinlichkeiten entlang der hellblau markierten Pfade multipliziert und die Pfadwahrscheinlichkeiten addiert:
 
@@ -904,7 +904,7 @@ d) Berechne die Wahrscheinlichkeit dafür, dass die Flasche bei drei Würfen nic
 
 `r hide("Lösung")`
 
-<img src="./images/abhaengStufenUebungA2d.png" height="200" />
+<img src="./images/abhaengStufenUebungA2d.png" height="300" />
 
 Die Wahscheinlichkeit dafür, dass die Flasche bei drei Würfen nicht zweimal nacheinander stehen bleibt, erhält man, wenn man die Wahrscheinlichkeiten entlang der blau markierten Pfade multipliziert und die Pfadwahrscheinlichkeiten addiert:
 
@@ -1431,7 +1431,7 @@ Bei der Produktion von Handyakkus sind durchschnittlich 2% defekt. In einer Pack
 
 `r hide("Lösung")`
 
-Hier kann man sich die Aufgabe wieder vereinfachen, indem man die Gegenwahrscheinlichkeit berechnet. Das Gegenereignis zu *mindestens ein Akku ist defekt* ist *kein Akku ist defekt*. Damit muss man nur einen Pfad beachten.
+Hier kann man sich die Aufgabe wieder vereinfachen, indem man die Gegenwahrscheinlichkeit berechnet. Das Gegenereignis zu *mindestens ein Akku ist defekt* ist *kein Akku ist defekt*. Damit muss man nur einen Pfad beachten:
 
 <img src="./images/gegenEreigBaumA4.png" height="250" />
 
