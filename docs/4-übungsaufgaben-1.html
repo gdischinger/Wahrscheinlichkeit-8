@@ -264,7 +264,7 @@ Lösung
 <div id="aufgabe-2-18" class="section level4 unnumbered">
 <h4>Aufgabe 2</h4>
 <p><img src="images/%C3%9CA2Eis.jpg" height="200" /></p>
-<p>Theo mag gern Himbeereis, Schokoeis und Vanilleeis. Seine Schwester Maja mag am liebsten Himbeereis, Schokoeis und Zitroneneis. Jeder der beiden darf sich zwei Kugeln Eis aussuchen.</p>
+<p>Theo mag gern Himbeereis, Schokoeis und Vanilleeis. Seine Schwester Maja mag am liebsten Himbeereis, Schokoeis und Zitroneneis. Jeder der beiden darf sich zwei Kugeln Eis aussuchen. Beide wollen zwei Kugeln aus den jeweils drei Lieblingssorten auswählen.</p>
 <ol style="list-style-type: lower-alpha">
 <li>Gib an, wie viele Möglichkeiten Theo hat, sein Eis zusammenzustellen, wenn er sich vorstellen kann, zwei gleiche Kugeln zu nehmen. (Wer tut denn sowas!)</li>
 </ol>
@@ -272,6 +272,10 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Man kann ein Baumdiagramm zeichnen, um alle Möglichkeiten übersichtlich aufzulisten:</p>
+<p><img src="images/%C3%9CA2aBaum.png" height="200" /></p>
+<p>Hier muss man nur noch die Pfadenden zählen: Es gibt 9 Pfadenden. Folglich hat Theo 9 Möglichkeiten sein Eis zusammenzustellen.</p>
+<p>Natürlich kann man diese Aufgabe auch ohne Baumdiagramm lösen. Theo hat für die erste und für die zweite Kugel jeweils drei Eissorten zur Auswahl. Damit hat er <span class="math inline">\(3 \cdot 3 = 9\)</span> Möglichkeiten, wie er sein Eis zusammenstellen kann.</p>
 </div>
 <div id="section-177" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -282,6 +286,10 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Natürlich kann man auch hier ein Baumdiagramm zeichnen, um alle Möglichkeiten aufzulisten:</p>
+<p><img src="images/4%C3%9CA2bBaum.png" height="200" /></p>
+<p>Wie in Teilaufgabe a) muss man nun nur noch die Pfadenden zählen: Es gibt 6 Pfadenden. Folglich hat Maja 6 Möglichkeiten ihr Eis zusammenzustellen.</p>
+<p>Auch diese Aufgabe kann man ohne Baumdiagramm lösen. Maja hat für die erste Kugel 3 Eissorten und für die zweite Kugel 2 Eissorten zur Auswahl. Damit hat sie <span class="math inline">\(3 \cdot 2 = 6\)</span> Möglichkeiten, wie sie ihr Eis zusammenstellen kann.</p>
 </div>
 <div id="section-178" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -291,6 +299,17 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Theo geht in die Eisdiele und wählt zufällig sein Eis aus. Nur wenn er Schoko-Himbeer (SH) oder Himbeer-Schoko (HS) erhält, gibt es überhaupt eine Chance, dass Maja das gleiche Eis erhält:</p>
+<p><span class="math display">\[\begin{align} P(Theo\;bekommt\;ein\;Eis,\;das\;Maja\;mag) &amp;= P(SH) + P(HS) \\
+&amp;= \frac{1}{3} \cdot \frac{1}{3} + \frac{1}{3} \cdot \frac{1}{3} = \frac{2}{9} \end{align}\]</span></p>
+<p>Maja geht nun auch in die Eisdiele und wählt zufällig ihr Eis aus. Die gleiche Überlegung wie eben kann man auch für Maja anstellen: Nur wenn Maja Schoko-Himbeer oder Himbeer-Schoko erhält, gibt es überhaupt eine Chance, dass Theo das gleiche Eis hat:</p>
+<p><span class="math display">\[\begin{align} P(Maja\;bekommt\;ein\;Eis,\;das\;Theo\;mag) &amp;= P(SH) + P(HS) \\
+&amp;= \frac{1}{3} \cdot \frac{1}{2} + \frac{1}{3} \cdot \frac{1}{2} = \frac{1}{3} \end{align}\]</span></p>
+<p>Wie hoch ist nun die Wahrscheinlichkeit, dass beide das gleiche Eis bekommen? Hier hilft folgendes Baumdiagramm:</p>
+<p><img src="images/%C3%9CA2cBaum.png" height="250" /></p>
+<p>Damit gilt:</p>
+<p><span class="math display">\[P(gleiches\;Eis) = \frac{1}{9} \cdot \frac{1}{3} = \frac{1}{27} \approx 0,037 \quad (\approx 3,7\%)\]</span></p>
+<p>Mit einer Wahrscheinlichkeit von etwa 3,7% essen Maja und Theo zufällig das gleiche Eis.</p>
 </div>
 <div id="section-179" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -309,6 +328,10 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Der Aufgabenstellung entnimmt man: “Anwohner kennen die Straße mit einer Wahrscheinlichkeit von 75%.”</p>
+<p>Daraus folgt, dass sie die Straße mit einer Wahrscheinlichkeit von 25% nicht kennen.</p>
+<p>Wollte man ein Baumdiagramm zeichnen, sieht das so aus:</p>
+<p><img src="images/%C3%9CA3aBaum.png" height="100" /></p>
 </div>
 <div id="section-180" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -319,6 +342,16 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Zunächst kann man sich die Situation in einem Baumdiagramm skizzieren:</p>
+<p><img src="images/%C3%9CA3bBaum.png" height="200" /></p>
+<p>Gefragt ist hier nach der Wahrscheinlichkeit dafür, dass die zufällig vorbeikommende Person, die der Pizzajunge anspricht,</p>
+<ol style="list-style-type: decimal">
+<li><p>ein Anwohner ist und</p></li>
+<li><p>die Straße nicht kennt.</p></li>
+</ol>
+<p>Der entsprechende Pfad ist grün markiert. Ihm kann man die für die Rechnung benötigten Wahrscheinlichkeiten entnehmen:</p>
+<p><span class="math inline">\(P(Passant\;ist\;Anwohner,\;der\;die\;Straße\;nicht\;kennt) = 0,6 \cdot 0,25 = 0,15 = 15\%\)</span></p>
+<p>Ein Passant ist mit einer Wahrscheinlichkeit von 15% ein Anwohner, der die Straße nicht kennt.</p>
 </div>
 <div id="section-181" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -329,6 +362,11 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Auch in dieser Teilaufgabe kann das Baumdiagramm helfen:</p>
+<p><img src="images/%C3%9CA3cBaum.png" height="200" /></p>
+<p>Realistischerweise sieht der Pizzajunge den Passanten nicht an, ob sie Anwohner sind, oder nicht. Daher möchte er jetzt wissen, wie hoch denn die Chance insgesamt ist, dass er keine Antwort bekommt:</p>
+<p><span class="math inline">\(P(Passant\;kennt\;die\;Straße\;nicht)= 0,6 \cdot 0,25 + 0,4 \cdot 0,85 = 0,49 = 49\%\)</span></p>
+<p>Mit einer Wahrscheinlichkeit von 49% kennt ein zufällig ausgewählter Passant die Straße nicht.</p>
 </div>
 <div id="section-182" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -342,6 +380,14 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Hier lohnt es sich, zunächst die Gegenwahrscheinlichkeit zu berechnen.</p>
+<p>Das Gegenereignis von “mindestens einmal” ist “kein mal” (“höchstens nullmal” ist ja genau keinmal, denn weniger als nullmal kann Zahl nun wirklich nicht fallen). Um das Gegenereignis zu berechnen, muss man also nur einen einzigen Pfad betrachten:</p>
+<p><img src="images/%C3%9CA4Baum.png" height="200" /></p>
+<p>Damit gilt:
+<span class="math display">\[\begin{align} P(mindestens\;einmal\;Zahl) &amp;= 1 - P(keinmal\;Zahl) = \\
+&amp;= 1 - (\frac{1}{2})^4 =0,9375 = 93,75\%
+\end{align}\]</span></p>
+<p>Die Wahrscheinlichkeit dafür, dass mindestens einmal Zahl fällt ist 93,75%.</p>
 </div>
 <div id="section-183" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -359,6 +405,11 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Die Situation kann mit folgendem Baumdiagramm skizziert werden:</p>
+<p><img src="images/%C3%9CA5aBaum.png" height="200" /></p>
+<p>Da sie die Kugeln nach jeder Ziehung zurücklegt, ändern sich die Wahrscheinlichkeiten von Ziehung zu Ziehung nicht. Die Wahrscheinlichkeit für den rot markierten INA-Pfad, ergibt sich mit Hilfe der Produktregel:</p>
+<p><span class="math inline">\(P(INA) = \frac{1}{4} \cdot \frac{1}{2} \cdot \frac{1}{4} = \frac{1}{32} = 0,03125 \approx 3\%\)</span></p>
+<p>Mit einer Wahrscheinlichkeit von etwa 3% zeigen die Kugeln Inas Namen, wenn die Kugeln nach dem Ziehen zurückgelegt werden.</p>
 </div>
 <div id="section-184" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -369,6 +420,10 @@ Lösung
 <button>
 Lösung
 </button>
+<p><img src="images/%C3%9CA5bBaum.png" height="200" /></p>
+<p>Legt sie die Kugeln nicht zurück, so ändern sich die Wahrscheinlichkeiten von Ziehung zu Ziehung. Ein einmal gezogenes I etwa, kann nun nicht noch einmal gezogen werden. Wie auch in Teilaufgabe a) erhält man die Wahrscheinlichkeit für den rot markierten INA-Pfad mit Hilfe der Produktregel:</p>
+<p><span class="math inline">\(P(INA) = \frac{1}{4} \cdot \frac{2}{3} \cdot \frac{1}{2} = \frac{1}{12} = 0,08\bar{3} \approx 8,3\%\)</span></p>
+<p>Mit einer Wahrscheinlichkeit von etwa 8,3% zeigen die Kugeln Inas Namen, wenn die Kugeln nach dem Ziehen nicht zurückgelegt werden.</p>
 </div>
 <div id="section-185" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -379,6 +434,11 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Da Nina die Kugeln nicht zurücklegt, zieht sie strenggenommen auch nur drei Kugeln, denn bei der vierten Ziehung ist ja nur noch eine Kugel übrig, es gibt also keine Wahl mehr. Die Wahrscheinlichkeit für die vierte Kugel ist 1. Da sich bei einer Multiplikation mit 1 das Produkt nicht ändert, habe ich die 1 in der Rechnung faulerweise weggelassen.</p>
+<p><img src="images/%C3%9CA5cBaum.png" height="200" /></p>
+<p>Die Wahrscheinlichkeit für den rot markierten NINA-Pfad erhält man wieder mit der Produktregel:</p>
+<p><span class="math inline">\(P(NINA) = \frac{1}{2}\cdot\frac{1}{3}\cdot\frac{1}{2}=\frac{1}{12} = 0,08\bar{3} \approx 8,3\%\)</span></p>
+<p>Mit einer Wahrscheinlichkeit von etwa 8,3% zeigen die Kugeln Ninas Namen, wenn die Kugeln nach dem Ziehen nicht zurückgelegt werden.</p>
 </div>
 <div id="section-186" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -394,6 +454,11 @@ Lösung
 <button>
 Lösung
 </button>
+<p><strong>Beachte</strong>: Hannes greift in die Tüte und zieht zwei Gummibärchen <strong>gleichzeitig</strong> heraus. Das führt zum gleichen Ergebnis, wie wenn er <strong>blind zwei hintereinander ohne Zurücklegen</strong> ziehen würde und erst, wenn beide auf dem Tisch vor ihm liegen, nachschaut, welche es denn sind. Es ist ihm also egal, welches er zuerst und welches er als zweites gezogen hat.</p>
+<p><img src="images/%C3%9CA6Baum.png" height="200" /></p>
+<p>Möchte man die Wahrscheinlichkeit ermitteln, dass Hannes genau ein Tier mit Cola-Geschmack erwischt, muss man die beiden hellcolafarben markierten Pfade betrachten.</p>
+<p><span class="math inline">\(P(genau\;einmal\;Cola)= \frac{1}{4}\cdot\frac{27}{35} + \frac{3}{4}\cdot\frac{9}{35}= \frac{54}{140} \approx 0,3857 \quad (\approx 38,57\%)\)</span></p>
+<p>Mit einer Wahrscheinlichkeit von etwa 38,57% erwischt Hannes genau ein Tier mit Cola-Geschmack.</p>
 </div>
 <div id="section-187" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -410,6 +475,10 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Lose werden (hier wie auch sonst in aller Regel) nach dem Öffnen nicht zurückgelegt. Daher ändern sich die Wahrscheinlichkeiten von Stufe zu Stufe:</p>
+<p><img src="images/%C3%9CA7aBaum.png" height="200" /></p>
+<p><span class="math inline">\(P(kein\;Gewinn)= \frac{150}{200} \cdot \frac{149}{199} \cdot \frac{148}{198} \cdot \frac{147}{197} \approx 0,3132 \quad (\approx 31,32\%)\)</span></p>
+<p>Mit einer Wahrscheinlichkeit von etwa 31,32% zieht Nicole kein Gewinnlos.</p>
 </div>
 <div id="section-188" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -420,6 +489,12 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Zunächst kann man die Situation mit folgendem verkürzten Baumdiagramm skizzieren:</p>
+<p><img src="images/%C3%9CA7bBaum.png" height="350" /></p>
+<p>Die Wahrscheinlichkeit dafür, dass sie genau ein Gewinnlos zieht, erhält man also, indem man die Wahrscheinlichkeiten dieser vier Pfade berechnet und die Pfadwahrscheinlichkeiten anschließend addiert. Da bei einer Multiplikation die Reihenfolge der Faktoren egal ist (<span class="math inline">\(3\cdot 4\cdot 5 = 5 \cdot 3\cdot4\)</span>), sind die vier Pfadwahrscheinlichkeiten gleich: Im Zähler steht jeweils <span class="math inline">\(50 \cdot 150 \cdot 149 \cdot 148\)</span> (die Reihenfolge ist ja egal!) und im Nenner steht immer <span class="math inline">\(200 \cdot 199 \cdot 198 \cdot 197\)</span>.</p>
+<p>Damit erhält man die Wahrscheinlichkeit für genau ein Gewinnlos wie folgt:</p>
+<p><span class="math inline">\(P(genau\;ein\;Gewinnlos)= 4 \cdot \frac{50 \cdot 150 \cdot 149 \cdot 148}{200 \cdot 199 \cdot 198 \cdot 197} \approx 0,4261 \quad (\approx 42,6\%)\)</span></p>
+<p>Mit einer Wahrscheinlichkeit von etwa 42,6% zieht Nicole genau ein Gewinnlos.</p>
 </div>
 <div id="section-189" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -430,6 +505,9 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Hier lohnt es sich mit der Gegenwahrscheinlichkeit zu rechnen. Das Gegenereignis zu mindestens ein Gewinnlos ist höchstens kein - also genau kein! - Gewinnlos. Diese Wahrscheinlichkeit wurde praktischerweise in Teilaufgabe a) bereits ermittelt: <span class="math inline">\(P(kein\;Gewinn) \approx 0,3132\)</span>. Damit gilt für die gesuchte Wahrscheinlichkeit:</p>
+<p><span class="math inline">\(P(mindestens\;ein\;Gewinnlos)=1 - P(kein\;Gewinn)\approx 1-0,3132 \approx 0,6868 \approx 68,68\%\)</span></p>
+<p>Mit einer Wahrscheinlichkeit von etwa 68,68% zieht Nicole mindestens ein Gewinnlos.</p>
 </div>
 <div id="section-190" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -446,6 +524,11 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Die Aufgabenstellung erlaubt ein Zusammenfassen verschiedener Ergebnisse (z.B. 2 und 4) zu einem Ereignis (z.B. gerade). Damit ist folgendes Baumdiagramm völlig ausreichend:</p>
+<p><img src="images/%C3%9CA8aBaum.png" height="150" /></p>
+<p>Die Wahrscheinlichkeit zweimal eine gerade Augenzahl (gg) zu erhalten, berechnet man damit wie folgt:</p>
+<p><span class="math inline">\(P(gg) = \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{4}\)</span></p>
+<p>Die Wahrscheinlichkeit, bei zweimaligem Würfeln zweimal eine gerade Augenzahl zu erhalten, ist also 25%.</p>
 </div>
 <div id="section-191" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -456,6 +539,13 @@ Lösung
 <button>
 Lösung
 </button>
+<p>An dieser Stelle kann ein Baumdiagramm helfen, das eine Übersicht über alle möglichen Würfelergebnisse zeigt:</p>
+<p><img src="images/%C3%9CA8bBaum.png" height="200" /></p>
+<p>Addiert man die Würfelergebnisse, die entlang der grün markierten Pfade auftreten, ergibt sich jeweils eine durch 3 teilbare Augensumme.</p>
+<p>Jedes dieser fünf zusammengesetzten Ergebnisse hat dabei dieselbe Wahrscheinlichkeit: <span class="math inline">\(\frac{1}{4}\cdot\frac{1}{4} = \frac{1}{16}\)</span>.</p>
+<p>Damit ergibt sich für die Wahrscheinlichkeit, dass die Augensumme bei zweimaligem Würfeln durch 3 teilbar ist:</p>
+<p><span class="math inline">\(P(durch\;3\;teilbar)=5 \cdot \frac{1}{16} = 0,3125 =31,25\%\)</span></p>
+<p>Die Wahrscheinlichkeit, dass die Augensumme bei zweimaligem Würfeln durch 3 teilbar ist, beträgt 31,25%.</p>
 </div>
 <div id="section-192" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -466,6 +556,17 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Gesucht ist ein Ereignis, dessen Wahrscheinlichkeit <span class="math inline">\(\frac{3}{16}\)</span> beträgt. Das bedeutet also, dass drei von 16 möglichen Ergebnissen zu dem Ereignis gehören müssen.</p>
+<p>Der zweimalige Würfelwurf des Tetraeders hat 16 mögliche Ergebnisse. Welche das sind, kann man dem Baumdiagramm aus Teilaufgabe b) entnehmen.</p>
+<p>Es bleibt also nur die Aufgabe, ein Ereignis zu formulieren, das genau drei dieser 16 möglichen Ergebnisse zusammenfasst. Hier könnte z.B. folgende Ereignisse wählen:</p>
+<ul>
+<li><p>“Die Augensumme bei zweimaligem Würfeln ist 4.” [Passende Ergebnisse: (1,3), (2,2) und (3,1)]</p></li>
+<li><p>“Die Augensumme bei zweimaligem Würfeln ist 6.” [Passende Ergebnisse: (2,4), (3,3) und (4,2)]</p></li>
+<li><p>“Die Augensumme bei zweimaligem Würfeln ist kleiner 4.” [Passende Ergebnisse: (1,1), (1,2) und (2,1)]</p></li>
+<li><p>“Man würfelt erst eine 1 und dann eine 3 oder erst eine 4 und dann eine 2 oder erst eine 3 und dann eine 4.” [Passende Ergebnisse: (1,3), (4,2) und (3,4)]</p></li>
+<li><p>“Das Produkt der Würfelergebnisse ist 4.” [Passende Ergebnisse: (1,4), (2,2) und (4,1)]</p></li>
+<li><p>usw. Sei kreativ! Es müssen nur genau drei Ergebnisse zum Ereignis gehören. Welche ist egal.</p></li>
+</ul>
 </div>
 <div id="section-193" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -476,6 +577,48 @@ Lösung
 <button>
 Lösung
 </button>
+<table>
+<thead>
+<tr class="header">
+<th>Differenz</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\quad\quad 1\)</span></td>
+<td><span class="math inline">\(\quad\quad 0\)</span></td>
+<td><span class="math inline">\(\quad\quad 1\)</span></td>
+<td><span class="math inline">\(\quad\quad 2\)</span></td>
+<td><span class="math inline">\(\quad\quad 3\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\quad\quad 2\)</span></td>
+<td><span class="math inline">\(\quad\quad 1\)</span></td>
+<td><span class="math inline">\(\quad\quad 0\)</span></td>
+<td><span class="math inline">\(\quad\quad 1\)</span></td>
+<td><span class="math inline">\(\quad\quad 2\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\quad\quad 3\)</span></td>
+<td><span class="math inline">\(\quad\quad 2\)</span></td>
+<td><span class="math inline">\(\quad\quad 1\)</span></td>
+<td><span class="math inline">\(\quad\quad 0\)</span></td>
+<td><span class="math inline">\(\quad\quad 1\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\quad\quad 4\)</span></td>
+<td><span class="math inline">\(\quad\quad 3\)</span></td>
+<td><span class="math inline">\(\quad\quad 2\)</span></td>
+<td><span class="math inline">\(\quad\quad 1\)</span></td>
+<td><span class="math inline">\(\quad\quad 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Sechs der 16 möglichen Würfelergebnisse führen zu einer Differenz von 1, vier führen zu einer Differenz von 0, vier zu einer Differenz von 2 und zwei führen zu einer Differenz von 3. Damit ist die 1 die wahrscheinlichste Differenz (<span class="math inline">\(P(1)=\frac{6}{16}\)</span>).</p>
 </div>
 <div id="section-194" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -492,6 +635,10 @@ Lösung
 <button>
 Lösung
 </button>
+<p><img src="images/%C3%9CA9aBaum.png" height="200" /></p>
+<p>Zum Ereignis <em>Augensumme 7</em> gehören die 6 zusammengestzten Ergebnisse (1,6), (2,5), (3,4), (4,3), (5,2) und (6,1). Jedes dieser Ergebnisse hat die gleiche Wahrscheinlichkeit <span class="math inline">\(\frac{1}{6}\cdot\frac{1}{6}=\frac{1}{36}\)</span></p>
+<p>Damit gilt für die Wahrscheinlichkeit, dass die Augensumme 7 ist:</p>
+<p><span class="math inline">\(P(Augensumme\;ist\;7)= 6 \cdot \frac{1}{36}= \frac{1}{6}\)</span></p>
 </div>
 <div id="section-195" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -505,6 +652,80 @@ Lösung
 <button>
 Lösung
 </button>
+<table>
+<thead>
+<tr class="header">
+<th>Summe</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\quad\quad 1\)</span></td>
+<td><span class="math inline">\(\;\quad 2\)</span></td>
+<td><span class="math inline">\(\;\quad 3\)</span></td>
+<td><span class="math inline">\(\;\quad 4\)</span></td>
+<td><span class="math inline">\(\;\quad 5\)</span></td>
+<td><span class="math inline">\(\;\quad 6\)</span></td>
+<td><span class="math inline">\(\;\quad 7\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\quad\quad 2\)</span></td>
+<td><span class="math inline">\(\;\quad 3\)</span></td>
+<td><span class="math inline">\(\;\quad 4\)</span></td>
+<td><span class="math inline">\(\;\quad 5\)</span></td>
+<td><span class="math inline">\(\;\quad 6\)</span></td>
+<td><span class="math inline">\(\;\quad 7\)</span></td>
+<td><span class="math inline">\(\;\quad 8\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\quad\quad 3\)</span></td>
+<td><span class="math inline">\(\;\quad 4\)</span></td>
+<td><span class="math inline">\(\;\quad 5\)</span></td>
+<td><span class="math inline">\(\;\quad 6\)</span></td>
+<td><span class="math inline">\(\;\quad 7\)</span></td>
+<td><span class="math inline">\(\;\quad 8\)</span></td>
+<td><span class="math inline">\(\;\quad 9\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\quad\quad 4\)</span></td>
+<td><span class="math inline">\(\;\quad 5\)</span></td>
+<td><span class="math inline">\(\;\quad 6\)</span></td>
+<td><span class="math inline">\(\;\quad 7\)</span></td>
+<td><span class="math inline">\(\;\quad 8\)</span></td>
+<td><span class="math inline">\(\;\quad 9\)</span></td>
+<td><span class="math inline">\(\;\quad 10\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\quad\quad 5\)</span></td>
+<td><span class="math inline">\(\;\quad 6\)</span></td>
+<td><span class="math inline">\(\;\quad 7\)</span></td>
+<td><span class="math inline">\(\;\quad 8\)</span></td>
+<td><span class="math inline">\(\;\quad 9\)</span></td>
+<td><span class="math inline">\(\;\quad 10\)</span></td>
+<td><span class="math inline">\(\;\quad 11\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\quad\quad 6\)</span></td>
+<td><span class="math inline">\(\;\quad 7\)</span></td>
+<td><span class="math inline">\(\;\quad 8\)</span></td>
+<td><span class="math inline">\(\;\quad 9\)</span></td>
+<td><span class="math inline">\(\;\quad 10\)</span></td>
+<td><span class="math inline">\(\;\quad 11\)</span></td>
+<td><span class="math inline">\(\;\quad 12\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Jedem der 36 möglichen Ergebnisse wird in der Tabelle eine Augensumme zugeordnet. Natürlich kann es vorkommen, dass verschiedene Ergebnissse zur selben Augensumme führen: Sowohl (3,4) [also erst eine 3, dann eine 4 würfeln] als auch (4,3) [also zuerst die 4 und dann die 3 würfeln] liefern die Augensumme 7 - genauso wie (5,2), (2,5), (6,1) und (1,6).</p>
+<p>Der Tabelle kann man also sowohl entnehmen, wie viele zusammengesetzte Ergebnisse es insgesamt gibt (36 Möglichkeiten), als auch, in wie vielen Fällen die Augensumme 7 auftritt (6 Fälle).</p>
+<p>Da jedes der 36 zusammengesetzten Ergebnisse (1,1), (1,2), (1,3), … , (2,1), (2,2), …, (5,6), (6,6) gleich wahrscheinlich ist, handelt es sich um ein Laplace-Experiment.
+Damit kann man die Wahrscheinlichkeit in diesem Fall als Anteil der günstigen Fälle an allen möglichen Fälle angeben:</p>
+<p><span class="math inline">\(P(7)=\frac{6}{36}=\frac{1}{6}\)</span></p>
 </div>
 <div id="section-196" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -515,6 +736,8 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Der Tabelle kann man entnehmen, dass es genau zwei der 36 Möglichkeiten 11 ergeben: (5,6) und (6,5). Damit erhält man die Wahrscheinlichkeit, mit zwei Würfeln die Augensumme 11 zu würfeln, wie folgt:</p>
+<p><span class="math inline">\(P(11)=\frac{2}{36}=\frac{1}{18} = 0,0\bar{5} \approx 5,6\%\)</span></p>
 </div>
 <div id="section-197" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -529,6 +752,18 @@ Lösung
 <button>
 Lösung
 </button>
+<p>Gefragt ist: “Ermittle, wie oft er gegen den Computer spielen muss, um mit einer Wahrscheinlichkeit von über 50% <strong>mindestens ein Spiel zu gewinnen</strong>.”
+In Fällen, in denen <strong>mindestens eins</strong> vorkommt, lohnt es sich (fast) immer, über das Gegenereignis nachzudenken, also tust du das jetzt:</p>
+<p>Das Gegenereignis von <em>mindestens ein Spiel gewinnen</em> ist <em>alle Spiele verlieren</em> (höchstens 0 Spiele gewinnen, also: <em>Kein Spiel gewinnen</em>).</p>
+<p>Wenn er mit einer Wahrscheinlichkeit von über 50% mindestens ein Spiel gewinnt … <strong>Halt! Was stand da! Nochmal lesen. Ganz langsam:</strong></p>
+<p>Wenn er mit einer Wahrscheinlichkeit von über 50% mindestens ein Spiel gewinnt, heißt dass nichts anderes, als dass die Wahrscheinlichkeit, dass er alle Spiele verliert (Gegenereignis) kleiner als 50% (Gegenteil von über 50%) sein muss. (Diesen Satz sooft lesen, bis der Knoten im Hirn weg ist. Bäumchen skizzieren kann auch helfen.)</p>
+<p>Wenn Peter mit einer Wahrscheinlichkeit von 10% gewinnt, verliert er mit einer Wahrscheinlichkeit von 90%.</p>
+<p>Ein mögliches Bäumchen - bedenke, uns interessiert eigentlich nur der Pfad ganz rechts - sieht also so aus:</p>
+<p><img src="images/%C3%9CA10Baum.png" height="150" /></p>
+<p>Was jetzt unbekannt ist, ist wie viele Stufen man den Baum nach unten zeichnen muss, so dass die Pfadwahrscheinlichkeit des Pfades ganz rechts (nur verlieren) kleiner ist als 50%, denn dann ist ja die Wahrscheinlichkeit des Rests größer als 50%. Und im Rest kommt in jedem Pfad mindestens ein “gewinnt” vor.</p>
+<p>Die Frage ist also, wie oft muss man 0,9 mit sich selbst multiplizieren, bis das Produkt kleiner als 0,5 ist. Das musst du ausprobieren. Los, nimm den Taschenrechner und versuch’s!</p>
+<p>Wie du sicher festgestellt hast, gilt, dass <span class="math inline">\(\underbrace{0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9}_{7\;mal} \approx 0,48\)</span> und damit kleiner als 0,5 ist, während <span class="math inline">\(\underbrace{0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9}_{6\;mal} \approx 0,53\)</span> noch zu groß ist.</p>
+<p>Das heißt Peter muss mindestens 7 mal spielen, um mit einer Wahrscheinlichkeit von mehr als 50% (bei 7 Spielen wären es ungefähr 52%) mindestens einmal zu gewinnen.</p>
 </div>
 <div id="section-198" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>

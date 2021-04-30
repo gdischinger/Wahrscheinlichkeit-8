@@ -1,0 +1,395 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.13)  30 APR 2021 16:28
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**4uebungsaufgaben.tex
+(./4uebungsaufgaben.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2020/01/24 v3.29 KOMA-Script document class (article)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2020/01/24 v3.29 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2020/01/24 v3.29 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2020/01/24 v3.29 KOMA-Script package (loading files)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2020/01/24 v3.29 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip47
+\scr@dte@tocline@numbox=\box45
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 137.
+Package scrartcl Info: You've used standard option `11pt'.
+(scrartcl)             This is correct!
+(scrartcl)             Internally I'm using `fontsize=11pt'.
+(scrartcl)             If you'd like to set the option with \KOMAoptions,
+(scrartcl)             you'd have to use `fontsize=11pt' there
+(scrartcl)             instead of `11pt', too.
+Class scrartcl Info: File `scrsize11pt.clo' used to setup font sizes on input l
+ine 2212.
+
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2020/01/24 v3.29 KOMA-Script font size class option (11pt
+)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2020/01/24 v3.29 KOMA-Script package (type area)
+\ta@bcor=\skip48
+\ta@div=\count167
+Package typearea Info: You've used standard option `landscape'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `paper=landscape'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `paper=landscape' there
+(typearea)             instead of `landscape', too.
+\ta@hblk=\skip49
+\ta@vblk=\skip50
+\ta@temp=\skip51
+\footheight=\skip52
+Package typearea Info: With paper sizes other than (almost) `A4' predefined
+(typearea)             DIV values do not exist. Using DIV calculation for good
+(typearea)             line width (unless using `version=3.24` or prior).
+
+DIV calculation for typearea with good linewidth.
+Package typearea Info: Maybe no optimal type area settings!
+(typearea)             The detected line width is about 16%
+(typearea)             smaller than the heuristically estimated maximum
+(typearea)             limit of typographical good line width.
+(typearea)             You could e.g. increase DIV, decrease fontsize
+(typearea)             or change the papersize.
+
+Package typearea Warning: Very low DIV value!
+(typearea)                DIV values less than 6 result in textwidth/-height
+(typearea)                smaller than total marginwidth/-height.
+(typearea)                You should e.g. increase DIV, increase fontsize or
+(typearea)                change papersize.
+
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 4
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 1195.01587pt
+(typearea)              \textwidth      = 298.75397pt
+(typearea)              DIV departure   = 16%
+(typearea)              \evensidemargin = 375.86096pt
+(typearea)              \oddsidemargin  = 375.86096pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 215.00009pt
+(typearea)              \topmargin      = 101.59174pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1719.
+)
+\c@part=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\scr@dte@section@maxnumwidth=\skip53
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\section on input line 4723.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\section on input line 4723.
+\scr@dte@part@maxnumwidth=\skip54
+Class scrartcl Info: using compatibility default `afterindent=false'
+(scrartcl)           for `\part on input line 4731.
+\scr@dte@subsection@maxnumwidth=\skip55
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsection on input line 4741.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsection on input line 4741.
+\scr@dte@subsubsection@maxnumwidth=\skip56
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsubsection on input line 4751.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsubsection on input line 4751.
+\scr@dte@paragraph@maxnumwidth=\skip57
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\paragraph on input line 4761.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\paragraph on input line 4761.
+\scr@dte@subparagraph@maxnumwidth=\skip58
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subparagraph on input line 4771.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subparagraph on input line 4771.
+\abovecaptionskip=\skip59
+\belowcaptionskip=\skip60
+\c@pti@nb@sid@b@x=\box46
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 6002.
+\scr@dte@figure@maxnumwidth=\skip61
+\c@figure=\count174
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 6014.
+\scr@dte@table@maxnumwidth=\skip62
+\c@table=\count175
+Class scrartcl Info: Redefining `\numberline' on input line 6178.
+\bibindent=\dimen134
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+) (./qtree.sty
+Package: 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
+Package: qtree 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2019/08/20 v0.3c Improved picture commands (HjG,RN,JT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 119.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+\pIIe@GRAPH=\toks17
+\@arclen=\dimen135
+\@arcrad=\dimen136
+\@tempdimd=\dimen137
+)
+\c@treecount=\count176
+\c@branchcount=\count177
+\parentbox=\box47
+\treebox=\box48
+\treeboxone=\box49
+\treeboxtwo=\box50
+\treeboxthree=\box51
+\treeboxfour=\box52
+\treeboxfive=\box53
+\treeboxsix=\box54
+\treeboxseven=\box55
+\treeboxeight=\box56
+\treeboxnine=\box57
+\treeboxten=\box58
+\treeboxeleven=\box59
+\treeboxtwelve=\box60
+\treeboxthirteen=\box61
+\treeboxfourteen=\box62
+\treeboxfifteen=\box63
+\treeboxsixteen=\box64
+\treeboxseventeen=\box65
+\treeboxeighteen=\box66
+\treeboxnineteen=\box67
+\treeboxtwenty=\box68
+\treeoffsetone=\skip63
+\treeoffsettwo=\skip64
+\treeoffsetthree=\skip65
+\treeoffsetfour=\skip66
+\treeoffsetfive=\skip67
+\treeoffsetsix=\skip68
+\treeoffsetseven=\skip69
+\treeoffseteight=\skip70
+\treeoffsetnine=\skip71
+\treeoffsetten=\skip72
+\treeoffseteleven=\skip73
+\treeoffsettwelve=\skip74
+\treeoffsetthirteen=\skip75
+\treeoffsetfourteen=\skip76
+\treeoffsetfifteen=\skip77
+\treeoffsetsixteen=\skip78
+\treeoffsetseventeen=\skip79
+\treeoffseteighteen=\skip80
+\treeoffsetnineteen=\skip81
+\treeoffsettwenty=\skip82
+\treeshiftone=\skip83
+\treeshifttwo=\skip84
+\treeshiftthree=\skip85
+\treeshiftfour=\skip86
+\treeshiftfive=\skip87
+\treeshiftsix=\skip88
+\treeshiftseven=\skip89
+\treeshifteight=\skip90
+\treeshiftnine=\skip91
+\treeshiftten=\skip92
+\treeshifteleven=\skip93
+\treeshifttwelve=\skip94
+\treeshiftthirteen=\skip95
+\treeshiftfourteen=\skip96
+\treeshiftfifteen=\skip97
+\treeshiftsixteen=\skip98
+\treeshiftseventeen=\skip99
+\treeshifteighteen=\skip100
+\treeshiftnineteen=\skip101
+\treeshifttwenty=\skip102
+\treewidthone=\skip103
+\treewidthtwo=\skip104
+\treewidththree=\skip105
+\treewidthfour=\skip106
+\treewidthfive=\skip107
+\treewidthsix=\skip108
+\treewidthseven=\skip109
+\treewidtheight=\skip110
+\treewidthnine=\skip111
+\treewidthten=\skip112
+\treewidtheleven=\skip113
+\treewidthtwelve=\skip114
+\treewidththirteen=\skip115
+\treewidthfourteen=\skip116
+\treewidthfifteen=\skip117
+\treewidthsixteen=\skip118
+\treewidthseventeen=\skip119
+\treewidtheighteen=\skip120
+\treewidthnineteen=\skip121
+\treewidthtwenty=\skip122
+\daughteroffsetone=\skip123
+\daughteroffsettwo=\skip124
+\daughteroffsetthree=\skip125
+\daughteroffsetfour=\skip126
+\branchwidthone=\skip127
+\branchwidthtwo=\skip128
+\branchwidththree=\skip129
+\branchwidthfour=\skip130
+\parentoffset=\skip131
+\treeoffset=\skip132
+\daughteroffset=\skip133
+\branchwidth=\skip134
+\parentwidth=\skip135
+\treewidth=\skip136
+\qta=\toks18
+\qtb=\toks19
+\nbranches=\count178
+\qroofx=\count179
+\qroofy=\count180
+\@qrscratchbox=\box69
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count181
+\l__pdf_internal_box=\box70
+)
+
+LaTeX Warning: Unused global option(s):
+    [ngerman].
+
+(./4uebungsaufgaben.aux)
+\openout1 = `4uebungsaufgaben.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+Package scrbase Info: activating english \contentsname on input line 8.
+Package scrbase Info: activating english \listfigurename on input line 8.
+Package scrbase Info: activating english \listtablename on input line 8.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count182
+\scratchdimen=\dimen138
+\scratchbox=\box71
+\nofMPsegments=\count183
+\nofMParguments=\count184
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count185
+\MPscratchDim=\dimen139
+\MPnumerator=\count186
+\makeMPintoPDFobject=\count187
+\everyMPtoPDFconversion=\toks21
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 15.
+
+Overfull \hbox (127.70833pt too wide) in paragraph at lines 15--16
+ [] 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (330.14278pt too wide) in paragraph at lines 23--24
+ [] 
+ []
+
+[2] [3]
+Overfull \hbox (104.80145pt too wide) in paragraph at lines 31--32
+ [] 
+ []
+
+[4]
+Overfull \hbox (104.80145pt too wide) in paragraph at lines 35--36
+ [] 
+ []
+
+[5] [6] [7] [8] [9]
+Overfull \hbox (131.72018pt too wide) in paragraph at lines 55--56
+ [] 
+ []
+
+[10] [11] [12] [13] [14] [15] (./4uebungsaufgaben.aux) ) 
+Here is how much of TeX's memory you used:
+ 3954 strings out of 483130
+ 77695 string characters out of 5963883
+ 448561 words of memory out of 5000000
+ 18998 multiletter control sequences out of 15000+600000
+ 535077 words of font info for 33 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 45i,8n,59p,10138b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on 4uebungsaufgaben.pdf (15 pages, 28537 bytes).
+PDF statistics:
+ 57 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
