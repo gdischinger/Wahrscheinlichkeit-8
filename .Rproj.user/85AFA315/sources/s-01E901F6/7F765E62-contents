@@ -8,6 +8,16 @@ Nimm begründet Stellung zu Nils' Aussage.
 
 `r hide("Lösung")`
 
+Lieber Nils, du hast leider nicht recht. 
+
+Zunächst einmal gilt ganz grundsätzlich, dass sich verschiedene Würfelwürfe nicht gegenseitig beeinflussen und es daher egal ist, wie oft du in der Vergangenheit welche Zahl auch immer gewürfelt (oder nicht gewürfelt) hast. Bei jedem neuen Würfelwurf gilt aufs Neue: Jede Zahl fällt mit der gleichen Wahrscheinlichkeit, nämlich $\frac{1}{6}$.
+
+Vielleicht bringst du auch gerade die Summen- und die Produktregel durcheinander und verknotest dich im Baum. Wolltest du berechnen, wie hoch die Wahrscheinlichkeit ist, in sechs Würfen keine 6 zu würfeln, so geht das folgendermaßen:
+
+$P(sechsmal\;keine\;6) = (\frac{5}{6})^6 \approx 0,335 \quad(\approx 33,5\%)$
+
+(Weißt du auch warum?)
+
 #### {-}
 
 ```{r, eval=knitr::opts_knit$get("rmarkdown.pandoc.to") == "html", results='asis', echo=FALSE}
@@ -170,7 +180,7 @@ $$\begin{align} P(mindestens\;einmal\;Zahl) &= 1 - P(keinmal\;Zahl) = \\
 &= 1 - (\frac{1}{2})^4 =0,9375 = 93,75\%
 \end{align}$$
 
-Die Wahrscheinlichkeit dafür, dass mindestens einmal Zahl fällt ist 93,75%.
+Die Wahrscheinlichkeit dafür, dass mindestens einmal Zahl fällt, ist 93,75%.
 
 #### {-}
 
@@ -323,7 +333,7 @@ cat('<hr style="background-color:#3C6690;height:2px">')
 
 
 #### Aufgabe 8 {-}
-Einen Körper, der aus vier gleichseitigen Dreiecken besteht, nennt man Tetraeder. Beim Würfeln mit einem Tetraeder bleibt stehts eine Spitze oben liegen. Die Augenzahlen auf einem solchen Spielwürfel sind deshalb an den Seitenflächen unten abzulesen. Hier wurde also eine 1 gewürfelt:
+Einen Körper, der aus vier gleichseitigen Dreiecken besteht, nennt man Tetraeder. Beim Würfeln mit einem Tetraeder bleibt stets eine Spitze oben liegen. Die Augenzahlen auf einem solchen Spielwürfel sind deshalb an den Seitenflächen unten abzulesen. Hier wurde also eine 1 gewürfelt:
 
 <img src="./images/ÜA8Tetraeder.png" height="200" />
 
@@ -466,7 +476,7 @@ c) Berechne mithilfe der Tabelle die Wahrscheinlichkeit für die Augensumme 11.
 
 `r hide("Lösung")`
 
-Der Tabelle kann man entnehmen, dass es genau zwei der 36 Möglichkeiten 11 ergeben: (5,6) und (6,5). Damit erhält man die Wahrscheinlichkeit, mit zwei Würfeln die Augensumme 11 zu würfeln, wie folgt:
+Der Tabelle kann man entnehmen, dass genau zwei der 36 Möglichkeiten 11 ergeben: (5,6) und (6,5). Damit erhält man die Wahrscheinlichkeit, mit zwei Würfeln die Augensumme 11 zu würfeln, wie folgt:
 
 $P(11)=\frac{2}{36}=\frac{1}{18} = 0,0\bar{5} \approx 5,6\%$
 
@@ -495,7 +505,7 @@ Das Gegenereignis von *mindestens ein Spiel gewinnen* ist *alle Spiele verlieren
 
 Wenn er mit einer Wahrscheinlichkeit von über 50% mindestens ein Spiel gewinnt ...  **Halt! Was stand da! Nochmal lesen. Ganz langsam:**
 
-Wenn er mit einer Wahrscheinlichkeit von über 50% mindestens ein Spiel gewinnt, heißt dass nichts anderes, als dass die Wahrscheinlichkeit, dass er alle Spiele verliert (Gegenereignis) kleiner als 50%  (Gegenteil von über 50%) sein muss. (Diesen Satz sooft lesen, bis der Knoten im Hirn weg ist. Bäumchen skizzieren kann auch helfen.)
+Wenn er mit einer Wahrscheinlichkeit von über 50% mindestens ein Spiel gewinnt, heißt das nichts anderes, als dass die Wahrscheinlichkeit, dass er alle Spiele verliert (Gegenereignis) kleiner als 50%  (Gegenteil von über 50%) sein muss. (Diesen Satz sooft lesen, bis der Knoten im Hirn weg ist. Bäumchen skizzieren kann auch helfen.)
 
 Wenn Peter mit einer Wahrscheinlichkeit von 10% gewinnt, verliert er mit einer Wahrscheinlichkeit von 90%.
 
@@ -509,7 +519,7 @@ Die Frage ist also, wie oft muss man 0,9 mit sich selbst multiplizieren, bis das
 
 Wie du sicher festgestellt hast, gilt, dass $\underbrace{0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9}_{7\;mal} \approx 0,48$ und damit kleiner als 0,5 ist, während $\underbrace{0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9}_{6\;mal} \approx 0,53$ noch zu groß ist. 
 
-Das heißt Peter muss mindestens 7 mal spielen, um mit einer Wahrscheinlichkeit von mehr als 50% (bei 7 Spielen wären es ungefähr 52%) mindestens einmal zu gewinnen.
+Das heißt, Peter muss mindestens 7 mal spielen, um mit einer Wahrscheinlichkeit von mehr als 50% (bei 7 Spielen wären es ungefähr 52%) mindestens einmal zu gewinnen.
 
 #### {-}
 

@@ -227,7 +227,6 @@ window.onload = function() {
 <li class="chapter" data-level="5" data-path="5-das-kannst-du-jetzt.html"><a href="5-das-kannst-du-jetzt.html"><i class="fa fa-check"></i><b>5</b> Das kannst du jetzt…</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="5-1-checkliste.html"><a href="5-1-checkliste.html"><i class="fa fa-check"></i><b>5.1</b> Checkliste</a></li>
-<li class="chapter" data-level="5.2" data-path="5-2-abschlussquiz.html"><a href="5-2-abschlussquiz.html"><i class="fa fa-check"></i><b>5.2</b> Abschlussquiz</a></li>
 </ul></li>
 </ul>
 
@@ -256,6 +255,11 @@ window.onload = function() {
 <button>
 Lösung
 </button>
+<p>Lieber Nils, du hast leider nicht recht.</p>
+<p>Zunächst einmal gilt ganz grundsätzlich, dass sich verschiedene Würfelwürfe nicht gegenseitig beeinflussen und es daher egal ist, wie oft du in der Vergangenheit welche Zahl auch immer gewürfelt (oder nicht gewürfelt) hast. Bei jedem neuen Würfelwurf gilt aufs Neue: Jede Zahl fällt mit der gleichen Wahrscheinlichkeit, nämlich <span class="math inline">\(\frac{1}{6}\)</span>.</p>
+<p>Vielleicht bringst du auch gerade die Summen- und die Produktregel durcheinander und verknotest dich im Baum. Wolltest du berechnen, wie hoch die Wahrscheinlichkeit ist, in sechs Würfen keine 6 zu würfeln, so geht das folgendermaßen:</p>
+<p><span class="math inline">\(P(sechsmal\;keine\;6) = (\frac{5}{6})^6 \approx 0,335 \quad(\approx 33,5\%)\)</span></p>
+<p>(Weißt du auch warum?)</p>
 </div>
 <div id="section-176" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -387,7 +391,7 @@ Lösung
 <span class="math display">\[\begin{align} P(mindestens\;einmal\;Zahl) &amp;= 1 - P(keinmal\;Zahl) = \\
 &amp;= 1 - (\frac{1}{2})^4 =0,9375 = 93,75\%
 \end{align}\]</span></p>
-<p>Die Wahrscheinlichkeit dafür, dass mindestens einmal Zahl fällt ist 93,75%.</p>
+<p>Die Wahrscheinlichkeit dafür, dass mindestens einmal Zahl fällt, ist 93,75%.</p>
 </div>
 <div id="section-183" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>
@@ -515,7 +519,7 @@ Lösung
 </div>
 <div id="aufgabe-8" class="section level4 unnumbered">
 <h4>Aufgabe 8</h4>
-<p>Einen Körper, der aus vier gleichseitigen Dreiecken besteht, nennt man Tetraeder. Beim Würfeln mit einem Tetraeder bleibt stehts eine Spitze oben liegen. Die Augenzahlen auf einem solchen Spielwürfel sind deshalb an den Seitenflächen unten abzulesen. Hier wurde also eine 1 gewürfelt:</p>
+<p>Einen Körper, der aus vier gleichseitigen Dreiecken besteht, nennt man Tetraeder. Beim Würfeln mit einem Tetraeder bleibt stets eine Spitze oben liegen. Die Augenzahlen auf einem solchen Spielwürfel sind deshalb an den Seitenflächen unten abzulesen. Hier wurde also eine 1 gewürfelt:</p>
 <p><img src="images/%C3%9CA8Tetraeder.png" height="200" /></p>
 <ol style="list-style-type: lower-alpha">
 <li>Ermittle die Wahrscheinlichkeit, bei zweimaligem Würfeln zweimal eine gerade Augenzahl zu erhalten. Zeichne dazu ein Baumdiagramm.</li>
@@ -736,7 +740,7 @@ Damit kann man die Wahrscheinlichkeit in diesem Fall als Anteil der günstigen F
 <button>
 Lösung
 </button>
-<p>Der Tabelle kann man entnehmen, dass es genau zwei der 36 Möglichkeiten 11 ergeben: (5,6) und (6,5). Damit erhält man die Wahrscheinlichkeit, mit zwei Würfeln die Augensumme 11 zu würfeln, wie folgt:</p>
+<p>Der Tabelle kann man entnehmen, dass genau zwei der 36 Möglichkeiten 11 ergeben: (5,6) und (6,5). Damit erhält man die Wahrscheinlichkeit, mit zwei Würfeln die Augensumme 11 zu würfeln, wie folgt:</p>
 <p><span class="math inline">\(P(11)=\frac{2}{36}=\frac{1}{18} = 0,0\bar{5} \approx 5,6\%\)</span></p>
 </div>
 <div id="section-197" class="section level4 unnumbered">
@@ -756,14 +760,14 @@ Lösung
 In Fällen, in denen <strong>mindestens eins</strong> vorkommt, lohnt es sich (fast) immer, über das Gegenereignis nachzudenken, also tust du das jetzt:</p>
 <p>Das Gegenereignis von <em>mindestens ein Spiel gewinnen</em> ist <em>alle Spiele verlieren</em> (höchstens 0 Spiele gewinnen, also: <em>Kein Spiel gewinnen</em>).</p>
 <p>Wenn er mit einer Wahrscheinlichkeit von über 50% mindestens ein Spiel gewinnt … <strong>Halt! Was stand da! Nochmal lesen. Ganz langsam:</strong></p>
-<p>Wenn er mit einer Wahrscheinlichkeit von über 50% mindestens ein Spiel gewinnt, heißt dass nichts anderes, als dass die Wahrscheinlichkeit, dass er alle Spiele verliert (Gegenereignis) kleiner als 50% (Gegenteil von über 50%) sein muss. (Diesen Satz sooft lesen, bis der Knoten im Hirn weg ist. Bäumchen skizzieren kann auch helfen.)</p>
+<p>Wenn er mit einer Wahrscheinlichkeit von über 50% mindestens ein Spiel gewinnt, heißt das nichts anderes, als dass die Wahrscheinlichkeit, dass er alle Spiele verliert (Gegenereignis) kleiner als 50% (Gegenteil von über 50%) sein muss. (Diesen Satz sooft lesen, bis der Knoten im Hirn weg ist. Bäumchen skizzieren kann auch helfen.)</p>
 <p>Wenn Peter mit einer Wahrscheinlichkeit von 10% gewinnt, verliert er mit einer Wahrscheinlichkeit von 90%.</p>
 <p>Ein mögliches Bäumchen - bedenke, uns interessiert eigentlich nur der Pfad ganz rechts - sieht also so aus:</p>
 <p><img src="images/%C3%9CA10Baum.png" height="150" /></p>
 <p>Was jetzt unbekannt ist, ist wie viele Stufen man den Baum nach unten zeichnen muss, so dass die Pfadwahrscheinlichkeit des Pfades ganz rechts (nur verlieren) kleiner ist als 50%, denn dann ist ja die Wahrscheinlichkeit des Rests größer als 50%. Und im Rest kommt in jedem Pfad mindestens ein “gewinnt” vor.</p>
 <p>Die Frage ist also, wie oft muss man 0,9 mit sich selbst multiplizieren, bis das Produkt kleiner als 0,5 ist. Das musst du ausprobieren. Los, nimm den Taschenrechner und versuch’s!</p>
 <p>Wie du sicher festgestellt hast, gilt, dass <span class="math inline">\(\underbrace{0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9}_{7\;mal} \approx 0,48\)</span> und damit kleiner als 0,5 ist, während <span class="math inline">\(\underbrace{0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9\cdot 0,9}_{6\;mal} \approx 0,53\)</span> noch zu groß ist.</p>
-<p>Das heißt Peter muss mindestens 7 mal spielen, um mit einer Wahrscheinlichkeit von mehr als 50% (bei 7 Spielen wären es ungefähr 52%) mindestens einmal zu gewinnen.</p>
+<p>Das heißt, Peter muss mindestens 7 mal spielen, um mit einer Wahrscheinlichkeit von mehr als 50% (bei 7 Spielen wären es ungefähr 52%) mindestens einmal zu gewinnen.</p>
 </div>
 <div id="section-198" class="section level4 unnumbered">
 <h4 class="unnumbered"></h4>

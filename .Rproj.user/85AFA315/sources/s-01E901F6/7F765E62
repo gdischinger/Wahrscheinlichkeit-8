@@ -3,7 +3,7 @@
     "path": "~/github/Lernpfade/8_Wahrscheinlichkeit/Wahrscheinlichkeit-8/Übungsaufgaben.Rmd",
     "project_path": "Übungsaufgaben.Rmd",
     "type": "r_markdown",
-    "hash": "281505848",
+    "hash": "2349240897",
     "contents": "",
     "dirty": false,
     "created": 1619386252950.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "509,43",
-        "scrollLine": "506"
+        "cursorPosition": "16,54",
+        "scrollLine": "4"
     },
     "folds": "",
-    "lastKnownWriteTime": 1619802956,
+    "lastKnownWriteTime": 1619971420,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1619802956979,
+    "last_content_update": 1619971420333,
     "read_only": false,
     "read_only_alternatives": []
 }
