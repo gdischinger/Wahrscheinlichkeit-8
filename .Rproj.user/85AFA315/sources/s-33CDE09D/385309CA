@@ -1,26 +1,26 @@
 {
-    "id": "7F765E62",
+    "id": "385309CA",
     "path": "~/github/Lernpfade/8_Wahrscheinlichkeit/Wahrscheinlichkeit-8/Übungsaufgaben.Rmd",
     "project_path": "Übungsaufgaben.Rmd",
     "type": "r_markdown",
-    "hash": "2349240897",
+    "hash": "2514606543",
     "contents": "",
     "dirty": false,
-    "created": 1619386252950.0,
+    "created": 1620163514665.0,
     "source_on_save": false,
     "relative_order": 3,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "16,54",
-        "scrollLine": "4"
+        "cursorPosition": "85,98",
+        "scrollLine": "72"
     },
     "folds": "",
-    "lastKnownWriteTime": 1619971420,
+    "lastKnownWriteTime": 1620163562,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1619971420333,
+    "last_content_update": 1620163562566,
     "read_only": false,
     "read_only_alternatives": []
 }
